@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ValidateRules > 빈 규칙이면 안내 문구만 보인다 1`] = `
+"<div class="rounded-md border border-border bg-muted/40 px-3 py-2 text-xs text-muted-foreground" data-testid="job-review-validate-rules">
+<p>이 Job 응답에 이 Step 의 규칙이 없습니다.</p>
+</div>"
+`;
+
+exports[`ValidateRules > 여러 Step 을 참조하면 필드 앞에 Step 이름을 붙인다 1`] = `
+"<div class="rounded-md border border-border bg-muted/40 px-3 py-2 text-xs text-muted-foreground" data-testid="job-review-validate-rules">
+<ul class="flex flex-col [&amp;&gt;li:not(:last-child)]:border-b [&amp;&gt;li:not(:last-child)]:border-border">
+<li class="flex flex-col gap-1.5 py-2 first:pt-0.5 last:pb-0.5">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-medium break-all text-foreground">분류와 금액</span>
+<span class="rounded-full border px-1.5 leading-4 border-destructive/30 text-destructive">오류 → red</span>
+</div>
+<p class="leading-6 break-all">
+<code title="Classify - 문서 분류.label" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">Classify - 문서 분류.label</code> <span class="font-medium text-foreground">=</span> <code title="Information Extract - 청구서.vendor" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">Information Extract - 청구서.vendor</code> 길이</p>
+</li>
+</ul>
+</div>"
+`;
+
+exports[`ValidateRules > 연산자·집계·속성·범위·상수가 섞인 규칙과 and/or 그룹을 그린다 1`] = `
+"<div class="rounded-md border border-border bg-muted/40 px-3 py-2 text-xs text-muted-foreground" data-testid="job-review-validate-rules">
+<ul class="flex flex-col [&amp;&gt;li:not(:last-child)]:border-b [&amp;&gt;li:not(:last-child)]:border-border">
+<li class="flex flex-col gap-1.5 py-2 first:pt-0.5 last:pb-0.5">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-medium break-all text-foreground">합계 확인</span>
+<span class="rounded-full border px-1.5 leading-4 border-destructive/30 text-destructive">오류 → red</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<p class="text-[0.6875rem] font-medium tracking-wide uppercase">모두 만족</p>
+<ul class="flex flex-col gap-0.5 border-l-2 border-border pl-2.5">
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.total" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">total</code> <span class="font-medium text-foreground">≥</span> <code class="font-mono text-[0.6875rem] text-foreground">100</code>
+</p>
+</li>
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.memo" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">memo</code> 값 있음</p>
+</li>
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.vendor" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">vendor</code> 에 <code class="font-mono text-[0.6875rem] text-foreground">"Upstage"</code> 포함</p>
+</li>
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.invoice_no" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">invoice_no</code> 가 패턴 <code class="font-mono text-[0.6875rem] text-foreground">"^INV-\\\\d+$"</code> 와 일치</p>
+</li>
+<li>
+<div class="flex flex-col gap-0.5">
+<p class="text-[0.6875rem] font-medium tracking-wide uppercase">하나 이상 만족</p>
+<ul class="flex flex-col gap-0.5 border-l-2 border-border pl-2.5">
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.items[].amount" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">items[].amount</code> 합계 <span class="font-medium text-foreground">=</span> <code title="Information Extract - 청구서.subtotal" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">subtotal</code>
+</p>
+</li>
+<li>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.total" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">total</code> 신뢰도 <span class="font-medium text-foreground">&gt;</span> <code class="font-mono text-[0.6875rem] text-foreground">0.8</code>
+</p>
+</li>
+<li>
+<p class="leading-6 break-all">모든 <code title="Information Extract - 청구서.items[].qty" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">items[].qty</code> <span class="font-medium text-foreground">≠</span> <code class="font-mono text-[0.6875rem] text-foreground">0</code>
+</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="flex flex-col gap-1.5 py-2 first:pt-0.5 last:pb-0.5">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-medium break-all text-foreground">통화 확인</span>
+<span class="rounded-full border px-1.5 leading-4 border-border">경고 → yellow</span>
+</div>
+<p class="leading-6 break-all">
+<code title="Information Extract - 청구서.currency" class="rounded-[0.25rem] border border-border bg-background px-1 py-px font-mono text-[0.6875rem] text-foreground">currency</code> 비어 있음</p>
+</li>
+<li class="flex flex-col gap-1.5 py-2 first:pt-0.5 last:pb-0.5">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-medium break-all text-foreground">조건 없음</span>
+<span class="rounded-full border px-1.5 leading-4 border-border">경고 → yellow</span>
+</div>
+</li>
+</ul>
+</div>"
+`;

@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "title": "Studio Review",
+    "description": "A guide to the Studio review feature for partners."
+  },
+  "common": {
+    "leaveConfirm": {
+      "title": "Leave this page?",
+      "stay": "Stay",
+      "leave": "Leave"
+    }
+  },
+  "home": {
+    "title": "Studio Review",
+    "description": "A demo app that walks you through the Studio review flow in three steps: pick a collection, pick a job, then review it.",
+    "cta": "Get started",
+    "stepLabel": "Step {step}",
+    "stepsLabel": "Review flow",
+    "dashboard": {
+      "label": "Review status",
+      "stats": {
+        "inProgress": "Jobs in review",
+        "done": "Jobs reviewed",
+        "collections": "Collections in review",
+        "failed": "Couldn't load"
+      },
+      "continue": {
+        "title": "Continue reviewing",
+        "open": "Open job",
+        "empty": "None of the jobs opened in this browser are in review.",
+        "emptyAction": "Pick a collection"
+      },
+      "recent": {
+        "title": "Recent reviews",
+        "hint": "Review records from everyone using this server. Jobs not opened in this browser show their IDs.",
+        "failed": "Couldn't load review status, so only jobs opened in this browser are shown."
+      }
+    },
+    "steps": {
+      "collections": {
+        "title": "Pick a collection",
+        "description": "Choose the document collection you want to review.",
+        "items": {
+          "0": "Filter by source, and choose which columns to show",
+          "1": "Choose the sort order",
+          "2": "Move between pages by number",
+          "3": "Copy the collection ID with the button next to the name"
+        }
+      },
+      "detail": {
+        "title": "Pick a job",
+        "description": "Choose a completed job to review.",
+        "items": {
+          "0": "Check file name, size, review status and config",
+          "1": "Search by file name, or open a job directly by its ID",
+          "2": "Filter by review status and review jobs in order",
+          "3": "See a notice for collections that do not support review"
+        }
+      },
+      "job": {
+        "title": "Review the job",
+        "description": "Compare with the original pages, fix the document structure and values, then save.",
+        "items": {
+          "0": "Highlight parsed content and extracted values on page images",
+          "1": "Split, merge, move, reorder, exclude and label documents",
+          "2": "Find documents flagged by validation and empty values right away",
+          "3": "Save and mark reviewed in one step, then move to the next job"
+        }
+      }
+    }
+  },
+  "appHeader": {
+    "home": "Studio Review",
+    "homeLabel": "Studio Review home"
+  },
+  "settings": {
+    "label": "Settings",
+    "language": "Language",
+    "stepsPick": "Steps to review",
+    "stepsHint": "Only the steps turned on here appear as tabs in every job. Parse and Instruct are read only.",
+    "readOnly": "Read only",
+    "queue": "Review queue",
+    "advance": "Open the next job after completing",
+    "advanceHint": "When you complete a job opened with \"Review in order\", the next job opens right away.",
+    "groups": {
+      "pageEditing": "Page editing",
+      "advanced": "Advanced"
+    },
+    "groupHints": {
+      "pageEditing": "Split or merge documents and move pages. Keep these off for a cleaner screen when you only check labels.",
+      "advanced": "Work with the review result as a file or look back at saved changes."
+    },
+    "feature": {
+      "pageTools": "Page editing tools",
+      "filmstrip": "Page thumbnails",
+      "organizer": "Organize pages",
+      "jsonMenu": "Review result JSON",
+      "history": "Change history"
+    },
+    "featureHint": {
+      "pageTools": "Shows boundary navigation, Split here, To previous, To next, Exclude page and Move pages on the structure toolbar, and Exclude document and Split into a new document in the panel.",
+      "filmstrip": "On the structure tab, browse neighboring documents' pages as a strip and pick where to split.",
+      "organizer": "See every document's pages in a grid, move, exclude, or split several into a new document at once, and split a document with ✂ between thumbnails.",
+      "jsonMenu": "Adds a JSON menu to the header to download or edit the review result.",
+      "history": "Shows a change history button in the header. Use it to load a previously saved value or the original back in."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "backHome": "Back to home"
+  },
+  "collections": {
+    "title": "Collections",
+    "description": "Pick a collection to review.",
+    "backToList": "All collections",
+    "view": {
+      "label": "View",
+      "list": "List",
+      "lineage": "Lineage"
+    },
+    "lineage": {
+      "graphLabel": "Collection lineage",
+      "loading": "Finding connected collections…",
+      "loadingHint": "This can take a little while the first time if there are many collections.",
+      "emptyTitle": "No connected collections yet",
+      "emptyDescription": "When a workflow imports a collection's results, or corrected results are imported into a new collection, the link appears here.",
+      "hint": "Arrows run from the original collection to the collection made from its results.",
+      "unrelated": "{count, plural, one {# collection with no links is} other {# collections with no links are}} not shown.",
+      "partial": "Some collections could not be read, so links may be missing.",
+      "partialRetry": "Read again",
+      "importEdge": "Import",
+      "importEdgeTitle": "Imported by {workflows}",
+      "missing": "Collection not available",
+      "jobs": "{count, plural, one {# job} other {# jobs}}",
+      "srSources": "Made from: {names}",
+      "srResults": "Used to make: {names}",
+      "resultImportEdge": "Result import",
+      "unverified": "{count, plural, one {# collection} other {# collections}} could not be checked for links, for example because the workflow is not accessible."
+    },
+    "columns": {
+      "name": "Name",
+      "source": "Source",
+      "workflow": "Workflow",
+      "jobs": "Jobs",
+      "review": "Review",
+      "updated": "Updated",
+      "lastResult": "Last result",
+      "menu": "Show or hide columns",
+      "menuLabel": "Columns"
+    },
+    "kind": {
+      "documents": "Documents",
+      "table": "Table"
+    },
+    "defaultBadge": "Default",
+    "defaultCollectionHint": "The default collection where this workflow's run results are collected automatically.",
+    "untitled": "Untitled collection",
+    "loadMore": "Load more",
+    "loadingMore": "Loading…",
+    "pagination": {
+      "label": "Collection pages",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page}",
+      "goTo": "Go to page {page}"
+    },
+    "source": {
+      "agent_export": "Agent Export",
+      "agent_link": "Workflow link",
+      "result_import": "Result import",
+      "file_upload": "File upload",
+      "standalone": "Store API"
+    },
+    "sourceHint": {
+      "agent_export": "Created by an Export node",
+      "agent_link": "Created by linking to a workflow",
+      "result_import": "Created by importing a result file",
+      "file_upload": "Created by uploading files",
+      "standalone": "Created directly with the Store API, without a workflow"
+    },
+    "sort": {
+      "order": "Sort order",
+      "newestResults": "Newest results first",
+      "oldestResults": "Oldest results first",
+      "scopeHint": "Column sorting and the source filter apply to this page only.",
+      "ariaSortBy": "Sort by {column}"
+    },
+    "filter": {
+      "ariaFilterBy": "Filter by {column}",
+      "ariaFilterByCount": "Filter by {column}, {count} selected",
+      "all": "All",
+      "clear": "Clear filters"
+    },
+    "copyId": {
+      "label": "Copy collection ID",
+      "hint": "Click to copy",
+      "copied": "Copied",
+      "failed": "Couldn't copy. Select the ID above and copy it yourself."
+    },
+    "empty": {
+      "title": "No collections yet",
+      "description": "Collections appear here once an agent or workflow writes results.",
+      "filteredTitle": "No collections match",
+      "filteredDescription": "Change or clear the source filter.",
+      "pageTitle": "No collections on this page",
+      "pageDescription": "Go back to the previous page."
+    },
+    "summary": {
+      "totalJobs": "All jobs",
+      "latestConfigJobs": "Jobs run with the latest settings",
+      "latestConfigs": "Latest settings",
+      "totalJobsHelp": "About the all-jobs count",
+      "totalJobsHint": "Every Job that produced results in this Collection, including Jobs run with earlier settings, re-runs of the same file, and Jobs still running or failed. To see them all in the table, open the view options, turn on “Show earlier runs” and turn off “Latest settings only” (the table lists completed Jobs only).",
+      "latestConfigJobsHelp": "About the latest-settings job count",
+      "latestConfigJobsHint": "Jobs run with the latest settings. Every run of the same file is counted.",
+      "visibleRows": "Rows in table: {count}",
+      "visibleRowsMore": "Rows in table: {count}+"
+    },
+    "unsupported": {
+      "title": "This collection does not support review",
+      "description": "Collections created by file upload or result import have no source jobs to review."
+    },
+    "jobs": {
+      "title": "Jobs",
+      "allHistory": "Show earlier runs",
+      "allHistoryHintOff": "For the same files, only the most recent run is shown.",
+      "allHistoryHintOn": "Every run is shown, even when the same files were run more than once.",
+      "latestOnly": "Latest settings only",
+      "latestOnlyHintOff": "Jobs run before the settings changed are shown too.",
+      "latestOnlyHintOn": "Only jobs run on the latest settings are shown.",
+      "latestOnlyGroupedTooltip": "\"Show earlier runs\" is off, so only the most recent run of the same files is shown. If those files were run again after the settings changed, jobs from the earlier settings stay hidden even with this option off. Turn on \"Show earlier runs\" to see them.",
+      "viewOptions": "View options",
+      "empty": {
+        "title": "No completed jobs",
+        "description": "Try turning off filters or changing the search."
+      },
+      "emptySearch": {
+        "title": "No jobs match \"{query}\"",
+        "description": "Search matches input file names (2 characters or more)."
+      },
+      "emptyFiltered": {
+        "title": "No jobs match these conditions",
+        "description": "Try changing the review status filter or the search term."
+      }
+    },
+    "search": {
+      "label": "Search by file name or job ID",
+      "placeholder": "File name or job_…",
+      "hintShort": "Type 2 or more characters to filter by file name.",
+      "hintJobId": "Looks like a job ID. Open it directly instead of filtering.",
+      "openJob": "Open",
+      "checking": "Checking…",
+      "jobNotFound": "This is not a completed job in this collection.",
+      "jobError": "Could not open the job ({code})."
+    },
+    "errors": {
+      "title": "Could not load data",
+      "retry": "Retry",
+      "code": "Error code: {code}",
+      "server_misconfigured": "The server has no Upstage API key configured.",
+      "api_unreachable": "Could not reach the Upstage API.",
+      "upstream_timeout": "The Upstage API did not respond in time.",
+      "network_error": "Could not reach this app's server.",
+      "unauthorized": "The API key was rejected.",
+      "not_found": "Not found.",
+      "generic": "Something went wrong."
+    },
+    "reviewFilter": {
+      "label": "Review status",
+      "all": "All",
+      "pending": "Not reviewed",
+      "in_progress": "In review",
+      "done": "Reviewed"
+    },
+    "progress": {
+      "label": "Review progress",
+      "done": "Reviewed {done} / {total}",
+      "doneOnly": "Reviewed {done}",
+      "inProgress": "In review {count}",
+      "loading": "Counting…",
+      "error": "Couldn't load review progress",
+      "basis": "Counted from all Jobs minus those still running or failed. Jobs run with earlier settings and re-runs of the same file are included, so this can be more than the Jobs “Review in order” goes through (the default view of the table below)."
+    },
+    "startReview": {
+      "button": "Review in order",
+      "checking": "Checking…",
+      "none": "No jobs left to review",
+      "error": "Couldn't check jobs"
+    },
+    "overview": {
+      "label": "Review status",
+      "inProgress": "Jobs in review",
+      "done": "Jobs reviewed",
+      "collections": "Collections in review",
+      "hint": "Counts review states recorded in this app across all collections. The Review column below shows each collection."
+    },
+    "reviewCell": {
+      "none": "Not started",
+      "done": "Done {done} / {total}",
+      "doneOnly": "Done {done}",
+      "inProgress": "In review {count}",
+      "bar": "Share of jobs reviewed"
+    }
+  },
+  "jobRow": {
+    "columns": {
+      "file": "File",
+      "size": "Size",
+      "status": "Status",
+      "review": "Review",
+      "config": "Settings",
+      "created": "Created",
+      "updated": "Updated"
+    },
+    "status": {
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    },
+    "moreFiles": "+{count}",
+    "filesAndPages": "{files, plural, one {# file} other {# files}}, {pages, plural, one {# page} other {# pages}}",
+    "filesOnly": "{files, plural, one {# file} other {# files}}",
+    "noFile": "(no file name)",
+    "latestBadge": "Latest",
+    "noConfig": "—",
+    "reviewStatus": {
+      "pending": "Not reviewed",
+      "in_progress": "In review",
+      "done": "Reviewed",
+      "unknown": "—",
+      "completedAt": "Completed {at}"
+    }
+  },
+  "review": {
+    "loading": "Loading the job…",
+    "header": {
+      "back": "Back to jobs",
+      "moreFiles": "+{count} more",
+      "tray": "Changes",
+      "save": "Save",
+      "saving": "Saving…",
+      "leaveConfirm": "You have unsaved changes. Leave this page and discard them?",
+      "leaveConfirmSaving": "Saving is in progress. If you leave now, you won't be able to see the result of this save here. Leave anyway?",
+      "complete": "Mark reviewed",
+      "completeAndNext": "Mark reviewed & next",
+      "completing": "Updating…",
+      "reopen": "Back to in review",
+      "saveAndComplete": "Save and mark reviewed",
+      "saveAndNext": "Save and next job",
+      "saveShortcut": "⌘S or Ctrl+S",
+      "completeShortcut": "⌘Enter or Ctrl+Enter",
+      "completedNotice": "Marked reviewed: {name}",
+      "history": "Change history",
+      "historyUnavailable": {
+        "unsupported": "Change history is not available for this collection",
+        "unknown": "Couldn't check whether change history is available"
+      }
+    },
+    "reviewStatus": {
+      "notice": {
+        "completed": "Marked as reviewed",
+        "reopened": "Moved back to in review",
+        "reverted_by_save": "Saving moved this job back to in review. Check it, then mark it reviewed again",
+        "failed": "Couldn't update the review status"
+      }
+    },
+    "queue": {
+      "label": "Review queue",
+      "previous": "Previous job",
+      "next": "Next job",
+      "nextJob": "Next: {name}",
+      "nextMore": "+{count}",
+      "remaining": "{count} left",
+      "remainingMore": "{count}+ left",
+      "loading": "Loading…",
+      "end": "This is the last job",
+      "refresh": "Check for new jobs",
+      "refreshHint": "Checks the list again for newly added jobs and opens the first one if there is any.",
+      "refreshing": "Checking…",
+      "noNew": "No new jobs",
+      "noMore": "No jobs left to review",
+      "loadFailed": "Couldn't load the next job",
+      "revisitable": "No new jobs. Use \"Previous job\" to finish {count, plural, one {# unfinished job} other {# unfinished jobs}}."
+    },
+    "stepTabs": {
+      "label": "Steps",
+      "readOnly": "View only",
+      "noLayout": "Document structure",
+      "structureMultiLayout": "This job has more than one document layout. Edit its document structure in Studio.",
+      "structureNoLayout": "This job has no document structure to edit. You can edit its values."
+    },
+    "stepTypes": {
+      "parse": "Parse",
+      "classify": "Classify",
+      "split": "Split",
+      "extract": "Extract",
+      "instruct": "Instruct",
+      "validate": "Validate",
+      "match": "Match",
+      "merge": "Merge",
+      "export": "Export"
+    },
+    "documents": {
+      "title": "Documents",
+      "titleSplit": "Split documents",
+      "about": "About this list",
+      "aboutSplit": "Documents that Classify identified and split out of the original files. Each name is the classified document type (label). Select a document to see its pages in the viewer.",
+      "aboutPlain": "Documents in the original files of this job. Select a document to see its pages in the viewer.",
+      "untitled": "(no label)",
+      "excluded": "Excluded pages",
+      "pages": "{count, plural, one {# page} other {# pages}}",
+      "empty": "This job has no document layout to show.",
+      "summary": "{count, plural, one {# document} other {# documents}}, {pages, plural, one {# page} other {# pages}} in total",
+      "summaryVisited": "{count} opened",
+      "summarySeparator": ", ",
+      "filtered": "{count} shown",
+      "selectedHidden": "The selected document is hidden by the filter.",
+      "excludedHint": "Restore excluded pages from the page thumbnails on the Classify tab.",
+      "excludedHintAction": "Turn on page thumbnails",
+      "group": "Group {index}",
+      "unvisited": "not opened yet",
+      "flag": {
+        "danger": "Failed",
+        "warning": "Warning"
+      },
+      "hint": {
+        "danger": "The Validate verdict for this document is failed (red).",
+        "warning": "The Validate verdict for this document is warning (yellow).",
+        "changed": "You changed the label, pages, or values of this document.",
+        "recheck": "The pages of this document changed, so check its values again.",
+        "locked": "This document cannot be edited.",
+        "excluded": "This document is excluded. Its pages count as excluded pages when you save.",
+        "unvisited": "You have not opened this document in this job yet."
+      },
+      "filter": {
+        "search": "Search by label",
+        "placeholder": "Search labels",
+        "status": "Status filter",
+        "all": "All",
+        "flagged": "Failed or warning",
+        "changed": "Changed",
+        "recheck": "Needs recheck",
+        "excluded": "Excluded",
+        "untouched": "Unchanged",
+        "unvisited": "Not opened yet",
+        "noMatch": "No documents match.",
+        "clear": "Clear filter"
+      },
+      "status": {
+        "changed": "Changed",
+        "recheck": "Needs recheck",
+        "locked": "Locked",
+        "excluded": "Excluded"
+      }
+    },
+    "pages": {
+      "position": {
+        "label": "Page position",
+        "previous": "Previous page",
+        "next": "Next page",
+        "input": "Page number",
+        "total": "/ {total}",
+        "track": "Go to page",
+        "valueText": "Page {page} of {total}",
+        "marks": {
+          "changed": "Pages with changed values",
+          "issue": "Pages with problems to fix",
+          "noImage": "Pages without an image yet"
+        }
+      }
+    },
+    "viewer": {
+      "label": "Document viewer",
+      "failedToLoadImage": "Could not load the page image.",
+      "pleaseTryAgain": "Please try again.",
+      "preparingPageImage": "Preparing the page image…",
+      "retry": "Retry",
+      "notReady": "Some page images are still being prepared.",
+      "fileFailed": "Could not load page images for {file}.",
+      "noPages": "This document has no pages to show.",
+      "progress": "Page images {pages}/{totalPages}, files {files}/{totalFiles}",
+      "highlightsLoading": "Loading highlights for nearby pages…",
+      "highlightsFailed": "Could not load highlights for some pages.",
+      "viewMode": "Page view",
+      "paged": "One page at a time",
+      "continuous": "Continuous scroll",
+      "filmstrip": "Page thumbnails",
+      "filmstripShow": "Show page thumbnails",
+      "filmstripHide": "Hide page thumbnails",
+      "organizerShow": "Open page organizer",
+      "organizerHide": "Close page organizer",
+      "shortcuts": "PageUp/PageDown: previous/next page. Home/End: first/last page. Alt+↑/↓: previous/next document"
+    },
+    "panel": {
+      "title": "Selected document",
+      "noSelection": "Select a document.",
+      "pages": "Pages",
+      "pageRange": "{file} p{from}–{to}",
+      "pageSingle": "{file} p{page}"
+    },
+    "status": {
+      "changed": "Changed",
+      "recheck": "Needs recheck",
+      "locked": "Locked"
+    },
+    "errors": {
+      "title": "Could not open this job",
+      "retry": "Retry",
+      "backToJobs": "Back to jobs",
+      "code": "Error code: {code}",
+      "generic": "Something went wrong.",
+      "review_target_not_found": "This is not a completed job in this collection.",
+      "collection_source_type_unsupported": "This collection does not support review.",
+      "collection_review_disabled": "Review is turned off for this collection.",
+      "operation_capacity_exceeded": "The server is busy. Try again in a moment.",
+      "artifact_unavailable": "This job's results are not available right now. Try again later.",
+      "idempotency_key_reused": "This upload was already sent with different content.",
+      "invalid_value": "The request has an invalid value.",
+      "forbidden": "This request was blocked.",
+      "package_limit_exceeded": "The review file is larger than the upload limit.",
+      "server_misconfigured": "The server has no Upstage API key configured.",
+      "api_unreachable": "Could not reach the Upstage API.",
+      "upstream_timeout": "The Upstage API did not respond in time.",
+      "upstream_redirect": "The Upstage API responded with an unexpected redirect.",
+      "network_error": "Could not reach this app's server.",
+      "invalid_document": "The review document could not be read.",
+      "unsupported_review_format": "This review document format is not supported.",
+      "invalid_json": "The review document is not valid JSON.",
+      "json_too_large": "The review document is too large to open.",
+      "nesting_too_deep": "The review document is nested too deeply to open.",
+      "duplicate_key": "The review document has a duplicated key.",
+      "unknownCode": "Could not save ({code}).",
+      "http_error": "The server returned an unexpected response.",
+      "invalid_response": "The server response could not be read.",
+      "unsupported_media_type": "The review file was sent with the wrong content type.",
+      "review_import_not_found": "This import no longer exists.",
+      "base_version_conflict": "Another review was applied first. Reload and edit again.",
+      "schema_violation": "A value does not match the step's schema.",
+      "mixed_file_result": "A file with results shared with other files cannot be moved.",
+      "review_target_mismatch": "The review file belongs to a different collection.",
+      "review_step_mismatch": "A result's step was changed. Reload and edit again.",
+      "review_step_unavailable": "The review file points to an unknown step.",
+      "review_group_unavailable": "The review file points to a missing file group.",
+      "review_document_unavailable": "The review file points to a missing document.",
+      "review_file_unavailable": "The review file points to a missing file.",
+      "review_source_unavailable": "This job cannot be reviewed.",
+      "review_limit_exceeded": "This job is over the review limit.",
+      "duplicate_review_file": "The same file is in more than one group.",
+      "page_out_of_range": "A page range is outside the file.",
+      "duplicate_review_page": "A page is selected twice in a document or by two documents.",
+      "page_overlap": "An excluded page is also in a document, or a page is excluded twice.",
+      "page_missing": "A page is in no document and not excluded.",
+      "label_not_in_config": "A label is not in the settings.",
+      "permission_revoked": "You no longer have permission to change this job.",
+      "upload_checksum_mismatch": "The upload was corrupted. Save again.",
+      "operation_expired": "The import expired. Save again.",
+      "artifact_too_large": "A result is too large to store.",
+      "unit_too_large": "Too many changes at once. Save fewer changes at a time.",
+      "invalid_import_resource": "The import status could not be read.",
+      "unknown_import_status": "The import is in an unknown state.",
+      "result_not_editable": "A changed result can no longer be edited."
+    },
+    "values": {
+      "noResults": "No results are linked to this document.",
+      "noStepResults": "This document has no results from this step.",
+      "noFields": "There are no values to edit.",
+      "stepOrdinal": "{name} ({n})",
+      "result": "Result",
+      "resultOrdinal": "Result {n}",
+      "resultId": "Result ID: {id}",
+      "mergeNotice": "If its input results change, this result is recomposed when you save.",
+      "machine": "Original value",
+      "keyTitle": "Schema key: {key}",
+      "descriptionTitle": "Schema description: {text}",
+      "empty": "(empty)",
+      "revert": "Restore",
+      "none": "(none)",
+      "notInConfig": "{value} (not in settings)",
+      "true": "Yes",
+      "false": "No",
+      "nullPlaceholder": "No value",
+      "emptyPlaceholder": "Empty",
+      "invalid_number": "This is not a number. Enter it without commas, like 1234.5.",
+      "not_integer": "Only whole numbers are allowed.",
+      "invalid_json": "This is not a valid JSON value.",
+      "not_scalar": "Objects and arrays are not allowed. Enter a single value.",
+      "responseLoading": "Loading positions in the document…",
+      "responseFailed": "Could not load positions in the document. You can still edit values without highlights.",
+      "filter": {
+        "label": "Filter values",
+        "changedOnly": "Changed only",
+        "emptyOnly": "Empty only",
+        "currentPageOnly": "This page only",
+        "hidden": "{count, plural, one {# value hidden} other {# values hidden}}",
+        "noLocationHint": "Values without a page position are hidden."
+      },
+      "display": {
+        "description": "Show descriptions",
+        "rules": "Show rules"
+      },
+      "fields": {
+        "label": "Fields",
+        "menuLabel": "Fields to show",
+        "count": "{shown} / {total}",
+        "countLabel": "Fields: {shown} of {total} shown",
+        "showAll": "Show all",
+        "hidden": "{count, plural, one {# field is hidden.} other {# fields are hidden.}}"
+      },
+      "editErrors": {
+        "generic": "Could not apply this change ({code}).",
+        "result_missing": "Could not apply the change because the result was not found.",
+        "path_missing": "Could not apply the change because the field was not found.",
+        "result_not_editable": "This result cannot be edited.",
+        "path_exists": "That field already exists.",
+        "index_out_of_range": "It can't be moved there.",
+        "depends_on_reverted": "This change depended on a reverted change, so it was reverted too."
+      },
+      "tree": {
+        "rootArray": "Values",
+        "addItem": "Add item",
+        "addField": "Add field ({count})",
+        "maxItems": "Up to {max} items",
+        "emptyArray": "No items.",
+        "clearValue": "Clear (no value)",
+        "removeField": "Remove field",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
+        "removeItem": "Remove item",
+        "removeItemMin": "Remove item (at least {min})",
+        "menu": "{field} menu",
+        "resultMenu": "{name} menu",
+        "editJson": "Edit as JSON",
+        "history": "Change history of this result",
+        "showMore": "Show more ({count} left)",
+        "itemNumber": "No.",
+        "itemActions": "Item actions",
+        "original": "Original value: {value}",
+        "revertCell": "Restore {field}",
+        "addCellField": "Add {field}"
+      },
+      "longText": {
+        "summary": "Long text ({size}, {count, number} chars)",
+        "hint": "Too long to edit here. Use \"Edit as JSON\"."
+      },
+      "schema": {
+        "type": "Doesn't match the schema type (expected: {expected}).",
+        "enum": "Not one of the allowed values.",
+        "required": "Required field missing: {missing}",
+        "known_key": "This field isn't in the schema.",
+        "min_items": "Needs at least {limit} items (now {count}).",
+        "max_items": "At most {limit} items (now {count}).",
+        "min_length": "Must be at least {limit} characters (now {count}).",
+        "max_length": "Must be at most {limit} characters (now {count})."
+      },
+      "jsonDialog": {
+        "title": "Edit {name} value as JSON",
+        "description": "Edit the whole result value as JSON. Applying adds one “Replace all values” change.",
+        "editor": "Result value JSON",
+        "jumpToError": "Go to error",
+        "apply": "Apply",
+        "cancel": "Cancel",
+        "unchanged": "Nothing has changed.",
+        "invalidJson": "This is not valid JSON.",
+        "invalidJsonAt": "Invalid JSON at line {line}, column {column}.",
+        "duplicateKey": "Duplicate key: {key}",
+        "tooDeep": "The JSON is nested too deeply.",
+        "tooLarge": "The JSON is too large.",
+        "schemaProblem": "The value does not match the schema (expected: {expected})."
+      },
+      "unlinked": "Not linked to a document ({count})",
+      "unlinkedHint": "These results are not linked to any document in this Job."
+    },
+    "parse": {
+      "summary": "{name}, {count, plural, one {# element} other {# elements}}, {pages, plural, one {# page} other {# pages}}",
+      "page": "Page {page}",
+      "item": "Element {n}",
+      "loadMore": "Show more",
+      "empty": "There are no Parse elements on this document's pages.",
+      "noSpace": "Preparing location information…",
+      "image": "Figure",
+      "imageLocate": "Show this figure on the page",
+      "currentPageOnly": "Current page only",
+      "summaryPage": "{name}, page {page}, {count, plural, one {# element} other {# elements}}",
+      "emptyPage": "There are no Parse elements on this page.",
+      "tableShowSource": "Show source",
+      "tableShowTable": "Show as table",
+      "tableRegion": "Table",
+      "tableImage": "(Image: {alt})"
+    },
+    "instruct": {
+      "decision": "Decision",
+      "unclassified": "Unclassified",
+      "citation": "Citation {n}",
+      "noLocation": "No location information",
+      "rawJson": "View original JSON",
+      "noRangeMatch": "No output covers this document's pages, so all outputs are shown.",
+      "noSpace": "Page positions are not ready yet, so all outputs are shown and citations cannot be opened.",
+      "outputHeading": "Output {n}",
+      "pages": "Pages {ranges}",
+      "empty": "This output has no text.",
+      "image": "(Image: {alt})",
+      "readOnly": "Instruct output is view-only.",
+      "structured": {
+        "nullValue": "None",
+        "emptyText": "(empty)",
+        "emptyList": "No items",
+        "emptyObject": "No fields"
+      }
+    },
+    "chips": {
+      "changed": "Changed",
+      "changedCount": "{count} changed",
+      "recheck": "Recheck",
+      "staleReason": "Values this verdict read have changed",
+      "locked": "Locked",
+      "lock": {
+        "input_changed": "Pages changed, so values cannot be edited",
+        "unlinked": "No linked document",
+        "missing": "This result has no value",
+        "unsupported_state": "Results in this state cannot be edited",
+        "structure_changed": "This document’s pages changed. Save, then check its values again"
+      }
+    },
+    "verdict": {
+      "group": "Verdict",
+      "green": "green",
+      "yellow": "yellow",
+      "red": "red",
+      "checks": "Original checks",
+      "passed": "Passed",
+      "failed": "Failed",
+      "checksNotice": "If you change the verdict, these original checks are cleared when you save.",
+      "changedNotice": "You changed the verdict. Original checks are cleared when you save."
+    },
+    "validateRules": {
+      "empty": "This Job's response has no rules for this step.",
+      "severity": {
+        "error": "Error → red",
+        "warning": "Warning → yellow"
+      },
+      "logic": {
+        "and": "All of",
+        "or": "Any of"
+      },
+      "operator": {
+        "filled": "<left></left> is filled",
+        "empty": "<left></left> is empty",
+        "contains": "<left></left> contains <right></right>",
+        "matches": "<left></left> matches <right></right>"
+      },
+      "agg": {
+        "sum": "sum <target></target>",
+        "count": "count <target></target>",
+        "min": "min <target></target>",
+        "max": "max <target></target>"
+      },
+      "attr": {
+        "confidence": "confidence of <target></target>",
+        "length": "length of <target></target>"
+      },
+      "scope": {
+        "all": "every <target></target>",
+        "any": "any <target></target>"
+      }
+    },
+    "validationSummary": {
+      "label": "Validation results",
+      "open": "View verdict",
+      "verdict": {
+        "red": "Failed",
+        "yellow": "Warning"
+      }
+    },
+    "filmstrip": {
+      "region": "Document structure",
+      "document": "Document {index}",
+      "untitled": "(no label)",
+      "label": "Document label",
+      "noLabel": "(no label)",
+      "notInConfigOption": "{label} (not in settings)",
+      "notInConfigBadge": "Not in settings",
+      "notInConfigHint": "This label is not in the settings. You can still save it.",
+      "pageCount": "{count, plural, one {# page} other {# pages}}",
+      "page": "p{page}",
+      "pageInFile": "p{page} ({file})",
+      "noImage": "No image",
+      "pageMenu": "Actions for {page}",
+      "moveLeft": "Move left",
+      "moveRight": "Move right",
+      "moveToDocument": "Move to another document",
+      "documentOption": "Document {index} ({label})",
+      "noOtherDocument": "No other document in this file group",
+      "excludePage": "Exclude this page",
+      "restorePage": "Put back into a document",
+      "split": "Split after {page}",
+      "documentMenu": "Actions for document {index}",
+      "dragDocument": "Drag to reorder, or drop on another document to merge",
+      "mergeWithPrevious": "Merge into previous document",
+      "moveDocumentEarlier": "Move earlier",
+      "moveDocumentLater": "Move later",
+      "excluded": "Excluded",
+      "excludedEmpty": "Drop a page here to exclude it.",
+      "unplaced": "Missing pages",
+      "missing": "This page is in no document and is not excluded.",
+      "overlap": "This page is in more than one place.",
+      "dropRejected": "Pages can only move within the same file group.",
+      "dropRejectedLocked": "You can't drop pages on a locked document.",
+      "groupBoundary": "File group boundary",
+      "excludeDocument": "Exclude this document",
+      "restoreDocument": "Restore this document",
+      "excludedDocument": "Excluded",
+      "restoreToNewDocument": "Make a new document",
+      "unplacedMenu": "Actions for missing {page}",
+      "collapsedPages": "… {count, plural, one {# page} other {# pages}}",
+      "focusDocument": "Show document {index}",
+      "hiddenBefore": "{count, plural, one {# document} other {# documents}} before",
+      "hiddenAfter": "{count, plural, one {# document} other {# documents}} after",
+      "expand": "Show pages",
+      "collapse": "Hide pages",
+      "moveDocumentTo": "Set position…"
+    },
+    "organizer": {
+      "title": "Page organizer",
+      "region": "Page thumbnail grid",
+      "size": "Thumbnail size",
+      "sizeSmall": "Small thumbnails",
+      "sizeMedium": "Large thumbnails",
+      "done": "Done",
+      "dragCount": "{count, plural, one {# page} other {# pages}}",
+      "dragging": "Moving {count, plural, one {# page} other {# pages}} together",
+      "moveEarlier": "Move earlier",
+      "moveLater": "Move later",
+      "splitBefore": "Split before {page}",
+      "selection": {
+        "label": "Selected pages",
+        "hint": "Drag thumbnails to move pages. ⌘/Ctrl+click or Shift+click to pick several pages and move, exclude, or split them into a new document at once.",
+        "count": "{count, plural, one {# page selected} other {# pages selected}}",
+        "move": "Move to another document…",
+        "exclude": "Exclude",
+        "newDocument": "Split into a new document…",
+        "split": "Split here",
+        "clear": "Clear selection",
+        "mixedGroups": "Only pages from the same file group can be moved together.",
+        "summary": "{count, plural, one {# page} other {# pages}} ({documents})",
+        "summaryDocument": "Document {index}: p. {pages}",
+        "dialogDescription": "Choose where to put the selected pages. Pick \"New document\" to split them into a new document with a label."
+      }
+    },
+    "structure": {
+      "label": "Label",
+      "noLabel": "(no label)",
+      "notInConfigOption": "{label} (not in settings)",
+      "notInConfig": "This label is not in the settings. You can still save it.",
+      "recheck": "This document’s pages changed. Save, then check its values again.",
+      "coverageUnknown": "Some files have an unknown page count, so missing pages cannot be checked.",
+      "errors": {
+        "generic": "Could not apply this change ({code}).",
+        "document_missing": "That document no longer exists.",
+        "page_not_in_document": "That page is not in the document anymore.",
+        "result_missing": "Could not apply the change because the result was not found.",
+        "path_missing": "Could not apply the change because the field was not found.",
+        "result_not_editable": "This result cannot be edited.",
+        "group_mismatch": "Pages can only move within the same file group.",
+        "target_missing": "Could not find where to put it.",
+        "already_excluded": "This page is already excluded.",
+        "multi_layout_unsupported": "Edit this job’s document structure in Studio.",
+        "index_out_of_range": "It cannot move any further.",
+        "invalid_document_id": "Could not create a new document. Try again.",
+        "path_exists": "That field already exists.",
+        "depends_on_reverted": "This change depended on a reverted change, so it was reverted too.",
+        "invalid_page_ranges": "Check the page ranges: pages start at 1, the first page cannot be after the last, and each file must be in this file group.",
+        "mixed_file_document": "A document uses this file together with another file, so the whole file cannot be moved. Change that document's page ranges first."
+      },
+      "pageRanges": {
+        "title": "Page ranges",
+        "file": "File for range {row}",
+        "range": "Pages for range {row}",
+        "placeholder": "1-3, 5",
+        "removeRow": "Remove range {row}",
+        "addRow": "+ Add file range",
+        "invalid": "Could not read the range. Write it like \"1-3, 5\"."
+      },
+      "excludeDocument": "Exclude this document",
+      "restoreDocument": "Restore this document",
+      "excludedNotice": "This document is excluded. Its pages count as excluded pages when you save.",
+      "newDocument": {
+        "open": "Split into a new document…",
+        "title": "Split into a new document",
+        "description": "The pages you enter are separated from their current document (or the excluded list) and become a new document. Pick a label; the new document goes right after the selected one.",
+        "hint": "Enter a file and page range to separate those pages from their current document into a new document with a label you choose.",
+        "invalidRanges": "Enter page ranges that can be read, like \"1-3, 5\".",
+        "cancel": "Cancel",
+        "create": "Create"
+      },
+      "documentPosition": {
+        "title": "Move document",
+        "description": "Enter the new position of document {index} ({first}–{last}, within the same file group).",
+        "position": "Position",
+        "invalid": "Enter a number from {first} to {last}.",
+        "cancel": "Cancel",
+        "move": "Move"
+      },
+      "toolbar": {
+        "label": "Document boundary and page actions",
+        "previousEnd": "◀ Document {index} end ({page}p)",
+        "nextStart": "Document {index} start ({page}p) ▶",
+        "noPrevious": "◀ First document",
+        "noNext": "Last document ▶",
+        "current": "Document {index} ({label}), page {page}/{total}",
+        "splitHere": "Split here ✂",
+        "toPrevious": "To previous document",
+        "toNext": "To next document",
+        "excludePage": "Exclude page",
+        "movePages": "Move pages…",
+        "noPreviousDocument": "There is no document before this one",
+        "noNextDocument": "There is no document after this one",
+        "previousOtherGroup": "The previous document is in another file group",
+        "nextOtherGroup": "The next document is in another file group",
+        "splitHereHint": "Splits from this page to the end of the document into a new document with the same label. To separate only some pages or change the label, use \"Move pages…\".",
+        "movePagesHint": "Pick a page range and move it to another document in the same file group, or split it into a new document with a label you choose."
+      },
+      "movePages": {
+        "title": "Move pages",
+        "description": "Choose pages of this document and where to put them. Pick \"New document\" to split them into a new document with a label.",
+        "from": "From page",
+        "to": "To page",
+        "target": "Target document",
+        "position": "Position",
+        "end": "At the end",
+        "start": "At the start",
+        "before": "Before a page",
+        "beforePage": "Position in the target document (1–{max})",
+        "invalidRange": "Enter a range from 1 to {total}.",
+        "invalidBefore": "Enter a page from 1 to {total}.",
+        "newDocument": "New document (right after the source)",
+        "newDocumentLabel": "New document label",
+        "onlyNewDocument": "No other document in this file group, so the pages are split into a new document.",
+        "cancel": "Cancel",
+        "move": "Move"
+      },
+      "fileGroups": {
+        "title": "File groups",
+        "group": "Group {index}",
+        "currentGroup": "(selected document)",
+        "move": "Move",
+        "moveMenu": "Move {file}",
+        "moveToGroup": "Move to group {index}",
+        "moveToNewGroup": "Split into a new group",
+        "reasons": {
+          "layoutMismatch": "That group is arranged by a different document classification step.",
+          "singleFile": "This is the only file in its group."
+        }
+      }
+    },
+    "issues": {
+      "title": "Checks before saving",
+      "ok": "Nothing blocks saving.",
+      "hint": "Document structure and values are checked automatically after every edit. You can't save while a red item remains.",
+      "blockingSummary": "{count, plural, one {# kind of problem blocks} other {# kinds of problems block}} saving.",
+      "blocking": "Blocks saving:",
+      "notBlocking": "Notice, saving still works:",
+      "other": "{code}: {count}",
+      "page_missing": "{count, plural, one {# page is} other {# pages are}} in no document and not excluded",
+      "duplicate_review_page": "{count, plural, one {# page is} other {# pages are}} selected more than once by documents",
+      "page_overlap": "{count, plural, one {# page is} other {# pages are}} excluded but also in a document, or excluded twice",
+      "page_out_of_range": "{count, plural, one {# page range is} other {# page ranges are}} outside the file",
+      "label_not_in_config": "{count, plural, one {# label is} other {# labels are}} not in the settings (can still be saved)",
+      "review_file_unavailable": "{count, plural, one {# file reference is} other {# file references are}} not in this job",
+      "review_group_unavailable": "{count, plural, one {# document points} other {# documents point}} to a missing file group",
+      "review_document_unavailable": "{count, plural, one {# excluded document is} other {# excluded documents are}} not in the document list",
+      "review_step_unavailable": "{count, plural, one {# file group points} other {# file groups point}} to a missing or non-Classify step",
+      "duplicate_review_file": "{count, plural, one {# file is} other {# files are}} in more than one group",
+      "review_limit_exceeded": "This job is over the review limit",
+      "schema_violation": "{count, plural, one {# value does} other {# values do}} not match the schema",
+      "result_not_editable": "{count, plural, one {# changed result} other {# changed results}} can no longer be edited",
+      "package_limit_exceeded": "The review file is larger than the upload limit"
+    },
+    "save": {
+      "short": {
+        "saving": "Saving…",
+        "reloading": "Reloading…",
+        "savedRevision": "Saved version {revision}",
+        "savedNoRevision": "Saved",
+        "reloadFailed": "Saved, but could not reload",
+        "noChange": "Nothing changed",
+        "conflict": "Conflict, reload needed",
+        "failed": "Not saved"
+      },
+      "uploading": "Uploading the review file…",
+      "polling": "Waiting for the changes to be applied…",
+      "reloadingAfterSave": "Saved. Reloading the latest state…",
+      "reloading": "Reloading the latest state…",
+      "saved": "Saved (revision {revision})",
+      "savedNoRevision": "Saved",
+      "savedPartial": "{saved}. Only some changes were applied. Check the reloaded values and edit again.",
+      "savedReloadFailed": "{saved}. Could not reload the latest state. Reload before editing again.",
+      "reloaded": "Loaded the latest state.",
+      "noChange": "Nothing changed.",
+      "blocked": "Fix the problems under “Checks before saving”, then save again.",
+      "tooLarge": "The review file is {size}, over the upload limit of {limit}. Save fewer changes at a time.",
+      "conflict": "Another review was applied first ({count, plural, one {# conflict} other {# conflicts}}). Reload and make your changes again.",
+      "conflictHint": "Saving again would hit the same conflict. Reload first, then save.",
+      "conflictResult": "Another review changed this result first. Reload and edit again.",
+      "conflictStructure": "Another review changed the document structure first. Reload and edit again.",
+      "failedField": "The field is marked in the values panel.",
+      "stopped": {
+        "timeout": "The changes were not applied within 10 minutes. Check this import later.",
+        "cancelled": "The import was cancelled. Nothing was saved.",
+        "unreachable": "Could not check whether the changes were applied. Saving the same changes again resumes the check."
+      },
+      "reload": "Reload",
+      "reloadConfirm": "Reloading discards your unsaved changes. Continue?",
+      "reloadConfirmTitle": "Reload the latest state?",
+      "reloadConfirmAction": "Reload",
+      "alsoReverted": "{count, plural, one {# dependent change was} other {# dependent changes were}} reverted too.",
+      "imported": "{count, plural, =0 {No changes added. The JSON matches the current values.} one {Added # change from the JSON.} other {Added # changes from the JSON.}}",
+      "restored": "{count, plural, =0 {Nothing to restore. The changes kept in this browser already match the current values.} one {Restored # change kept in this browser.} other {Restored # changes kept in this browser.}}",
+      "importId": "Import {id}",
+      "code": "Code {code}"
+    },
+    "draft": {
+      "found": "You have {count, plural, one {# unsaved change} other {# unsaved changes}} from {savedAt}.",
+      "foundHint": "Editing now discards this saved draft.",
+      "restore": "Restore",
+      "discard": "Discard",
+      "incompatible": "The job changed on the server, so the unsaved changes cannot be restored.",
+      "restoreFailed": "Change #{index} could not be applied, so nothing was restored. {detail}",
+      "tooLarge": "The changes are too large to keep in this browser. Save soon.",
+      "storageFull": "This browser's storage is full, so the changes could not be kept here. Save before leaving this tab."
+    },
+    "tray": {
+      "title": "Changes",
+      "description": "Review each change, undo what you don't want, then save.",
+      "close": "Close",
+      "changes": "{count, plural, =0 {No changes} one {# change} other {# changes}}",
+      "emptyTitle": "Nothing changed yet",
+      "hint": {
+        "structure": "Classify tab: drag pages to reorder, split, merge or exclude them, and change labels.",
+        "values": "Value tabs such as Extract or Validate: pick a field to see where it is on the page, then correct it. Parse and Instruct tabs are view-only.",
+        "save": "Every change appears here. Undo any of them, then save once for the whole job."
+      },
+      "noDocument": "No linked document",
+      "emptyValue": "(empty)",
+      "nullValue": "(none)",
+      "revert": "Undo",
+      "revertItem": "Undo: {text}",
+      "revertAll": "Undo all",
+      "revertAllCancel": "Cancel",
+      "revertAllConfirmTitle": "Undo all {count, plural, one {# change} other {# changes}}?",
+      "revertAllConfirmBody": "All unsaved edits will be discarded.",
+      "revertAllDone": "Undid all {count, plural, one {# change} other {# changes}}.",
+      "conflict": "Conflict",
+      "items": {
+        "setValue": "{step} › {field}: {before} → {after}",
+        "setValueNoStep": "{field}: {before} → {after}",
+        "setLabel": "Label: {before} → {after}",
+        "reorderPages": "Moved page {pages} to position {to}",
+        "reorderDocuments": "Moved {document} from position {before} to {after}",
+        "split": "Split {document} after page {page}",
+        "merge": "Merged {other} into {document}",
+        "movePages": "Moved page {pages} to {other}",
+        "excludePages": "Excluded page {pages}",
+        "restorePages": "Returned {count, plural, one {# page} other {# pages}} to {document}",
+        "replaceSubtree": "{target}: replaced value ({before} → {after})",
+        "replaceAll": "{step}: replaced all values",
+        "insertItem": "{target}: added item {index}",
+        "removeItem": "{target}: removed item {index} ({before})",
+        "moveItem": "{target}: moved item {from} to {to}",
+        "setKey": "{target}: added field",
+        "removeKey": "{target}: removed field ({before})",
+        "restoreToNewDocument": "Made a new document from {count, plural, one {# excluded page} other {# excluded pages}}",
+        "setPageRanges": "Page ranges: {before} → {after}",
+        "setPageRangesMoved": "Page ranges: {before} → {after} (took {moved})",
+        "addDocument": "New document {document}: {ranges}",
+        "addDocumentMoved": "New document {document}: {ranges} (took {moved})",
+        "excludeDocument": "Excluded document {document}",
+        "restoreDocument": "Restored document {document}",
+        "moveFile": "Moved {file} to file group {group}",
+        "moveFileNewGroup": "Split {file} into a new file group",
+        "replaceStructure": "Replaced document structure from JSON ({documents, plural, one {# document} other {# documents}}, {excludedDocuments} excluded, {excludedPages, plural, one {# excluded page} other {# excluded pages}})",
+        "replaceStructureChanged": "Replaced document structure from JSON ({documents, plural, one {# document} other {# documents}}, {excludedDocuments} excluded, {excludedPages, plural, one {# excluded page} other {# excluded pages}}). changed: {summary}{shown, plural, =0 {} other {. {examples}}}{more, plural, =0 {} other { and # more}}",
+        "batchMovePages": "Moved {count, plural, one {# page} other {# pages}} from {documents} documents to {other} ({sources})",
+        "batchExcludePages": "Excluded {count, plural, one {# page} other {# pages}} from {documents} documents ({sources})",
+        "batchNewDocument": "Made a new document from {count, plural, one {# page} other {# pages}} of {documents} documents ({sources})"
+      },
+      "fragments": {
+        "arrayIndex": "#{index}",
+        "movedFrom": "{count, plural, one {# page} other {# pages}} from {document}",
+        "movedFromRemoved": "{count, plural, one {# page} other {# pages}} from {document} (document removed)",
+        "movedFromExcluded": "{count, plural, one {# excluded page} other {# excluded pages}}",
+        "structureLabels": "{count, plural, one {# label} other {# labels}}",
+        "structureRanges": "{count, plural, one {# page range} other {# page ranges}}",
+        "structureAdded": "{count} added",
+        "structureRemoved": "{count} removed",
+        "structureReordered": "{count} reordered",
+        "structureGroups": "file group settings",
+        "structureLabelChange": "{before} → {after} (document {position})",
+        "structureDocument": "{document} (document {position})"
+      },
+      "summary": {
+        "title": "Checks before saving",
+        "passed": "Passed:",
+        "failed": "Problem:",
+        "missingOk": "No missing pages",
+        "overlapOk": "No overlapping pages",
+        "valuesOk": "Changed values match the schema",
+        "limitOk": "Within the upload limit",
+        "size": "({size} / {limit})",
+        "coverageUnknown": "Some files have an unknown page count, so missing pages cannot be checked."
+      },
+      "advanced": "Advanced: upload body (JSON, {size})",
+      "save": "Save",
+      "saving": "Saving…",
+      "blockedHint": "Fix the problems above to save.",
+      "structureGroup": "Document structure",
+      "origin": {
+        "revision": "Loaded from history v{version, number}",
+        "original": "Loaded from the original"
+      }
+    },
+    "json": {
+      "menu": "JSON",
+      "menuLabel": "Review result JSON",
+      "menuTitle": "Review result JSON",
+      "menuDescription": "Download this job's review result (documents and values) as a JSON file, or edit it directly.",
+      "downloadOriginal": "Download original",
+      "downloadOriginalHint": "The result as loaded when this screen opened.",
+      "downloadEdited": "Download current edits",
+      "downloadEditedHint": "Includes your edits, even before saving.",
+      "edit": "Edit as JSON…",
+      "editHint": "View and edit the whole result as JSON.",
+      "importFile": "Import from file…",
+      "importFileHint": "Load a JSON file into the editor, check it, then apply.",
+      "title": "Edit full JSON",
+      "description": "Edit the whole review JSON or load it from a file. After checking, applying adds the differences as changes; saving is a separate step.",
+      "editor": "Review JSON",
+      "jumpToError": "Go to error",
+      "pickFile": "Choose file",
+      "loadEdited": "Load current edits",
+      "loadEditedHint": "Loads the review JSON as it is edited on screen right now (unsaved edits included) and replaces the editor text.",
+      "loadOriginal": "Load original",
+      "check": "Check",
+      "checking": "Checking…",
+      "apply": "Apply",
+      "close": "Close",
+      "largeNotice": "This file is large ({size}), so editing may be slow.",
+      "fileTooLarge": "Files larger than {limit} cannot be opened.",
+      "fileUnreadable": "Could not read the file.",
+      "fileLoaded": "File loaded. Check it, then apply.",
+      "basis": {
+        "edited": "Showing: current edits — includes changes made on screen (unsaved ones too).",
+        "original": "Showing: original — the result loaded from the server when this screen opened. Changes made on screen are not included.",
+        "file": "Showing: file {name}",
+        "modified": "edited in this window"
+      },
+      "summary": "Errors {errors}, Rejected {rejected}, Ignored {ignored}",
+      "willAdd": "Applying adds {count, plural, one {# change} other {# changes}}.",
+      "noChanges": "No differences from the current edits.",
+      "recheck": "The text has changed. Check it again.",
+      "blockedBySave": "You cannot apply while saving or after a conflict.",
+      "applyFailed": "Change #{index} could not be applied, so nothing was changed. {detail}",
+      "rejectedTitle": "Why it cannot be applied",
+      "warningsTitle": "Notes (it can still be applied)",
+      "parse": {
+        "invalidJson": "This is not valid JSON.",
+        "invalidJsonAt": "Invalid JSON at line {line}, column {column}.",
+        "duplicateKey": "Duplicate key: {key}",
+        "tooDeep": "The JSON is nested too deeply.",
+        "tooLarge": "The JSON is too large.",
+        "unsupportedFormat": "This is not review JSON (format: {format}).",
+        "invalidDocument": "{pointer} has an invalid shape ({reason})."
+      },
+      "errors": {
+        "collection_mismatch": "This file belongs to another collection.",
+        "job_mismatch": "This file is not for this job (it must contain exactly this job).",
+        "catalog_mismatch": "The step or config list is different.",
+        "unknown_result": "This result is not in this job.",
+        "result_step_mismatch": "The result's step is different.",
+        "base_version_mismatch": "The version is different. Load the latest document and edit again.",
+        "layout_mismatch": "The document layout views are different.",
+        "file_set_mismatch": "The files are different.",
+        "structure_mismatch": "The document structure (file_groups and layouts) does not match.",
+        "apply_failed": "This change cannot be applied ({reason})."
+      },
+      "warnings": {
+        "read_only_ignored": "Read-only field: it is not saved, so it is discarded.",
+        "layout_step_changed": "The classify step link changed, so document and result links may change."
+      }
+    },
+    "history": {
+      "title": "Change history",
+      "description": "See saved changes. You can load an earlier value into your edits and save it again.",
+      "close": "Close",
+      "sort": {
+        "label": "Sort",
+        "newest": "Newest first",
+        "oldest": "Oldest first"
+      },
+      "loading": "Loading change history…",
+      "loadingBlock": "Loading the next page…",
+      "empty": "No saved changes yet",
+      "retry": "Try again",
+      "errors": {
+        "unsupported": "Change history isn't available on this server",
+        "notFound": "Can't show the change history of this job",
+        "busy": "Too many requests. Try again in {seconds, number}s",
+        "busyReady": "Too many requests. Try again",
+        "generic": "Couldn't load the change history ({code})",
+        "detail": "Couldn't load this change ({code})",
+        "revisionNotFound": "This change can't be found"
+      },
+      "row": {
+        "type": {
+          "result": "Value",
+          "structure": "Document structure"
+        },
+        "version": "v{from}→v{to}",
+        "documentsMore": "+{count, number}",
+        "noDocuments": "No linked documents",
+        "noLabel": "(no label)",
+        "documentsHint": "Document labels reflect the current document structure",
+        "toggle": "Show the {name} change",
+        "publishedAt": "Applied: {time}",
+        "copiedAt": "Copied: {time} (may differ from when the change was made)",
+        "createdBy": "By: {name}",
+        "reference": "Reference: {value}",
+        "reason": "Reason: {value}",
+        "badge": {
+          "current": "Current",
+          "fromMachine": "Changed from original",
+          "copied": "Copied",
+          "system": "System"
+        }
+      },
+      "machineLoading": "Loading the original…",
+      "emptyFiltered": "No changes match these filters",
+      "savingNotice": "The list reloads when saving finishes",
+      "filter": {
+        "label": "Type",
+        "all": "All",
+        "result": "Values",
+        "structure": "Document structure",
+        "resultChip": "Result: {name}",
+        "clearResult": "Clear the {name} result filter"
+      },
+      "group": {
+        "same": "{count, number} changes saved together",
+        "continued": "{count, number} changes saved together (continued from previous page)",
+        "foreign": "Saved in another collection",
+        "sameHelp": "These items changed in a single save. Load them one at a time or all at once with \"Load all\"",
+        "foreignHelp": "This job belongs to more than one collection. This change was saved from the review screen of a different collection than the one you are viewing.",
+        "loadAll": "Load all ({count, number})",
+        "loading": "Loading the group…",
+        "loaded": "Loaded {loaded, number} changes into your edits",
+        "loadedPartial": "Loaded {loaded, number} of {total, number} — the rest match the current values or can't be loaded",
+        "loadNone": "Nothing in this group can be loaded"
+      },
+      "load": {
+        "button": "Load into edits",
+        "done": "Loaded into your edits",
+        "failed": "Couldn't load: {reason}",
+        "draftWarning": "Loading discards the unsaved draft you haven't restored",
+        "mergeNote": "Merge results are recomputed on save and may differ from the loaded value",
+        "blocked": {
+          "loading": "Loading the content…",
+          "omitted": "The content isn't available, so it can't be loaded",
+          "missing_result": "This result isn't in the job anymore",
+          "not_editable": "This result can't be edited now",
+          "mismatch": "It doesn't match the current document structure, so it can't be loaded",
+          "same": "Same as the current value",
+          "saving": "Can't load while saving",
+          "conflict": "Resolve the save conflict first",
+          "current": "This is the value applied now",
+          "original_missing": "The original isn't in the history, so it can't be loaded"
+        },
+        "impact": {
+          "title": "Loading changes {documents, number} documents and affects {results, number} linked results",
+          "removed": "Deletes {label}",
+          "added": "Adds {label}",
+          "pages": "{label}: page range changes",
+          "results": "Linked results: {names}",
+          "noResults": "No linked results",
+          "more": "+{count, number}",
+          "applied": "Loaded the document structure — {documents, number} documents changed, {results, number} results affected",
+          "batchHint": "To load the values saved together too, use \"Load all\" in the group header"
+        }
+      },
+      "detail": {
+        "field": "Field",
+        "before": "Before",
+        "after": "After",
+        "none": "(no value)",
+        "noDiff": "No value differences",
+        "machineBefore": "“Before” is the original",
+        "reordered": "Item order also changed",
+        "showJson": "Show JSON",
+        "hideJson": "Hide JSON",
+        "jsonAfter": "JSON after",
+        "jsonBefore": "JSON before",
+        "moreRows": "{count, number} more differences — check with Show JSON",
+        "omitted": {
+          "too_large": "The content is too large to show",
+          "unavailable": "The content isn't available"
+        },
+        "baseOmitted": {
+          "too_large": "The earlier content is too large to compare",
+          "unavailable": "The earlier content isn't available, so it can't be compared"
+        },
+        "structure": {
+          "fileAdded": "Added file {file}",
+          "fileRemoved": "Removed file {file}",
+          "fileMoved": "Moved file {file} to another group",
+          "documentAdded": "Added document {label}",
+          "documentRemoved": "Deleted document {label}",
+          "documentLabel": "{document}: label {from} → {to}",
+          "documentMoved": "Moved document {label} to another group",
+          "documentPages": "{document}: page range changed",
+          "documentsReordered": "Document order changed",
+          "documentExcluded": "Excluded document {label}",
+          "documentIncluded": "Included document {label} again",
+          "pagesExcluded": "Excluded pages changed",
+          "pagesIncluded": "Re-included pages changed",
+          "noLabel": "(no label)"
+        }
+      },
+      "machine": {
+        "title": "Original",
+        "description": "The result first received, before any edit",
+        "none": "Nothing has been edited, so the current values are the original",
+        "toggle": "Show original targets",
+        "skipped": "Your edits changed while loading, so it wasn't applied. Press again to load it"
+      }
+    },
+    "stepsFallback": "None of the steps turned on in Settings are in this job, so all of its steps are shown."
+  }
+}

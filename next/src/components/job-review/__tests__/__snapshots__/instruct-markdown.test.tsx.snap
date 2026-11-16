@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InstructMarkdown > 선택된 칩과 위치 없는 칩을 그린다 1`] = `
+"<div class="min-w-0 text-sm leading-6 break-words text-foreground [&amp;_h1]:mt-4 [&amp;_h1]:mb-2 [&amp;_h1]:text-lg [&amp;_h1]:font-bold [&amp;_h2]:mt-4 [&amp;_h2]:mb-2 [&amp;_h2]:text-base [&amp;_h2]:font-bold [&amp;_h3]:mt-3 [&amp;_h3]:mb-1 [&amp;_h3]:text-base [&amp;_h3]:font-semibold [&amp;_h4]:mt-3 [&amp;_h4]:mb-1 [&amp;_h4]:font-semibold [&amp;_h5]:mt-3 [&amp;_h5]:mb-1 [&amp;_h5]:font-medium [&amp;_h6]:mt-3 [&amp;_h6]:mb-1 [&amp;_p]:my-2 [&amp;_hr]:my-3 [&amp;_hr]:border-border [&amp;_ul]:my-2 [&amp;_ul]:list-disc [&amp;_ul]:pl-5 [&amp;_ol]:my-2 [&amp;_ol]:list-decimal [&amp;_ol]:pl-5 [&amp;_li]:my-0.5 [&amp;_li&gt;p]:my-0 [&amp;_blockquote]:border-l-2 [&amp;_blockquote]:border-border [&amp;_blockquote]:pl-3 [&amp;_blockquote]:text-muted-foreground [&amp;_strong]:font-semibold [&amp;_s]:text-muted-foreground [&amp;_code]:rounded-[0.25rem] [&amp;_code]:bg-muted [&amp;_code]:px-1 [&amp;_code]:font-mono [&amp;_code]:text-xs [&amp;_pre]:my-2 [&amp;_pre]:overflow-x-auto [&amp;_pre]:rounded-md [&amp;_pre]:bg-muted [&amp;_pre]:p-3 [&amp;_pre_code]:bg-transparent [&amp;_pre_code]:p-0 [&amp;_table]:my-2 [&amp;_table]:block [&amp;_table]:overflow-x-auto [&amp;_table]:text-xs [&amp;_th]:border [&amp;_th]:border-border [&amp;_th]:bg-muted [&amp;_th]:px-2 [&amp;_th]:py-1 [&amp;_th]:text-left [&amp;_th]:font-medium [&amp;_td]:border [&amp;_td]:border-border [&amp;_td]:px-2 [&amp;_td]:py-1 [&amp;_td]:align-top [&amp;&gt;*:first-child]:mt-0 [&amp;&gt;*:last-child]:mb-0">
+<p>가<button type="button" aria-label="인용 1" aria-pressed="false" data-testid="job-review-instruct-citation" data-citation="1" class="mx-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-[0.25rem] px-1 align-baseline text-xs leading-4 font-semibold cursor-pointer bg-primary/10 text-primary hover:bg-primary/20">1</button> 나<button type="button" aria-label="인용 2" aria-pressed="true" data-testid="job-review-instruct-citation" data-citation="2" data-selected="true" class="mx-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-[0.25rem] px-1 align-baseline text-xs leading-4 font-semibold cursor-pointer bg-primary/10 text-primary hover:bg-primary/20 ring-1 ring-primary">2</button> 다<button type="button" aria-label="인용 3" aria-disabled="true" data-testid="job-review-instruct-citation" data-citation="3" class="mx-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-[0.25rem] px-1 align-baseline text-xs leading-4 font-semibold cursor-not-allowed bg-muted text-muted-foreground" data-state="closed" data-slot="tooltip-trigger">3</button>
+</p>
+</div>"
+`;
+
+exports[`InstructMarkdown > 인용 표식 두 형식·GFM 표·줄바꿈·코드·외부 링크·이미지를 그린다 1`] = `
+"<div class="min-w-0 text-sm leading-6 break-words text-foreground [&amp;_h1]:mt-4 [&amp;_h1]:mb-2 [&amp;_h1]:text-lg [&amp;_h1]:font-bold [&amp;_h2]:mt-4 [&amp;_h2]:mb-2 [&amp;_h2]:text-base [&amp;_h2]:font-bold [&amp;_h3]:mt-3 [&amp;_h3]:mb-1 [&amp;_h3]:text-base [&amp;_h3]:font-semibold [&amp;_h4]:mt-3 [&amp;_h4]:mb-1 [&amp;_h4]:font-semibold [&amp;_h5]:mt-3 [&amp;_h5]:mb-1 [&amp;_h5]:font-medium [&amp;_h6]:mt-3 [&amp;_h6]:mb-1 [&amp;_p]:my-2 [&amp;_hr]:my-3 [&amp;_hr]:border-border [&amp;_ul]:my-2 [&amp;_ul]:list-disc [&amp;_ul]:pl-5 [&amp;_ol]:my-2 [&amp;_ol]:list-decimal [&amp;_ol]:pl-5 [&amp;_li]:my-0.5 [&amp;_li&gt;p]:my-0 [&amp;_blockquote]:border-l-2 [&amp;_blockquote]:border-border [&amp;_blockquote]:pl-3 [&amp;_blockquote]:text-muted-foreground [&amp;_strong]:font-semibold [&amp;_s]:text-muted-foreground [&amp;_code]:rounded-[0.25rem] [&amp;_code]:bg-muted [&amp;_code]:px-1 [&amp;_code]:font-mono [&amp;_code]:text-xs [&amp;_pre]:my-2 [&amp;_pre]:overflow-x-auto [&amp;_pre]:rounded-md [&amp;_pre]:bg-muted [&amp;_pre]:p-3 [&amp;_pre_code]:bg-transparent [&amp;_pre_code]:p-0 [&amp;_table]:my-2 [&amp;_table]:block [&amp;_table]:overflow-x-auto [&amp;_table]:text-xs [&amp;_th]:border [&amp;_th]:border-border [&amp;_th]:bg-muted [&amp;_th]:px-2 [&amp;_th]:py-1 [&amp;_th]:text-left [&amp;_th]:font-medium [&amp;_td]:border [&amp;_td]:border-border [&amp;_td]:px-2 [&amp;_td]:py-1 [&amp;_td]:align-top [&amp;&gt;*:first-child]:mt-0 [&amp;&gt;*:last-child]:mb-0">
+<h2>요약</h2>
+<p>첫 문장입니다.<button type="button" aria-label="인용 1" aria-pressed="false" data-testid="job-review-instruct-citation" data-citation="1" class="mx-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-[0.25rem] px-1 align-baseline text-xs leading-4 font-semibold cursor-pointer bg-primary/10 text-primary hover:bg-primary/20">1</button>
+<br>
+둘째 줄은 <code>코드</code> 와 <a href="https://example.com/a" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">외부 링크</a> 를 담습니다.<button type="button" aria-label="인용 2" aria-pressed="false" data-testid="job-review-instruct-citation" data-citation="2" class="mx-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-[0.25rem] px-1 align-baseline text-xs leading-4 font-semibold cursor-pointer bg-primary/10 text-primary hover:bg-primary/20">2</button>
+</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>합계</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>
+<span class="text-muted-foreground">그림: 도장</span>
+</p>
+</div>"
+`;

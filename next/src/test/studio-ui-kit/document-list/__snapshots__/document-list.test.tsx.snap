@@ -1,0 +1,218 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DocumentList (가상, 행 > virtualizeAbove) > 루트 DOM 스냅샷 1`] = `
+"<nav aria-label="문서 목록" data-testid="dl" class="min-w-0">
+<ul role="list" style="max-height: 60vh;" class="flex flex-col overflow-y-auto" data-testid="dl-viewport">
+<li aria-hidden="true" class="shrink-0" style="height: 0px;">
+</li>
+<li role="presentation" style="height: 40px;" data-testid="dl-group-header" class="px-3 pt-2 pb-1 text-xs font-medium text-muted-foreground shrink-0 flex items-end truncate whitespace-nowrap">앞 묶음</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-1">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">1</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 1</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-2">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">2</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 2</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-3">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">3</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 3</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li role="presentation" style="height: 40px;" data-testid="dl-group-header" class="px-3 pt-2 pb-1 text-xs font-medium text-muted-foreground shrink-0 flex items-end truncate whitespace-nowrap">뒤 묶음</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-foreground bg-muted font-medium text-foreground hover:bg-muted" type="button" aria-current="true" data-testid="dl-button-select" data-document-id="doc-4">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">4</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 4</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" aria-describedby="id-1-item:doc-5-changed" data-testid="dl-button-select" data-document-id="doc-5">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">5</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 5</span>
+<span class="flex shrink-0 items-center gap-1">
+<span class="flex shrink-0 items-center text-primary" data-marker="changed" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil size-3.5" aria-hidden="true">
+<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+</path>
+<path d="m15 5 4 4">
+</path>
+</svg>
+<span class="sr-only">바뀜</span>
+</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+<span id="id-1-item:doc-5-changed" hidden="">고친 값이 있다</span>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" aria-describedby="id-1-item:doc-6-unvisited" data-testid="dl-button-select" data-document-id="doc-6">
+<span aria-hidden="true" class="absolute inset-y-0 left-0 flex w-3 items-center justify-center text-primary" data-marker="unvisited" data-state="closed" data-slot="tooltip-trigger">
+<span class="size-1.5 rounded-full bg-current">
+</span>
+</span>
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">6</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 6<span class="sr-only"> 열어 보지 않음</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+<span id="id-1-item:doc-6-unvisited" hidden="">아직 열어 보지 않은 문서</span>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-7">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">7</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 7</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-8">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">8</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 8</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-9">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">9</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 9</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li style="height: 40px;" class="shrink-0">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-full py-0 border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-10">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">10</span>
+<span class="min-w-0 flex-1 truncate whitespace-nowrap">문서 10</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+</li>
+<li aria-hidden="true" class="shrink-0" style="height: 4040px;">
+</li>
+</ul>
+</nav>"
+`;
+
+exports[`DocumentList (비가상) > 루트 DOM 스냅샷 1`] = `
+"<nav aria-label="문서 목록" data-testid="dl" class="min-w-0">
+<ul role="list" class="flex gap-1 overflow-x-auto pb-1 xl:flex-col xl:overflow-x-visible xl:pb-0">
+<li role="presentation" data-testid="dl-group-header" class="px-3 pt-2 pb-1 text-xs font-medium text-muted-foreground shrink-0 xl:shrink">1 묶음</li>
+<li class="shrink-0 xl:shrink">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-auto py-2 whitespace-normal border-l-foreground bg-muted font-medium text-foreground hover:bg-muted" type="button" aria-describedby="id-1-item:doc-1-danger id-1-item:doc-1-changed" aria-current="true" data-testid="dl-button-select" data-document-id="doc-1">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">1</span>
+<span class="min-w-0 flex-1 truncate">청구서</span>
+<span class="flex shrink-0 items-center gap-1" data-flag="danger">
+<span class="flex shrink-0 items-center text-destructive" data-marker="danger" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x lucide-x-circle size-3.5" aria-hidden="true">
+<circle cx="12" cy="12" r="10">
+</circle>
+<path d="m15 9-6 6">
+</path>
+<path d="m9 9 6 6">
+</path>
+</svg>
+<span class="sr-only">실패</span>
+</span>
+<span class="flex shrink-0 items-center text-primary" data-marker="changed" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil size-3.5" aria-hidden="true">
+<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+</path>
+<path d="m15 5 4 4">
+</path>
+</svg>
+<span class="sr-only">바뀜</span>
+</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">2쪽</span>
+</button>
+<span id="id-1-item:doc-1-danger" hidden="">검증 실패가 있다</span>
+<span id="id-1-item:doc-1-changed" hidden="">고친 값이 있다</span>
+</li>
+<li class="shrink-0 xl:shrink">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-auto py-2 whitespace-normal border-l-transparent" type="button" aria-describedby="id-1-item:doc-2-unvisited" data-testid="dl-button-select" data-document-id="doc-2">
+<span aria-hidden="true" class="absolute inset-y-0 left-0 flex w-3 items-center justify-center text-primary" data-marker="unvisited" data-state="closed" data-slot="tooltip-trigger">
+<span class="size-1.5 rounded-full bg-current">
+</span>
+</span>
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">2</span>
+<span class="min-w-0 flex-1 truncate text-muted-foreground italic">라벨 없음<span class="sr-only"> 열어 보지 않음</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">1쪽</span>
+</button>
+<span id="id-1-item:doc-2-unvisited" hidden="">아직 열어 보지 않은 문서</span>
+</li>
+<li role="presentation" data-testid="dl-group-header" class="px-3 pt-2 pb-1 text-xs font-medium text-muted-foreground shrink-0 xl:shrink">2 묶음</li>
+<li class="shrink-0 xl:shrink">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-auto py-2 whitespace-normal border-l-transparent" type="button" data-testid="dl-button-select" data-document-id="doc-3">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">7</span>
+<span class="min-w-0 flex-1 truncate">영수증</span>
+<span class="flex shrink-0 items-center gap-1" data-flag="warning">
+<span class="flex shrink-0 items-center host-warning-tone" data-marker="warning" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert lucide-alert-triangle size-3.5" aria-hidden="true">
+<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3">
+</path>
+<path d="M12 9v4">
+</path>
+<path d="M12 17h.01">
+</path>
+</svg>
+<span class="sr-only">경고</span>
+</span>
+<span class="flex shrink-0 items-center text-muted-foreground" data-marker="recheck" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-eye size-3.5" aria-hidden="true">
+<path d="M3 7V5a2 2 0 0 1 2-2h2">
+</path>
+<path d="M17 3h2a2 2 0 0 1 2 2v2">
+</path>
+<path d="M21 17v2a2 2 0 0 1-2 2h-2">
+</path>
+<path d="M7 21H5a2 2 0 0 1-2-2v-2">
+</path>
+<circle cx="12" cy="12" r="1">
+</circle>
+<path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0">
+</path>
+</svg>
+<span class="sr-only">재확인 필요</span>
+</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">3쪽</span>
+</button>
+</li>
+<li class="shrink-0 xl:shrink">
+<button data-slot="button" data-variant="ghost" data-size="default" class="group/button inline-flex shrink-0 items-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 relative w-full cursor-pointer justify-start gap-2 border-l-2 px-3 text-left focus-visible:ring-ring motion-reduce:transition-none h-auto py-2 whitespace-normal border-l-transparent opacity-60" type="button" data-testid="dl-button-select" data-document-id="doc-4">
+<span class="w-5 shrink-0 text-xs text-muted-foreground tabular-nums">4</span>
+<span class="min-w-0 flex-1 truncate">계약서</span>
+<span class="flex shrink-0 items-center gap-1">
+<span class="flex shrink-0 items-center text-muted-foreground" data-marker="excluded" data-state="closed" data-slot="tooltip-trigger">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ban size-3.5" aria-hidden="true">
+<circle cx="12" cy="12" r="10">
+</circle>
+<path d="M4.929 4.929 19.07 19.071">
+</path>
+</svg>
+<span class="sr-only">제외</span>
+</span>
+</span>
+<span class="shrink-0 text-xs text-muted-foreground tabular-nums">4쪽</span>
+</button>
+</li>
+<li class="shrink-0 xl:shrink">
+<div class="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground opacity-70">
+<span class="w-5 shrink-0">
+</span>
+<span class="min-w-0 flex-1 truncate">제외한 페이지</span>
+<span class="shrink-0 text-xs tabular-nums">5쪽</span>
+</div>
+</li>
+</ul>
+</nav>"
+`;

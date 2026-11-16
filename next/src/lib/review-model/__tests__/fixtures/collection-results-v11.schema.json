@@ -1,0 +1,424 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Job-owned collection review JSON v11",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "collection_id",
+    "configs",
+    "steps",
+    "jobs"
+  ],
+  "properties": {
+    "format": {
+      "const": "collection-results/11"
+    },
+    "collection_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "configs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "agent_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "agent_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "steps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "config_id",
+          "name",
+          "type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "config_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "description": "Read-only: labels the step's Config allows (Classify). Ignored on upload."
+          },
+          "schema": {
+            "type": "object",
+            "description": "Read-only: the JSON Schema the step's Config gives its result (field types, enums, required, descriptions); uploads are validated against it on the server. Ignored on upload."
+          }
+        }
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/job"
+      }
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object",
+      "required": [
+        "file_ref",
+        "file_id",
+        "name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "file_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^.+#(0|[1-9][0-9]*)$"
+        },
+        "file_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string"
+        },
+        "num_pages": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Read-only: page count. Ignored on upload."
+        },
+        "input_index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Read-only: position in the origin Job's input (its machine results' page space). Ignored on upload."
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "file_ref",
+        "page_ranges"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "file_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "page_ranges": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "required": [
+        "document_id",
+        "label",
+        "source_files",
+        "group_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9_-]{0,64}$"
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "source_files": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "group_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": [
+        "group_id",
+        "files",
+        "layout_step_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        },
+        "layout_step_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    },
+    "structure": {
+      "type": "object",
+      "required": [
+        "base_version",
+        "groups"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "base_version": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/group"
+          }
+        },
+        "excluded_pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "excluded_documents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "id",
+        "step_id",
+        "base_version",
+        "content"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "step_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "state": {
+          "enum": [
+            "present",
+            "stale",
+            "input_changed",
+            "unlinked",
+            "missing"
+          ]
+        },
+        "document_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "field_groups": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "job_id",
+            "occurrence_id"
+          ],
+          "properties": {
+            "job_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "occurrence_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "content": {},
+        "checks": {
+          "type": "array",
+          "description": "Read-only: the machine's per-check outcome behind a Validate verdict (absent once a person changed the verdict). Ignored on upload.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "severity": {
+                "type": "string"
+              },
+              "passed": {
+                "type": "boolean"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "job": {
+      "type": "object",
+      "required": [
+        "id",
+        "output"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "file_groups": {
+          "$ref": "#/$defs/structure"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "if": {
+              "required": [
+                "id"
+              ]
+            },
+            "then": {
+              "$ref": "#/$defs/result"
+            },
+            "else": {
+              "$ref": "#/$defs/layout"
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step_id",
+        "base_version",
+        "content"
+      ],
+      "properties": {
+        "step_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "documents"
+          ],
+          "properties": {
+            "documents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/document"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

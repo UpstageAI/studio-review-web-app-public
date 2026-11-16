@@ -1,0 +1,145 @@
+{
+  "format": "collection-results/11",
+  "collection_id": "scol_test",
+  "configs": { "cfg_1": { "agent_id": "agt_1" } },
+  "steps": {
+    "st_classify": {
+      "config_id": "cfg_1",
+      "name": "문서 분류",
+      "type": "document-classify",
+      "labels": ["invoice", "receipt", "contract"]
+    },
+    "st_extract": {
+      "config_id": "cfg_1",
+      "name": "금액 추출",
+      "type": "information-extract",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "amount": { "type": "number", "title": "Amount" },
+          "rate": { "type": "number" },
+          "scale": { "type": "number" },
+          "delta": { "type": "number" },
+          "currency": { "type": "string", "enum": ["KRW", "USD"] },
+          "invoice_no": { "type": "string", "description": "Invoice number" },
+          "paid": { "type": "boolean" },
+          "memo": { "anyOf": [{ "type": "string", "maxLength": 500 }, { "type": "null" }] },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "qty": { "type": "integer" },
+                "price": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "st_merge": {
+      "config_id": "cfg_1",
+      "name": "합계",
+      "type": "merge",
+      "schema": { "type": "object", "properties": { "total": { "type": "number" } } }
+    },
+    "st_validate": {
+      "config_id": "cfg_1",
+      "name": "금액 검증",
+      "type": "validate",
+      "schema": { "type": "string", "enum": ["green", "yellow", "red"] }
+    }
+  },
+  "jobs": [
+    {
+      "id": "job_A",
+      "file_groups": {
+        "base_version": 3,
+        "groups": [
+          {
+            "group_id": "grp_1",
+            "layout_step_id": "st_classify",
+            "files": [
+              { "file_ref": "job_A#0", "file_id": "file_1", "name": "a.pdf", "num_pages": 3, "input_index": 0 },
+              { "file_ref": "job_A#1", "file_id": "file_2", "name": "b.pdf", "num_pages": 2, "input_index": 1 }
+            ]
+          }
+        ],
+        "excluded_pages": [],
+        "excluded_documents": []
+      },
+      "output": [
+        {
+          "step_id": "st_classify",
+          "base_version": 3,
+          "content": {
+            "documents": [
+              {
+                "document_id": "doc_1",
+                "group_id": "grp_1",
+                "label": "invoice",
+                "source_files": [{ "file_ref": "job_A#0", "page_ranges": [[1, 2]] }]
+              },
+              {
+                "document_id": "doc_2",
+                "group_id": "grp_1",
+                "label": "receipt",
+                "source_files": [
+                  { "file_ref": "job_A#0", "page_ranges": [[3, 3]] },
+                  { "file_ref": "job_A#1", "page_ranges": [[1, 1]] }
+                ]
+              },
+              {
+                "document_id": "doc_3",
+                "group_id": "grp_1",
+                "label": "contract",
+                "source_files": [{ "file_ref": "job_A#1", "page_ranges": [[2, 2]] }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "occ_extract_1",
+          "step_id": "st_extract",
+          "base_version": 2,
+          "content": {
+            "amount": 12345678901234567890,
+            "rate": 0.1234567890123456789,
+            "scale": 1E2,
+            "delta": -0,
+            "currency": "USD",
+            "invoice_no": "INV-1",
+            "paid": true,
+            "memo": null,
+            "lines": [{ "qty": 2, "price": 10.5 }]
+          },
+          "document_ids": ["doc_1"]
+        },
+        {
+          "id": "occ_extract_2",
+          "step_id": "st_extract",
+          "base_version": 1,
+          "state": "input_changed",
+          "content": { "amount": 1000, "currency": "KRW" },
+          "document_ids": ["doc_2"]
+        },
+        {
+          "id": "occ_merge_1",
+          "step_id": "st_merge",
+          "base_version": 0,
+          "content": { "total": 1000.50 },
+          "field_groups": { "invoice": ["doc_1", "doc_2"] }
+        },
+        {
+          "id": "occ_validate_1",
+          "step_id": "st_validate",
+          "base_version": 0,
+          "state": "stale",
+          "content": "green",
+          "checks": [{ "name": "amount_positive", "severity": "error", "passed": true, "reason": "amount > 0" }],
+          "document_ids": ["doc_1"]
+        }
+      ]
+    }
+  ]
+}

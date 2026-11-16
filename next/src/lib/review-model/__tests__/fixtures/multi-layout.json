@@ -1,0 +1,69 @@
+{
+  "format": "collection-results/11",
+  "collection_id": "scol_test",
+  "configs": { "cfg_1": { "agent_id": null } },
+  "steps": {
+    "st_classify_a": { "config_id": "cfg_1", "name": "분류 A", "type": "document-classify", "labels": ["invoice"] },
+    "st_classify_b": { "config_id": "cfg_1", "name": "분류 B", "type": "document-classify" },
+    "st_extract": { "config_id": "cfg_1", "name": "추출", "type": "information-extract" }
+  },
+  "jobs": [
+    {
+      "id": "job_M",
+      "file_groups": {
+        "base_version": 0,
+        "groups": [
+          {
+            "group_id": "grp_a",
+            "layout_step_id": "st_classify_a",
+            "files": [{ "file_ref": "job_M#0", "file_id": "file_a", "name": "a.pdf", "num_pages": 2, "input_index": 0 }]
+          },
+          {
+            "group_id": "grp_b",
+            "layout_step_id": "st_classify_b",
+            "files": [{ "file_ref": "job_M#1", "file_id": "file_b", "name": "b.pdf", "num_pages": 1, "input_index": 1 }]
+          }
+        ],
+        "excluded_pages": [],
+        "excluded_documents": []
+      },
+      "output": [
+        {
+          "step_id": "st_classify_a",
+          "base_version": 0,
+          "content": {
+            "documents": [
+              {
+                "document_id": "doc_1",
+                "group_id": "grp_a",
+                "label": "invoice",
+                "source_files": [{ "file_ref": "job_M#0", "page_ranges": [[1, 2]] }]
+              }
+            ]
+          }
+        },
+        {
+          "step_id": "st_classify_b",
+          "base_version": 0,
+          "content": {
+            "documents": [
+              {
+                "document_id": "doc_1",
+                "group_id": "grp_b",
+                "label": "memo",
+                "source_files": [{ "file_ref": "job_M#1", "page_ranges": [[1, 1]] }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "occ_m_1",
+          "step_id": "st_extract",
+          "base_version": 0,
+          "content": { "name": "A" },
+          "document_ids": ["doc_1"]
+        }
+      ]
+    }
+  ]
+}

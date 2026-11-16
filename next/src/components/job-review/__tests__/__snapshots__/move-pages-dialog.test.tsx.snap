@@ -1,0 +1,250 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MovePagesDialog DOM > 범위 모드 기본: 대상 문서와 위치 radio 1`] = `
+"<div role="dialog" id="id-1" data-state="open" data-slot="dialog-content" class="fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl bg-popover p-4 text-sm text-popover-foreground ring-1 ring-foreground/10 duration-100 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 sm:max-w-md" data-testid="job-review-move-pages-dialog" tabindex="-1" aria-labelledby="id-2" aria-describedby="id-3" style="pointer-events: auto;">
+<div data-slot="dialog-header" class="flex flex-col gap-2">
+<h2 id="id-2" data-slot="dialog-title" class="font-heading text-base leading-none font-medium">페이지 옮기기</h2>
+<p id="id-3" data-slot="dialog-description" class="text-sm text-muted-foreground *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground">이 문서의 페이지 범위와 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.</p>
+</div>
+<form class="flex min-w-0 flex-col gap-4">
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-4" class="text-xs font-medium text-muted-foreground">시작 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-4" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-from" value="2">
+</div>
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-5" class="text-xs font-medium text-muted-foreground">끝 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-5" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-to" value="2">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-6" class="text-xs font-medium text-muted-foreground">옮길 문서</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-6" data-testid="job-review-move-pages-dialog-select-target">
+<span data-slot="select-value" style="pointer-events: none;">문서 3 (Invoice)</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="doc-b" selected="">문서 3 (Invoice)</option>
+<option value="doc-c">문서 5 ((라벨 없음))</option>
+<option value="\\u0000new">새 문서 (원본 문서 바로 뒤)</option>
+</select>
+</div>
+<fieldset class="flex min-w-0 flex-col gap-1.5">
+<legend class="mb-1.5 text-xs font-medium text-muted-foreground">위치</legend>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-end" type="radio" value="end" checked="" name="id-7">끝</label>
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-start" type="radio" value="start" name="id-7">앞</label>
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-before" type="radio" value="before" name="id-7">특정 페이지 앞</label>
+</div>
+</fieldset>
+<div data-slot="dialog-footer" class="-mx-4 -mb-4 flex flex-col-reverse gap-2 rounded-b-xl border-t bg-muted/50 p-4 sm:flex-row sm:justify-end">
+<button data-slot="button" data-variant="outline" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="button" data-testid="job-review-move-pages-dialog-button-cancel">취소</button>
+<button data-slot="button" data-variant="default" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="submit" data-testid="job-review-move-pages-dialog-button-move">옮기기</button>
+</div>
+</form>
+</div>"
+`;
+
+exports[`MovePagesDialog DOM > 범위 모드 새 문서: 라벨 select(설정 밖 기본 라벨이 앞) 1`] = `
+"<div role="dialog" id="id-1" data-state="open" data-slot="dialog-content" class="fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl bg-popover p-4 text-sm text-popover-foreground ring-1 ring-foreground/10 duration-100 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 sm:max-w-md" data-testid="job-review-move-pages-dialog" tabindex="-1" aria-labelledby="id-2" aria-describedby="id-3" style="pointer-events: auto;">
+<div data-slot="dialog-header" class="flex flex-col gap-2">
+<h2 id="id-2" data-slot="dialog-title" class="font-heading text-base leading-none font-medium">페이지 옮기기</h2>
+<p id="id-3" data-slot="dialog-description" class="text-sm text-muted-foreground *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground">이 문서의 페이지 범위와 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.</p>
+</div>
+<form class="flex min-w-0 flex-col gap-4">
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-4" class="text-xs font-medium text-muted-foreground">시작 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-4" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-from" value="2">
+</div>
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-5" class="text-xs font-medium text-muted-foreground">끝 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-5" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-to" value="2">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-6" class="text-xs font-medium text-muted-foreground">옮길 문서</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-6" data-testid="job-review-move-pages-dialog-select-target">
+<span data-slot="select-value" style="pointer-events: none;">새 문서 (원본 문서 바로 뒤)</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="doc-b">문서 3 (Invoice)</option>
+<option value="doc-c">문서 5 ((라벨 없음))</option>
+<option value="\\u0000new" selected="">새 문서 (원본 문서 바로 뒤)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-7" class="text-xs font-medium text-muted-foreground">새 문서 라벨</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-7" data-testid="job-review-move-pages-dialog-label-select">
+<span data-slot="select-value" style="pointer-events: none;">Memo</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="\\u0000none">(라벨 없음)</option>
+<option value="Memo" selected="">Memo</option>
+<option value="Invoice">Invoice</option>
+<option value="Receipt">Receipt</option>
+</select>
+</div>
+<div data-slot="dialog-footer" class="-mx-4 -mb-4 flex flex-col-reverse gap-2 rounded-b-xl border-t bg-muted/50 p-4 sm:flex-row sm:justify-end">
+<button data-slot="button" data-variant="outline" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="button" data-testid="job-review-move-pages-dialog-button-cancel">취소</button>
+<button data-slot="button" data-variant="default" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="submit" data-testid="job-review-move-pages-dialog-button-move">옮기기</button>
+</div>
+</form>
+</div>"
+`;
+
+exports[`MovePagesDialog DOM > 새 문서 라벨 자유 입력(labelChoices null) 1`] = `
+"<div role="dialog" id="id-1" data-state="open" data-slot="dialog-content" class="fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl bg-popover p-4 text-sm text-popover-foreground ring-1 ring-foreground/10 duration-100 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 sm:max-w-md" data-testid="job-review-move-pages-dialog" tabindex="-1" aria-labelledby="id-2" aria-describedby="id-3" style="pointer-events: auto;">
+<div data-slot="dialog-header" class="flex flex-col gap-2">
+<h2 id="id-2" data-slot="dialog-title" class="font-heading text-base leading-none font-medium">페이지 옮기기</h2>
+<p id="id-3" data-slot="dialog-description" class="text-sm text-muted-foreground *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground">이 문서의 페이지 범위와 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.</p>
+</div>
+<form class="flex min-w-0 flex-col gap-4">
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-4" class="text-xs font-medium text-muted-foreground">시작 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-4" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-from" value="2">
+</div>
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-5" class="text-xs font-medium text-muted-foreground">끝 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-5" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-to" value="2">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-6" class="text-xs font-medium text-muted-foreground">옮길 문서</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-6" data-testid="job-review-move-pages-dialog-select-target">
+<span data-slot="select-value" style="pointer-events: none;">새 문서 (원본 문서 바로 뒤)</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="doc-b">문서 3 (Invoice)</option>
+<option value="doc-c">문서 5 ((라벨 없음))</option>
+<option value="\\u0000new" selected="">새 문서 (원본 문서 바로 뒤)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-7" class="text-xs font-medium text-muted-foreground">새 문서 라벨</label>
+<input data-slot="input" class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40" id="id-7" maxlength="200" placeholder="(라벨 없음)" autocomplete="off" data-testid="job-review-move-pages-dialog-label-input" value="Invoice">
+</div>
+<div data-slot="dialog-footer" class="-mx-4 -mb-4 flex flex-col-reverse gap-2 rounded-b-xl border-t bg-muted/50 p-4 sm:flex-row sm:justify-end">
+<button data-slot="button" data-variant="outline" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="button" data-testid="job-review-move-pages-dialog-button-cancel">취소</button>
+<button data-slot="button" data-variant="default" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="submit" data-testid="job-review-move-pages-dialog-button-move">옮기기</button>
+</div>
+</form>
+</div>"
+`;
+
+exports[`MovePagesDialog DOM > 선택 모드: 요약 줄과 새 문서 1`] = `
+"<div role="dialog" id="id-1" data-state="open" data-slot="dialog-content" class="fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl bg-popover p-4 text-sm text-popover-foreground ring-1 ring-foreground/10 duration-100 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 sm:max-w-md" data-testid="job-review-move-pages-dialog" tabindex="-1" aria-labelledby="id-2" aria-describedby="id-3" style="pointer-events: auto;">
+<div data-slot="dialog-header" class="flex flex-col gap-2">
+<h2 id="id-2" data-slot="dialog-title" class="font-heading text-base leading-none font-medium">페이지 옮기기</h2>
+<p id="id-3" data-slot="dialog-description" class="text-sm text-muted-foreground *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground">고른 페이지를 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.</p>
+</div>
+<form class="flex min-w-0 flex-col gap-4">
+<p class="text-sm break-words" data-testid="job-review-move-pages-dialog-summary">3장 · 문서 2: 1, 3쪽 · 문서 5: 2쪽</p>
+<div class="flex flex-col gap-1.5">
+<label for="id-4" class="text-xs font-medium text-muted-foreground">옮길 문서</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-4" data-testid="job-review-move-pages-dialog-select-target">
+<span data-slot="select-value" style="pointer-events: none;">새 문서 (원본 문서 바로 뒤)</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="doc-b">문서 3 (Invoice)</option>
+<option value="doc-c">문서 5 ((라벨 없음))</option>
+<option value="\\u0000new" selected="">새 문서 (원본 문서 바로 뒤)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-5" class="text-xs font-medium text-muted-foreground">새 문서 라벨</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-5" data-testid="job-review-move-pages-dialog-label-select">
+<span data-slot="select-value" style="pointer-events: none;">Invoice</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="\\u0000none">(라벨 없음)</option>
+<option value="Invoice" selected="">Invoice</option>
+<option value="Receipt">Receipt</option>
+</select>
+</div>
+<div data-slot="dialog-footer" class="-mx-4 -mb-4 flex flex-col-reverse gap-2 rounded-b-xl border-t bg-muted/50 p-4 sm:flex-row sm:justify-end">
+<button data-slot="button" data-variant="outline" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="button" data-testid="job-review-move-pages-dialog-button-cancel">취소</button>
+<button data-slot="button" data-variant="default" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="submit" data-testid="job-review-move-pages-dialog-button-move">옮기기</button>
+</div>
+</form>
+</div>"
+`;
+
+exports[`MovePagesDialog 검사 > 오류 상태 DOM 1`] = `
+"<div role="dialog" id="id-1" data-state="open" data-slot="dialog-content" class="fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-xl bg-popover p-4 text-sm text-popover-foreground ring-1 ring-foreground/10 duration-100 outline-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 sm:max-w-md" data-testid="job-review-move-pages-dialog" tabindex="-1" aria-labelledby="id-2" aria-describedby="id-3" style="pointer-events: auto;">
+<div data-slot="dialog-header" class="flex flex-col gap-2">
+<h2 id="id-2" data-slot="dialog-title" class="font-heading text-base leading-none font-medium">페이지 옮기기</h2>
+<p id="id-3" data-slot="dialog-description" class="text-sm text-muted-foreground *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground">이 문서의 페이지 범위와 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.</p>
+</div>
+<form class="flex min-w-0 flex-col gap-4">
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-4" class="text-xs font-medium text-muted-foreground">시작 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-4" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-from" value="2" aria-invalid="true" aria-describedby="id-5">
+</div>
+<div class="flex min-w-0 flex-col gap-1.5">
+<label for="id-6" class="text-xs font-medium text-muted-foreground">끝 페이지</label>
+<input data-slot="input" class="h-8 min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 w-24 tabular-nums" id="id-6" inputmode="numeric" autocomplete="off" data-testid="job-review-move-pages-dialog-input-to" value="9" aria-invalid="true" aria-describedby="id-5">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label for="id-7" class="text-xs font-medium text-muted-foreground">옮길 문서</label>
+<button type="button" role="combobox" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-slot="select-trigger" data-size="default" class="flex items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 w-full" id="id-7" data-testid="job-review-move-pages-dialog-select-target">
+<span data-slot="select-value" style="pointer-events: none;">문서 3 (Invoice)</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down pointer-events-none size-4 text-muted-foreground" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</button>
+<select aria-hidden="true" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+<option value="doc-b" selected="">문서 3 (Invoice)</option>
+<option value="doc-c">문서 5 ((라벨 없음))</option>
+<option value="\\u0000new">새 문서 (원본 문서 바로 뒤)</option>
+</select>
+</div>
+<fieldset class="flex min-w-0 flex-col gap-1.5">
+<legend class="mb-1.5 text-xs font-medium text-muted-foreground">위치</legend>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-end" type="radio" value="end" checked="" name="id-8">끝</label>
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-start" type="radio" value="start" name="id-8">앞</label>
+<label class="flex items-center gap-1.5">
+<input class="accent-primary" data-testid="job-review-move-pages-dialog-radio-before" type="radio" value="before" name="id-8">특정 페이지 앞</label>
+</div>
+</fieldset>
+<p id="id-5" role="alert" class="text-xs text-destructive">1부터 5 사이의 범위를 적으세요.</p>
+<div data-slot="dialog-footer" class="-mx-4 -mb-4 flex flex-col-reverse gap-2 rounded-b-xl border-t bg-muted/50 p-4 sm:flex-row sm:justify-end">
+<button data-slot="button" data-variant="outline" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="button" data-testid="job-review-move-pages-dialog-button-cancel">취소</button>
+<button data-slot="button" data-variant="default" data-size="default" class="group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" type="submit" data-testid="job-review-move-pages-dialog-button-move">옮기기</button>
+</div>
+</form>
+</div>"
+`;

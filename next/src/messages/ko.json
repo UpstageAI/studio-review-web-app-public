@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "title": "Studio Review",
+    "description": "파트너사를 위한 Studio 리뷰 기능 가이드입니다."
+  },
+  "common": {
+    "leaveConfirm": {
+      "title": "이 화면을 떠날까요?",
+      "stay": "머무르기",
+      "leave": "나가기"
+    }
+  },
+  "home": {
+    "title": "Studio Review",
+    "description": "Collection 고르기 → Job 고르기 → Job 검수하기, 세 단계로 Studio 검수 흐름을 체험하는 Demo App 입니다.",
+    "cta": "시작하기",
+    "stepLabel": "{step} 단계",
+    "stepsLabel": "검수 흐름",
+    "dashboard": {
+      "label": "검수 현황",
+      "stats": {
+        "inProgress": "검수 중인 Job",
+        "done": "검수 완료한 Job",
+        "collections": "검수가 진행 중인 Collection",
+        "failed": "불러오지 못했습니다"
+      },
+      "continue": {
+        "title": "이어서 검수하기",
+        "open": "Job 열기",
+        "empty": "이 브라우저에서 연 Job 중 검수 중인 Job 이 없습니다.",
+        "emptyAction": "Collection 고르기"
+      },
+      "recent": {
+        "title": "최근 검수",
+        "hint": "이 서버를 쓰는 모든 사람의 검수 기록입니다. 이 브라우저에서 열지 않은 Job 은 ID 로 보입니다.",
+        "failed": "검수 상태를 불러오지 못해 이 브라우저에서 연 Job 만 보입니다."
+      }
+    },
+    "steps": {
+      "collections": {
+        "title": "Collection 고르기",
+        "description": "검수할 문서 Collection 을 고릅니다.",
+        "items": {
+          "0": "출처 필터로 거르고, 보일 열 고르기",
+          "1": "정렬 순서 고르기",
+          "2": "번호로 페이지 이동",
+          "3": "이름 옆 버튼으로 Collection ID 복사"
+        }
+      },
+      "detail": {
+        "title": "Job 고르기",
+        "description": "완료된 Job 중 검수할 것을 고릅니다.",
+        "items": {
+          "0": "파일명, 분량, 검수 상태, 설정 확인",
+          "1": "파일명 검색, Job ID 로 바로 열기",
+          "2": "검수 상태로 거르고 차례로 검수하기",
+          "3": "검수를 지원하지 않는 Collection 안내"
+        }
+      },
+      "job": {
+        "title": "Job 검수하기",
+        "description": "원본 페이지와 대조해 문서 구성과 값을 고치고 저장합니다.",
+        "items": {
+          "0": "페이지 이미지 위 Parse, 추출값 하이라이트",
+          "1": "문서 분리, 합치기, 옮기기, 순서, 제외, 라벨",
+          "2": "검증에 걸린 문서와 빈 값을 바로 찾기",
+          "3": "저장하고 완료로 다음 Job 까지 한 번에"
+        }
+      }
+    }
+  },
+  "appHeader": {
+    "home": "Studio Review",
+    "homeLabel": "Studio Review 처음 화면"
+  },
+  "settings": {
+    "label": "설정",
+    "language": "언어",
+    "stepsPick": "검수할 단계",
+    "stepsHint": "모든 Job 에서 켠 단계만 탭에 보입니다. Parse 와 Instruct 는 보기 전용입니다.",
+    "readOnly": "보기 전용",
+    "queue": "검수 큐",
+    "advance": "완료하면 다음 Job 열기",
+    "advanceHint": "\"차례로 검수하기\" 로 연 Job 을 완료하면 다음 Job 을 바로 엽니다.",
+    "groups": {
+      "pageEditing": "페이지 편집",
+      "advanced": "고급"
+    },
+    "groupHints": {
+      "pageEditing": "문서를 나누거나 합치고 페이지를 옮기는 기능입니다. 라벨만 확인할 때는 꺼 두면 화면이 깔끔합니다.",
+      "advanced": "검수 결과를 파일로 다루거나 저장된 변경을 되짚는 기능입니다."
+    },
+    "feature": {
+      "pageTools": "페이지 편집 도구",
+      "filmstrip": "페이지 썸네일",
+      "organizer": "페이지 정리",
+      "jsonMenu": "검수 결과 JSON",
+      "history": "변경 이력"
+    },
+    "featureHint": {
+      "pageTools": "구성 탭 툴바에 문서 경계 이동과 여기서 나누기, 앞 문서로, 뒤 문서로, 페이지 제외, 페이지 옮기기를, 작업 패널에 이 문서 제외와 새 문서로 분리를 보입니다.",
+      "filmstrip": "구성 탭에서 앞뒤 문서의 페이지를 띠로 보며 나눌 자리를 고릅니다.",
+      "organizer": "모든 문서의 페이지를 격자로 보고 여러 장을 한꺼번에 옮기거나 제외하거나 새 문서로 분리하고, 썸네일 사이 ✂ 로 문서를 나눕니다.",
+      "jsonMenu": "헤더에 JSON 메뉴를 노출해 검수 결과를 내려받거나 직접 고칠 수 있습니다.",
+      "history": "헤더에 변경 이력 버튼을 노출합니다. 이를 통해 이전에 저장한 값이나 최초 원본을 다시 불러올 수 있습니다."
+    }
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "backHome": "홈으로 돌아가기"
+  },
+  "collections": {
+    "title": "Collection",
+    "description": "검수할 Collection 을 고릅니다.",
+    "backToList": "Collection 목록",
+    "view": {
+      "label": "보기",
+      "list": "목록",
+      "lineage": "관계"
+    },
+    "lineage": {
+      "graphLabel": "Collection 관계",
+      "loading": "이어진 Collection 을 찾는 중…",
+      "loadingHint": "Collection 이 많으면 처음에는 시간이 조금 걸릴 수 있습니다.",
+      "emptyTitle": "이어진 Collection 이 아직 없습니다",
+      "emptyDescription": "Workflow 가 어떤 Collection 의 결과를 Import 하거나, 고친 결과를 새 Collection 으로 가져오면 여기에 나타납니다.",
+      "hint": "화살표는 원본 Collection 에서 그 결과로 만든 Collection 으로 이어집니다.",
+      "unrelated": "이어진 곳이 없는 Collection {count, number}개는 보이지 않습니다.",
+      "partial": "일부 Collection 을 읽지 못해 빠진 관계가 있을 수 있습니다.",
+      "partialRetry": "다시 읽기",
+      "importEdge": "Import",
+      "importEdgeTitle": "{workflows} 에서 Import",
+      "missing": "볼 수 없는 Collection",
+      "jobs": "Job {count, number}개",
+      "srSources": "원본: {names}",
+      "srResults": "이어진 곳: {names}",
+      "resultImportEdge": "결과 가져오기",
+      "unverified": "Workflow 를 볼 수 없는 등의 이유로 연결을 확인하지 못한 Collection 이 {count, number}개 있습니다."
+    },
+    "columns": {
+      "name": "이름",
+      "source": "출처",
+      "workflow": "Workflow",
+      "jobs": "Job 수",
+      "review": "검수",
+      "updated": "수정일",
+      "lastResult": "마지막 결과",
+      "menu": "열 보기 설정",
+      "menuLabel": "표시할 열"
+    },
+    "kind": {
+      "documents": "문서",
+      "table": "표"
+    },
+    "defaultBadge": "기본",
+    "defaultCollectionHint": "이 Workflow 의 실행 결과가 자동으로 쌓이는 기본 Collection 입니다.",
+    "untitled": "이름 없는 Collection",
+    "loadMore": "더 보기",
+    "loadingMore": "불러오는 중…",
+    "pagination": {
+      "label": "Collection 페이지 이동",
+      "previous": "이전",
+      "next": "다음",
+      "page": "{page} 페이지",
+      "goTo": "{page} 페이지로"
+    },
+    "source": {
+      "agent_export": "Agent Export",
+      "agent_link": "Workflow 연결",
+      "result_import": "결과 가져오기",
+      "file_upload": "파일 업로드",
+      "standalone": "Store API"
+    },
+    "sourceHint": {
+      "agent_export": "Export Node 로 생성한 Collection",
+      "agent_link": "Workflow 에 연결하여 생성한 Collection",
+      "result_import": "결과 파일을 가져와 만든 Collection",
+      "file_upload": "파일을 올려 만든 Collection",
+      "standalone": "Workflow 없이 Store API 로 직접 만든 Collection"
+    },
+    "sort": {
+      "order": "정렬 순서",
+      "newestResults": "최신 결과순",
+      "oldestResults": "오래된 결과순",
+      "scopeHint": "열 머리 정렬과 출처 필터는 이 페이지 안에서만 적용됩니다.",
+      "ariaSortBy": "{column} 기준 정렬"
+    },
+    "filter": {
+      "ariaFilterBy": "{column} 기준 필터",
+      "ariaFilterByCount": "{column} 기준 필터, {count}개 선택",
+      "all": "전체",
+      "clear": "필터 지우기"
+    },
+    "copyId": {
+      "label": "Collection ID 복사",
+      "hint": "눌러서 복사",
+      "copied": "복사했습니다",
+      "failed": "복사하지 못했습니다. 위 ID 를 직접 선택해 복사하세요."
+    },
+    "empty": {
+      "title": "Collection 이 없습니다",
+      "description": "Agent 나 Workflow 가 결과를 쓰면 여기에 나타납니다.",
+      "filteredTitle": "조건에 맞는 Collection 이 없습니다",
+      "filteredDescription": "출처 필터를 바꾸거나 지워 보세요.",
+      "pageTitle": "이 페이지에 Collection 이 없습니다",
+      "pageDescription": "이전 페이지로 돌아가 보세요."
+    },
+    "summary": {
+      "totalJobs": "전체 Job",
+      "latestConfigJobs": "최신 설정으로 실행한 Job",
+      "latestConfigs": "최신 설정 수",
+      "totalJobsHelp": "전체 Job 수 설명",
+      "totalJobsHint": "이 Collection 에 결과를 낸 모든 Job 수입니다. 이전 설정으로 실행한 Job, 같은 파일을 다시 실행한 Job, 진행 중·실패한 Job 도 포함합니다. 표에서 모두 보려면 표시 옵션에서 ‘이전 실행도 보기’ 를 켜고 ‘최신 설정 결과만 보기’ 를 끄세요(완료된 Job 만 표에 나옵니다).",
+      "latestConfigJobsHelp": "최신 설정으로 실행한 Job 수 설명",
+      "latestConfigJobsHint": "최신 설정으로 실행한 Job 수입니다. 같은 파일을 여러 번 실행했으면 모두 셉니다.",
+      "visibleRows": "표에 보이는 행 {count}",
+      "visibleRowsMore": "표에 보이는 행 {count}+"
+    },
+    "unsupported": {
+      "title": "이 Collection 은 검수를 지원하지 않습니다",
+      "description": "파일 업로드나 결과 가져오기로 만든 Collection 에는 검수할 원본 Job 이 없습니다."
+    },
+    "jobs": {
+      "title": "Job",
+      "allHistory": "이전 실행도 보기",
+      "allHistoryHintOff": "같은 파일은 가장 최근에 실행한 Job 하나만 보입니다.",
+      "allHistoryHintOn": "같은 파일을 여러 번 실행했다면 그 Job 을 모두 보입니다.",
+      "latestOnly": "최신 설정 결과만 보기",
+      "latestOnlyHintOff": "설정을 바꾸기 전에 실행한 Job 도 보입니다.",
+      "latestOnlyHintOn": "최신 설정으로 실행한 Job 만 보입니다.",
+      "latestOnlyGroupedTooltip": "\"이전 실행도 보기\" 가 꺼져 있어 같은 파일은 가장 최근에 실행한 Job 만 보입니다. 같은 파일을 바뀐 설정으로 다시 실행했다면, 이 옵션을 꺼도 그 전 설정의 Job 은 보이지 않습니다. 보려면 \"이전 실행도 보기\" 를 켜세요.",
+      "viewOptions": "표시 옵션",
+      "empty": {
+        "title": "완료된 Job 이 없습니다",
+        "description": "필터를 끄거나 검색어를 바꿔 보세요."
+      },
+      "emptySearch": {
+        "title": "\"{query}\" 와 일치하는 Job 이 없습니다",
+        "description": "검색은 입력 파일명(2 자 이상)과 비교합니다."
+      },
+      "emptyFiltered": {
+        "title": "조건에 맞는 Job 이 없습니다",
+        "description": "검수 상태 필터나 검색어를 바꿔 보세요."
+      }
+    },
+    "search": {
+      "label": "파일명 또는 Job ID 로 찾기",
+      "placeholder": "파일명 또는 job_…",
+      "hintShort": "2 자 이상 입력하면 파일명으로 거릅니다.",
+      "hintJobId": "Job ID 로 보입니다. 목록을 거르지 않고 바로 엽니다.",
+      "openJob": "바로 열기",
+      "checking": "확인 중…",
+      "jobNotFound": "이 Collection 의 완료 Job 이 아닙니다.",
+      "jobError": "Job 을 열 수 없습니다 ({code})."
+    },
+    "errors": {
+      "title": "데이터를 불러오지 못했습니다",
+      "retry": "다시 시도",
+      "code": "오류 코드: {code}",
+      "server_misconfigured": "서버에 Upstage API 키가 설정되지 않았습니다.",
+      "api_unreachable": "Upstage API 에 연결하지 못했습니다.",
+      "upstream_timeout": "Upstage API 가 제때 응답하지 않았습니다.",
+      "network_error": "이 앱의 서버에 연결하지 못했습니다.",
+      "unauthorized": "API 키가 거부되었습니다.",
+      "not_found": "찾을 수 없습니다.",
+      "generic": "문제가 발생했습니다."
+    },
+    "reviewFilter": {
+      "label": "검수 상태",
+      "all": "전체",
+      "pending": "검수 전",
+      "in_progress": "검수 중",
+      "done": "검수 완료"
+    },
+    "progress": {
+      "label": "진행 현황",
+      "done": "검수 완료 {done} / {total}",
+      "doneOnly": "검수 완료 {done}",
+      "inProgress": "검수 중 {count}",
+      "loading": "세는 중…",
+      "error": "진행 현황을 불러오지 못했습니다",
+      "basis": "전체 Job 에서 진행 중·실패한 Job 을 뺀 수가 기준입니다. 이전 설정으로 실행한 Job 과 같은 파일을 다시 실행한 Job 도 세므로, ‘차례로 검수하기’ 대상(아래 표의 기본 보기)보다 많을 수 있습니다."
+    },
+    "startReview": {
+      "button": "차례로 검수하기",
+      "checking": "확인 중…",
+      "none": "검수할 Job 이 없습니다",
+      "error": "Job 을 확인하지 못했습니다"
+    },
+    "overview": {
+      "label": "검수 현황",
+      "inProgress": "검수 중인 Job",
+      "done": "검수 완료한 Job",
+      "collections": "검수가 진행 중인 Collection",
+      "hint": "이 앱에 기록된 검수 상태를 모든 Collection 에서 셉니다. 아래 표의 \"검수\" 열은 Collection 마다의 현황입니다."
+    },
+    "reviewCell": {
+      "none": "검수 전",
+      "done": "완료 {done} / {total}",
+      "doneOnly": "완료 {done}",
+      "inProgress": "검수 중 {count}",
+      "bar": "검수 완료 비율"
+    }
+  },
+  "jobRow": {
+    "columns": {
+      "file": "파일",
+      "size": "분량",
+      "status": "상태",
+      "review": "검수",
+      "config": "설정",
+      "created": "생성",
+      "updated": "갱신"
+    },
+    "status": {
+      "in_progress": "진행 중",
+      "completed": "완료",
+      "failed": "실패",
+      "cancelled": "취소됨"
+    },
+    "moreFiles": "+{count}",
+    "filesAndPages": "파일 {files}개, {pages}페이지",
+    "filesOnly": "파일 {files}개",
+    "noFile": "(파일명 없음)",
+    "latestBadge": "최신 설정",
+    "noConfig": "—",
+    "reviewStatus": {
+      "pending": "검수 전",
+      "in_progress": "검수 중",
+      "done": "검수 완료",
+      "unknown": "—",
+      "completedAt": "{at} 완료"
+    }
+  },
+  "review": {
+    "loading": "Job 을 불러오는 중…",
+    "header": {
+      "back": "Job 목록으로",
+      "moreFiles": "외 {count}개",
+      "tray": "변경 사항",
+      "save": "저장",
+      "saving": "저장 중…",
+      "leaveConfirm": "저장하지 않은 변경이 있습니다. 이 화면을 떠나면 변경이 사라집니다. 떠날까요?",
+      "leaveConfirmSaving": "저장하는 중입니다. 지금 떠나면 저장 결과를 이 화면에서 확인할 수 없습니다. 떠날까요?",
+      "complete": "검수 완료",
+      "completeAndNext": "완료 후 다음 Job",
+      "completing": "처리 중…",
+      "reopen": "검수 중으로 되돌리기",
+      "saveAndComplete": "저장하고 완료",
+      "saveAndNext": "저장하고 다음 Job",
+      "saveShortcut": "⌘S 또는 Ctrl+S",
+      "completeShortcut": "⌘Enter 또는 Ctrl+Enter",
+      "completedNotice": "검수 완료: {name}",
+      "history": "변경 이력",
+      "historyUnavailable": {
+        "unsupported": "이 Collection 에서는 변경 이력을 제공하지 않습니다",
+        "unknown": "변경 이력 지원 여부를 확인하지 못했습니다"
+      }
+    },
+    "reviewStatus": {
+      "notice": {
+        "completed": "검수 완료로 표시했습니다",
+        "reopened": "검수 중으로 되돌렸습니다",
+        "reverted_by_save": "저장으로 검수 중 상태가 됐습니다. 확인 뒤 다시 검수 완료를 누르세요",
+        "failed": "검수 상태를 바꾸지 못했습니다"
+      }
+    },
+    "queue": {
+      "label": "검수 큐",
+      "previous": "이전 Job",
+      "next": "다음 Job",
+      "nextJob": "다음: {name}",
+      "nextMore": "+{count}",
+      "remaining": "남은 {count}개",
+      "remainingMore": "남은 {count}개+",
+      "loading": "불러오는 중…",
+      "end": "마지막 Job 입니다",
+      "refresh": "새 Job 확인",
+      "refreshHint": "목록에 새로 추가된 Job 이 있는지 다시 확인합니다. 있으면 바로 엽니다.",
+      "refreshing": "확인 중…",
+      "noNew": "새로 추가된 Job 이 없습니다",
+      "noMore": "검수할 Job 이 없습니다",
+      "loadFailed": "다음 Job 을 불러오지 못했습니다",
+      "revisitable": "새로 추가된 Job 은 없습니다. 끝내지 않은 Job {count}개는 \"이전 Job\" 으로 돌아가 검수하세요."
+    },
+    "stepTabs": {
+      "label": "Step",
+      "readOnly": "보기 전용",
+      "noLayout": "문서 구성",
+      "structureMultiLayout": "문서 배치가 둘 이상인 Job 입니다. 이 Job 의 문서 구성은 Studio 에서 고치세요.",
+      "structureNoLayout": "이 Job 에는 고칠 문서 구성이 없습니다. 값은 고칠 수 있습니다."
+    },
+    "stepTypes": {
+      "parse": "Parse",
+      "classify": "Classify",
+      "split": "Split",
+      "extract": "Extract",
+      "instruct": "Instruct",
+      "validate": "Validate",
+      "match": "Match",
+      "merge": "Merge",
+      "export": "Export"
+    },
+    "documents": {
+      "title": "문서",
+      "titleSplit": "분할된 문서",
+      "about": "이 목록 설명",
+      "aboutSplit": "Classify 가 원본 파일에서 식별해 분할한 문서입니다. 각 문서의 이름은 분류된 문서 종류(라벨)이며, 문서를 고르면 그 페이지가 뷰어에 보입니다.",
+      "aboutPlain": "이 Job 의 원본 파일에 있는 문서입니다. 문서를 고르면 그 페이지가 뷰어에 보입니다.",
+      "untitled": "(라벨 없음)",
+      "excluded": "제외한 페이지",
+      "pages": "{count}쪽",
+      "empty": "이 Job 에는 보여 줄 문서 구성이 없습니다.",
+      "summary": "문서 {count}개, 전체 {pages}쪽",
+      "summaryVisited": "열어 본 문서 {count}개",
+      "summarySeparator": ", ",
+      "filtered": "필터 {count}개",
+      "selectedHidden": "선택한 문서가 필터에 가려져 있습니다.",
+      "excludedHint": "제외한 페이지는 Classify 탭의 페이지 썸네일에서 되돌릴 수 있습니다.",
+      "excludedHintAction": "페이지 썸네일 켜기",
+      "group": "그룹 {index}",
+      "unvisited": "아직 열어 보지 않음",
+      "flag": {
+        "danger": "실패",
+        "warning": "경고"
+      },
+      "hint": {
+        "danger": "Validate 판정이 실패(red)인 문서입니다.",
+        "warning": "Validate 판정이 경고(yellow)인 문서입니다.",
+        "changed": "라벨, 페이지 구성 또는 값을 고친 문서입니다.",
+        "recheck": "페이지 구성이 바뀌어 값을 다시 확인해야 하는 문서입니다.",
+        "locked": "편집할 수 없는 문서입니다.",
+        "excluded": "제외한 문서입니다. 저장하면 이 문서의 페이지는 제외 페이지로 처리됩니다.",
+        "unvisited": "이 Job 에서 아직 열어 보지 않은 문서입니다."
+      },
+      "filter": {
+        "search": "라벨로 찾기",
+        "placeholder": "라벨 검색",
+        "status": "상태 필터",
+        "all": "전체",
+        "flagged": "실패 또는 경고",
+        "changed": "바뀜",
+        "recheck": "재확인 필요",
+        "excluded": "제외",
+        "untouched": "변경 없음",
+        "unvisited": "열어 보지 않은 문서",
+        "noMatch": "조건에 맞는 문서가 없습니다.",
+        "clear": "필터 지우기"
+      },
+      "status": {
+        "changed": "바뀜",
+        "recheck": "재확인 필요",
+        "locked": "편집 불가",
+        "excluded": "제외"
+      }
+    },
+    "pages": {
+      "position": {
+        "label": "페이지 위치",
+        "previous": "이전 페이지",
+        "next": "다음 페이지",
+        "input": "페이지 번호",
+        "total": "/ {total}",
+        "track": "페이지 이동",
+        "valueText": "{total}쪽 중 {page}쪽",
+        "marks": {
+          "changed": "바뀐 값이 있는 페이지",
+          "issue": "검증 문제가 있는 페이지",
+          "noImage": "이미지가 아직 없는 페이지"
+        }
+      }
+    },
+    "viewer": {
+      "label": "문서 뷰어",
+      "failedToLoadImage": "페이지 이미지를 불러오지 못했습니다.",
+      "pleaseTryAgain": "다시 시도해 주세요.",
+      "preparingPageImage": "페이지 이미지를 준비하는 중…",
+      "retry": "다시 시도",
+      "notReady": "일부 페이지 이미지를 아직 준비하고 있습니다.",
+      "fileFailed": "{file} 의 페이지 이미지를 불러오지 못했습니다.",
+      "noPages": "이 문서에는 보여 줄 페이지가 없습니다.",
+      "progress": "페이지 이미지 {pages}/{totalPages}, 파일 {files}/{totalFiles}",
+      "highlightsLoading": "주변 페이지의 하이라이트를 불러오는 중…",
+      "highlightsFailed": "일부 페이지의 하이라이트를 불러오지 못했습니다.",
+      "viewMode": "페이지 보기 방식",
+      "paged": "한 장씩 보기",
+      "continuous": "이어서 스크롤",
+      "filmstrip": "페이지 썸네일",
+      "filmstripShow": "페이지 썸네일 펼치기",
+      "filmstripHide": "페이지 썸네일 접기",
+      "organizerShow": "페이지 정리 열기",
+      "organizerHide": "페이지 정리 닫기",
+      "shortcuts": "PageUp, PageDown 은 앞뒤 페이지, Home, End 는 첫 페이지와 끝 페이지, Alt+↑, Alt+↓ 는 앞뒤 문서로 갑니다."
+    },
+    "panel": {
+      "title": "선택한 문서",
+      "noSelection": "문서를 고르세요.",
+      "pages": "페이지",
+      "pageRange": "{file} {from}–{to}쪽",
+      "pageSingle": "{file} {page}쪽"
+    },
+    "status": {
+      "changed": "바뀜",
+      "recheck": "재확인 필요",
+      "locked": "편집 불가"
+    },
+    "errors": {
+      "title": "이 Job 을 열지 못했습니다",
+      "retry": "다시 시도",
+      "backToJobs": "Job 목록으로",
+      "code": "오류 코드: {code}",
+      "generic": "문제가 발생했습니다.",
+      "review_target_not_found": "이 Collection 의 완료 Job 이 아닙니다.",
+      "collection_source_type_unsupported": "검수를 지원하지 않는 Collection 입니다.",
+      "collection_review_disabled": "이 Collection 은 검수가 꺼져 있습니다.",
+      "operation_capacity_exceeded": "서버가 바쁩니다. 잠시 뒤 다시 시도하세요.",
+      "artifact_unavailable": "지금은 이 Job 의 결과를 읽을 수 없습니다. 잠시 뒤 다시 시도하세요.",
+      "idempotency_key_reused": "같은 업로드가 다른 내용으로 이미 전송되었습니다.",
+      "invalid_value": "요청에 잘못된 값이 있습니다.",
+      "forbidden": "이 요청은 차단되었습니다.",
+      "package_limit_exceeded": "검수 파일이 업로드 한도보다 큽니다.",
+      "server_misconfigured": "서버에 Upstage API 키가 설정되지 않았습니다.",
+      "api_unreachable": "Upstage API 에 연결하지 못했습니다.",
+      "upstream_timeout": "Upstage API 가 제때 응답하지 않았습니다.",
+      "upstream_redirect": "Upstage API 가 예상하지 못한 redirect 로 응답했습니다.",
+      "network_error": "이 앱의 서버에 연결하지 못했습니다.",
+      "invalid_document": "검수 문서를 읽지 못했습니다.",
+      "unsupported_review_format": "지원하지 않는 검수 문서 형식입니다.",
+      "invalid_json": "검수 문서가 올바른 JSON 이 아닙니다.",
+      "json_too_large": "검수 문서가 너무 커서 열 수 없습니다.",
+      "nesting_too_deep": "검수 문서의 중첩이 너무 깊어 열 수 없습니다.",
+      "duplicate_key": "검수 문서에 중복된 키가 있습니다.",
+      "unknownCode": "저장하지 못했습니다({code}).",
+      "http_error": "서버가 예상하지 못한 응답을 보냈습니다.",
+      "invalid_response": "서버 응답을 읽지 못했습니다.",
+      "unsupported_media_type": "검수 파일을 잘못된 형식으로 보냈습니다.",
+      "review_import_not_found": "이 가져오기가 더 이상 없습니다.",
+      "base_version_conflict": "다른 검수가 먼저 반영했습니다. 다시 불러와서 고치세요.",
+      "schema_violation": "Step schema 와 맞지 않는 값이 있습니다.",
+      "mixed_file_result": "다른 파일과 결과를 함께 쓰는 파일은 옮길 수 없습니다.",
+      "review_target_mismatch": "다른 Collection 의 검수 파일입니다.",
+      "review_step_mismatch": "결과의 Step 이 바뀌었습니다. 다시 불러와서 고치세요.",
+      "review_step_unavailable": "검수 파일이 알 수 없는 Step 을 가리킵니다.",
+      "review_group_unavailable": "검수 파일이 없는 파일 그룹을 가리킵니다.",
+      "review_document_unavailable": "검수 파일이 없는 문서를 가리킵니다.",
+      "review_file_unavailable": "검수 파일이 없는 파일을 가리킵니다.",
+      "review_source_unavailable": "이 Job 은 검수할 수 없습니다.",
+      "review_limit_exceeded": "이 Job 이 검수 한도를 넘었습니다.",
+      "duplicate_review_file": "같은 파일이 두 그룹 이상에 들어 있습니다.",
+      "page_out_of_range": "파일 범위를 벗어난 페이지 범위가 있습니다.",
+      "duplicate_review_page": "한 문서에 두 번, 또는 두 문서에 함께 들어 있는 페이지가 있습니다.",
+      "page_overlap": "제외한 페이지가 문서에도 들어 있거나 두 번 제외되었습니다.",
+      "page_missing": "어느 문서에도 없고 제외되지도 않은 페이지가 있습니다.",
+      "label_not_in_config": "설정에 없는 라벨이 있습니다.",
+      "permission_revoked": "이 Job 을 고칠 권한이 없습니다.",
+      "upload_checksum_mismatch": "업로드가 손상되었습니다. 다시 저장하세요.",
+      "operation_expired": "가져오기가 만료되었습니다. 다시 저장하세요.",
+      "artifact_too_large": "결과가 너무 커서 저장할 수 없습니다.",
+      "unit_too_large": "한 번에 바꾼 것이 너무 많습니다. 나눠서 저장하세요.",
+      "invalid_import_resource": "가져오기 상태를 읽지 못했습니다.",
+      "unknown_import_status": "가져오기가 알 수 없는 상태입니다.",
+      "result_not_editable": "바꾼 결과 중 더 이상 고칠 수 없는 것이 있습니다."
+    },
+    "values": {
+      "noResults": "이 문서에 연결된 결과가 없습니다.",
+      "noStepResults": "이 문서에는 이 Step 의 결과가 없습니다.",
+      "noFields": "고칠 수 있는 값이 없습니다.",
+      "stepOrdinal": "{name} ({n})",
+      "result": "결과",
+      "resultOrdinal": "결과 {n}",
+      "resultId": "결과 ID: {id}",
+      "mergeNotice": "입력 결과가 바뀌면 저장할 때 다시 합성됩니다.",
+      "machine": "원본 값",
+      "keyTitle": "스키마 키: {key}",
+      "descriptionTitle": "스키마 설명: {text}",
+      "empty": "(빈 값)",
+      "revert": "원래 값으로",
+      "none": "(없음)",
+      "notInConfig": "{value} (설정에 없음)",
+      "true": "예",
+      "false": "아니요",
+      "nullPlaceholder": "값 없음",
+      "emptyPlaceholder": "빈 값",
+      "invalid_number": "숫자로 읽을 수 없습니다. 1234.5 처럼 쉼표 없이 입력하세요.",
+      "not_integer": "정수만 입력할 수 있습니다.",
+      "invalid_json": "JSON 값으로 읽을 수 없습니다.",
+      "not_scalar": "객체나 배열은 입력할 수 없습니다. 값 하나만 입력하세요.",
+      "responseLoading": "원본 위치를 불러오는 중…",
+      "responseFailed": "원본 위치를 불러오지 못했습니다. 하이라이트 없이 값만 고칠 수 있습니다.",
+      "filter": {
+        "label": "값 필터",
+        "changedOnly": "바뀐 값만",
+        "emptyOnly": "빈 값만",
+        "currentPageOnly": "현재 페이지 값만",
+        "hidden": "{count}개 숨김",
+        "noLocationHint": "위치 정보가 없는 값은 숨겨집니다."
+      },
+      "display": {
+        "description": "설명 보기",
+        "rules": "규칙 보기"
+      },
+      "fields": {
+        "label": "필드",
+        "menuLabel": "보일 필드",
+        "count": "{shown} / {total}",
+        "countLabel": "필드 {total}개 중 {shown}개 표시",
+        "showAll": "모두 보기",
+        "hidden": "필드 {count}개를 숨겼습니다."
+      },
+      "editErrors": {
+        "generic": "이 변경을 적용하지 못했습니다({code}).",
+        "result_missing": "이 결과를 찾을 수 없어 변경을 적용하지 못했습니다.",
+        "path_missing": "이 필드를 찾을 수 없어 변경을 적용하지 못했습니다.",
+        "result_not_editable": "편집할 수 없는 결과입니다.",
+        "path_exists": "이미 있는 필드입니다.",
+        "index_out_of_range": "그 위치로 옮길 수 없습니다.",
+        "depends_on_reverted": "되돌린 변경에 기대던 변경이라 함께 되돌렸습니다."
+      },
+      "tree": {
+        "rootArray": "값 목록",
+        "addItem": "항목 추가",
+        "addField": "필드 추가 ({count})",
+        "maxItems": "최대 {max}개까지 넣을 수 있습니다",
+        "emptyArray": "항목이 없습니다.",
+        "clearValue": "비우기(값 없음)",
+        "removeField": "필드 삭제",
+        "moveUp": "위로",
+        "moveDown": "아래로",
+        "removeItem": "항목 삭제",
+        "removeItemMin": "항목 삭제(최소 {min}개)",
+        "menu": "{field} 메뉴",
+        "resultMenu": "{name} 메뉴",
+        "editJson": "JSON 으로 편집",
+        "history": "이 결과의 변경 이력",
+        "showMore": "더 보기 ({count}개 남음)",
+        "itemNumber": "번호",
+        "itemActions": "항목 조작",
+        "original": "원본 값: {value}",
+        "revertCell": "{field} 원래 값으로",
+        "addCellField": "{field} 추가"
+      },
+      "longText": {
+        "summary": "긴 텍스트 ({size}, {count, number}자)",
+        "hint": "너무 길어 여기서는 고칠 수 없습니다. \"JSON 으로 편집\" 으로 고치세요."
+      },
+      "schema": {
+        "type": "값의 형식이 schema 와 맞지 않습니다(필요: {expected}).",
+        "enum": "허용된 값이 아닙니다.",
+        "required": "필수 필드가 없습니다: {missing}",
+        "known_key": "schema 에 없는 필드입니다.",
+        "min_items": "항목이 {limit}개 이상이어야 합니다(지금 {count}개).",
+        "max_items": "항목은 {limit}개까지입니다(지금 {count}개).",
+        "min_length": "글자 수가 {limit}자 이상이어야 합니다(지금 {count}자).",
+        "max_length": "글자 수는 {limit}자까지입니다(지금 {count}자)."
+      },
+      "jsonDialog": {
+        "title": "{name} 값을 JSON 으로 편집",
+        "description": "결과 값 전체를 JSON 으로 고칩니다. 적용하면 변경 사항에 “전체 값 교체” 항목 하나가 쌓입니다.",
+        "editor": "결과 값 JSON",
+        "jumpToError": "오류 위치로",
+        "apply": "적용",
+        "cancel": "취소",
+        "unchanged": "바뀐 내용이 없습니다.",
+        "invalidJson": "JSON 으로 읽을 수 없습니다.",
+        "invalidJsonAt": "{line}번째 줄 {column}번째 칸에서 JSON 으로 읽을 수 없습니다.",
+        "duplicateKey": "같은 키가 두 번 있습니다: {key}",
+        "tooDeep": "너무 깊게 중첩되어 있습니다.",
+        "tooLarge": "JSON 이 너무 큽니다.",
+        "schemaProblem": "결과 값의 모양이 schema 와 맞지 않습니다(필요: {expected})."
+      },
+      "unlinked": "연결된 문서 없음 ({count})",
+      "unlinkedHint": "이 Job 의 어느 문서에도 연결되지 않은 결과입니다."
+    },
+    "parse": {
+      "summary": "{name}, 요소 {count}, {pages}쪽",
+      "page": "{page}쪽",
+      "item": "요소 {n}",
+      "loadMore": "더 보기",
+      "empty": "이 문서의 페이지에 Parse 요소가 없습니다.",
+      "noSpace": "위치 정보를 준비하는 중입니다.",
+      "image": "그림",
+      "imageLocate": "이 그림의 위치 보기",
+      "currentPageOnly": "현재 페이지만",
+      "summaryPage": "{name}, {page}쪽, 요소 {count}",
+      "emptyPage": "이 페이지에는 Parse 요소가 없습니다.",
+      "tableShowSource": "원문 보기",
+      "tableShowTable": "표로 보기",
+      "tableRegion": "표",
+      "tableImage": "(이미지: {alt})"
+    },
+    "instruct": {
+      "decision": "결정",
+      "unclassified": "미분류",
+      "citation": "인용 {n}",
+      "noLocation": "위치 정보 없음",
+      "rawJson": "원본 JSON 보기",
+      "noRangeMatch": "이 문서 범위의 출력이 없어 전체를 보입니다.",
+      "noSpace": "페이지 위치를 아직 몰라 출력을 모두 보이고, 인용 위치로 갈 수 없습니다.",
+      "outputHeading": "출력 {n}",
+      "pages": "{ranges}쪽",
+      "empty": "이 출력에는 본문이 없습니다.",
+      "image": "(이미지: {alt})",
+      "readOnly": "Instruct 출력은 보기만 할 수 있습니다.",
+      "structured": {
+        "nullValue": "없음",
+        "emptyText": "(비어 있음)",
+        "emptyList": "항목 없음",
+        "emptyObject": "필드 없음"
+      }
+    },
+    "chips": {
+      "changed": "바뀜",
+      "changedCount": "바뀜 {count}",
+      "recheck": "재확인 필요",
+      "staleReason": "판정이 읽은 값이 바뀌었습니다",
+      "locked": "편집 불가",
+      "lock": {
+        "input_changed": "페이지 구성이 바뀌어 값을 고칠 수 없습니다",
+        "unlinked": "연결된 문서가 없습니다",
+        "missing": "값이 없는 결과입니다",
+        "unsupported_state": "이 상태의 결과는 고칠 수 없습니다",
+        "structure_changed": "구성이 바뀐 문서입니다. 저장한 뒤 값을 다시 확인하세요"
+      }
+    },
+    "verdict": {
+      "group": "판정",
+      "green": "green",
+      "yellow": "yellow",
+      "red": "red",
+      "checks": "원본 판정 근거",
+      "passed": "통과",
+      "failed": "실패",
+      "checksNotice": "판정을 고치면 아래 원본 판정 근거는 저장할 때 지워집니다.",
+      "changedNotice": "판정을 고쳤습니다. 원본 판정 근거는 저장할 때 지워집니다."
+    },
+    "validateRules": {
+      "empty": "이 Job 응답에 이 Step 의 규칙이 없습니다.",
+      "severity": {
+        "error": "오류 → red",
+        "warning": "경고 → yellow"
+      },
+      "logic": {
+        "and": "모두 만족",
+        "or": "하나 이상 만족"
+      },
+      "operator": {
+        "filled": "<left></left> 값 있음",
+        "empty": "<left></left> 비어 있음",
+        "contains": "<left></left> 에 <right></right> 포함",
+        "matches": "<left></left> 가 패턴 <right></right> 와 일치"
+      },
+      "agg": {
+        "sum": "<target></target> 합계",
+        "count": "<target></target> 개수",
+        "min": "<target></target> 최솟값",
+        "max": "<target></target> 최댓값"
+      },
+      "attr": {
+        "confidence": "<target></target> 신뢰도",
+        "length": "<target></target> 길이"
+      },
+      "scope": {
+        "all": "모든 <target></target>",
+        "any": "하나 이상의 <target></target>"
+      }
+    },
+    "validationSummary": {
+      "label": "검증 결과",
+      "open": "판정 보기",
+      "verdict": {
+        "red": "실패",
+        "yellow": "경고"
+      }
+    },
+    "filmstrip": {
+      "region": "문서 구성",
+      "document": "문서 {index}",
+      "untitled": "(라벨 없음)",
+      "label": "문서 라벨",
+      "noLabel": "(라벨 없음)",
+      "notInConfigOption": "{label} (설정에 없음)",
+      "notInConfigBadge": "설정에 없음",
+      "notInConfigHint": "설정에 없는 라벨입니다. 그대로 저장할 수 있습니다.",
+      "pageCount": "{count}쪽",
+      "page": "{page}p",
+      "pageInFile": "{page}p ({file})",
+      "noImage": "이미지 없음",
+      "pageMenu": "{page} 메뉴",
+      "moveLeft": "왼쪽으로",
+      "moveRight": "오른쪽으로",
+      "moveToDocument": "다른 문서로 옮기기",
+      "documentOption": "문서 {index} ({label})",
+      "noOtherDocument": "같은 파일 그룹에 다른 문서가 없습니다",
+      "excludePage": "이 페이지 제외",
+      "restorePage": "문서로 되돌리기",
+      "split": "{page} 뒤에서 나누기",
+      "documentMenu": "문서 {index} 메뉴",
+      "dragDocument": "끌어서 순서를 바꾸거나 다른 문서에 놓아 합칩니다",
+      "mergeWithPrevious": "앞 문서와 합치기",
+      "moveDocumentEarlier": "앞으로",
+      "moveDocumentLater": "뒤로",
+      "excluded": "제외",
+      "excludedEmpty": "페이지를 여기로 끌면 제외됩니다.",
+      "unplaced": "빠진 페이지",
+      "missing": "어느 문서에도 없고 제외되지도 않은 페이지입니다.",
+      "overlap": "두 곳 이상에 들어 있는 페이지입니다.",
+      "dropRejected": "페이지는 같은 파일 그룹 안에서만 옮길 수 있습니다.",
+      "dropRejectedLocked": "잠긴 문서에는 놓을 수 없습니다.",
+      "groupBoundary": "파일 그룹 경계",
+      "excludeDocument": "이 문서 제외",
+      "restoreDocument": "이 문서 복귀",
+      "excludedDocument": "제외됨",
+      "restoreToNewDocument": "새 문서로",
+      "unplacedMenu": "빠진 {page} 메뉴",
+      "collapsedPages": "…{count}쪽",
+      "focusDocument": "문서 {index} 펼치기",
+      "hiddenBefore": "앞 문서 {count}개",
+      "hiddenAfter": "뒤 문서 {count}개",
+      "expand": "펼치기",
+      "collapse": "접기",
+      "moveDocumentTo": "위치 지정…"
+    },
+    "organizer": {
+      "title": "페이지 정리",
+      "region": "페이지 썸네일 격자",
+      "size": "썸네일 크기",
+      "sizeSmall": "작은 썸네일",
+      "sizeMedium": "큰 썸네일",
+      "done": "완료",
+      "dragCount": "{count}장",
+      "dragging": "{count}장을 함께 옮기는 중",
+      "moveEarlier": "앞으로",
+      "moveLater": "뒤로",
+      "splitBefore": "{page} 앞에서 나누기",
+      "selection": {
+        "label": "선택한 페이지 조작",
+        "hint": "썸네일을 끌어 옮깁니다. ⌘/Ctrl+클릭이나 Shift+클릭으로 여러 장을 골라 한 번에 옮기거나 제외하거나 새 문서로 분리할 수 있습니다.",
+        "count": "{count}장 선택",
+        "move": "다른 문서로 옮기기…",
+        "exclude": "제외",
+        "newDocument": "새 문서로 분리…",
+        "split": "여기서 나누기",
+        "clear": "선택 해제",
+        "mixedGroups": "같은 파일 그룹의 페이지만 함께 옮길 수 있습니다.",
+        "summary": "{count}장 ({documents})",
+        "summaryDocument": "문서 {index}: {pages}쪽",
+        "dialogDescription": "고른 페이지를 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다."
+      }
+    },
+    "structure": {
+      "label": "라벨",
+      "noLabel": "(라벨 없음)",
+      "notInConfigOption": "{label} (설정에 없음)",
+      "notInConfig": "설정에 없는 라벨입니다. 그대로 저장할 수 있습니다.",
+      "recheck": "구성이 바뀐 문서입니다. 저장한 뒤 값을 다시 확인하세요.",
+      "coverageUnknown": "페이지 수를 모르는 파일이 있어 빠진 페이지를 확인할 수 없습니다.",
+      "errors": {
+        "generic": "이 변경을 적용하지 못했습니다({code}).",
+        "document_missing": "그 문서가 더 이상 없습니다.",
+        "page_not_in_document": "그 페이지가 더 이상 문서에 없습니다.",
+        "result_missing": "결과를 찾지 못해 변경을 적용하지 못했습니다.",
+        "path_missing": "필드를 찾지 못해 변경을 적용하지 못했습니다.",
+        "result_not_editable": "이 결과는 고칠 수 없습니다.",
+        "group_mismatch": "페이지는 같은 파일 그룹 안에서만 옮길 수 있습니다.",
+        "target_missing": "옮길 자리를 찾지 못했습니다.",
+        "already_excluded": "이미 제외된 페이지입니다.",
+        "multi_layout_unsupported": "이 Job 의 문서 구성은 Studio 에서 고치세요.",
+        "index_out_of_range": "더 옮길 수 없습니다.",
+        "invalid_document_id": "새 문서를 만들지 못했습니다. 다시 시도하세요.",
+        "path_exists": "이미 있는 필드입니다.",
+        "depends_on_reverted": "되돌린 변경에 기대던 변경이라 함께 되돌렸습니다.",
+        "invalid_page_ranges": "페이지 범위를 확인하세요. 페이지는 1부터이고, 시작이 끝보다 클 수 없으며, 파일은 이 파일 그룹에 있어야 합니다.",
+        "mixed_file_document": "이 파일과 다른 파일을 함께 쓰는 문서가 있어 파일을 통째로 옮길 수 없습니다. 그 문서의 페이지 범위를 먼저 고치세요."
+      },
+      "pageRanges": {
+        "title": "페이지 범위",
+        "file": "{row}번째 범위의 파일",
+        "range": "{row}번째 범위의 페이지",
+        "placeholder": "1-3, 5",
+        "removeRow": "{row}번째 범위 삭제",
+        "addRow": "+ 파일 범위 추가",
+        "invalid": "범위를 읽을 수 없습니다. \"1-3, 5\" 처럼 적으세요."
+      },
+      "excludeDocument": "이 문서 제외",
+      "restoreDocument": "이 문서 복귀",
+      "excludedNotice": "제외한 문서입니다. 저장하면 이 문서의 페이지는 제외 페이지로 처리됩니다.",
+      "newDocument": {
+        "open": "새 문서로 분리…",
+        "title": "새 문서로 분리",
+        "description": "지정한 페이지는 지금 속한 문서(또는 제외 목록)에서 분리되어 새 문서가 됩니다. 라벨을 고르세요. 새 문서는 선택한 문서 바로 뒤에 들어갑니다.",
+        "hint": "파일과 페이지 범위를 지정해 그 페이지를 지금 문서에서 분리하고, 라벨을 정한 새 문서로 만듭니다.",
+        "invalidRanges": "\"1-3, 5\" 처럼 읽을 수 있는 페이지 범위를 적으세요.",
+        "cancel": "취소",
+        "create": "만들기"
+      },
+      "documentPosition": {
+        "title": "문서 위치 지정",
+        "description": "문서 {index}의 새 위치를 같은 파일 그룹 안 {first}–{last} 사이로 적으세요.",
+        "position": "위치",
+        "invalid": "{first}부터 {last} 사이의 숫자를 적으세요.",
+        "cancel": "취소",
+        "move": "옮기기"
+      },
+      "toolbar": {
+        "label": "문서 경계와 페이지 조작",
+        "previousEnd": "◀ 문서 {index} 끝 ({page}p)",
+        "nextStart": "문서 {index} 시작 ({page}p) ▶",
+        "noPrevious": "◀ 첫 문서",
+        "noNext": "마지막 문서 ▶",
+        "current": "문서 {index} ({label}), {page}/{total}쪽",
+        "splitHere": "여기서 나누기 ✂",
+        "toPrevious": "앞 문서로",
+        "toNext": "뒤 문서로",
+        "excludePage": "페이지 제외",
+        "movePages": "페이지 옮기기…",
+        "noPreviousDocument": "앞에 문서가 없습니다",
+        "noNextDocument": "뒤에 문서가 없습니다",
+        "previousOtherGroup": "앞 문서는 다른 파일 그룹이라 보낼 수 없습니다",
+        "nextOtherGroup": "뒤 문서는 다른 파일 그룹이라 보낼 수 없습니다",
+        "splitHereHint": "보던 쪽부터 문서 끝까지를 같은 라벨의 새 문서로 나눕니다. 일부 쪽만 분리하거나 라벨을 바꾸려면 \"페이지 옮기기…\" 를 쓰세요.",
+        "movePagesHint": "시작·끝 쪽을 골라 같은 파일 그룹의 다른 문서로 옮기거나, 라벨을 정한 새 문서로 분리합니다."
+      },
+      "movePages": {
+        "title": "페이지 옮기기",
+        "description": "이 문서의 페이지 범위와 옮길 곳을 고르세요. 새 문서를 고르면 라벨을 정해 분리합니다.",
+        "from": "시작 페이지",
+        "to": "끝 페이지",
+        "target": "옮길 문서",
+        "position": "위치",
+        "end": "끝",
+        "start": "앞",
+        "before": "특정 페이지 앞",
+        "beforePage": "옮길 문서 안 순번 (1–{max})",
+        "invalidRange": "1부터 {total} 사이의 범위를 적으세요.",
+        "invalidBefore": "1부터 {total} 사이의 페이지를 적으세요.",
+        "newDocument": "새 문서 (원본 문서 바로 뒤)",
+        "newDocumentLabel": "새 문서 라벨",
+        "onlyNewDocument": "같은 파일 그룹에 다른 문서가 없어 새 문서로 분리합니다.",
+        "cancel": "취소",
+        "move": "옮기기"
+      },
+      "fileGroups": {
+        "title": "파일 그룹",
+        "group": "그룹 {index}",
+        "currentGroup": "(선택한 문서)",
+        "move": "옮기기",
+        "moveMenu": "{file} 옮기기",
+        "moveToGroup": "그룹 {index}(으)로 옮기기",
+        "moveToNewGroup": "새 그룹으로 분리",
+        "reasons": {
+          "layoutMismatch": "문서 분류 Step 이 다른 그룹입니다.",
+          "singleFile": "그룹에 이 파일 하나뿐입니다."
+        }
+      }
+    },
+    "issues": {
+      "title": "저장 전 검증",
+      "ok": "저장을 막는 문제가 없습니다.",
+      "hint": "고칠 때마다 문서 구성과 값을 자동으로 검사합니다. 빨간 항목이 있으면 저장할 수 없습니다.",
+      "blockingSummary": "저장을 막는 문제가 {count}가지 있습니다.",
+      "blocking": "저장을 막는 문제:",
+      "notBlocking": "알림, 저장은 됩니다:",
+      "other": "{code}: {count}건",
+      "page_missing": "어느 문서에도 없고 제외되지도 않은 페이지 {count}쪽",
+      "duplicate_review_page": "문서에 두 번 이상 들어 있는 페이지 {count}쪽",
+      "page_overlap": "제외했는데 문서에도 있거나 두 번 제외된 페이지 {count}쪽",
+      "page_out_of_range": "파일 범위를 벗어난 페이지 범위 {count}개",
+      "label_not_in_config": "설정에 없는 라벨 {count}개(그대로 저장할 수 있습니다)",
+      "review_file_unavailable": "이 Job 에 없는 파일 참조 {count}개",
+      "review_group_unavailable": "없는 파일 그룹을 가리키는 문서 {count}개",
+      "review_document_unavailable": "문서 목록에 없는 제외 문서 {count}개",
+      "review_step_unavailable": "없거나 Classify 가 아닌 Step 을 가리키는 파일 그룹 {count}개",
+      "duplicate_review_file": "두 그룹 이상에 들어 있는 파일 {count}개",
+      "review_limit_exceeded": "이 Job 이 검수 한도를 넘었습니다",
+      "schema_violation": "schema 와 맞지 않는 값 {count}개",
+      "result_not_editable": "더 이상 고칠 수 없는 바뀐 결과 {count}개",
+      "package_limit_exceeded": "검수 파일이 업로드 한도보다 큽니다"
+    },
+    "save": {
+      "short": {
+        "saving": "저장 중…",
+        "reloading": "다시 불러오는 중…",
+        "savedRevision": "저장 버전 {revision}",
+        "savedNoRevision": "저장됨",
+        "reloadFailed": "저장됨, 다시 불러오지 못함",
+        "noChange": "바뀐 내용 없음",
+        "conflict": "충돌, 다시 불러오기 필요",
+        "failed": "저장하지 못함"
+      },
+      "uploading": "검수 파일을 올리는 중…",
+      "polling": "변경이 반영되기를 기다리는 중…",
+      "reloadingAfterSave": "저장했습니다. 최신 상태를 다시 불러오는 중…",
+      "reloading": "최신 상태를 다시 불러오는 중…",
+      "saved": "저장됨 (revision {revision})",
+      "savedNoRevision": "저장됨",
+      "savedPartial": "{saved}. 일부 변경만 반영됐습니다. 다시 불러온 값을 확인하고 다시 고치세요.",
+      "savedReloadFailed": "{saved}. 최신 상태를 다시 불러오지 못했습니다. 이어서 고치기 전에 다시 불러오세요.",
+      "reloaded": "최신 상태를 불러왔습니다.",
+      "noChange": "바뀐 내용이 없습니다.",
+      "blocked": "“저장 전 검증” 의 문제를 고친 뒤 다시 저장하세요.",
+      "tooLarge": "검수 파일({size})이 업로드 한도 {limit}보다 큽니다. 변경을 나눠 저장하세요.",
+      "conflict": "다른 검수가 먼저 반영했습니다(충돌 {count}건). 다시 불러와서 고치세요.",
+      "conflictHint": "다시 저장해도 같은 충돌이 납니다. 먼저 다시 불러온 뒤 저장하세요.",
+      "conflictResult": "다른 검수가 이 결과를 먼저 바꿨습니다. 다시 불러와서 고치세요.",
+      "conflictStructure": "다른 검수가 문서 구성을 먼저 바꿨습니다. 다시 불러와서 고치세요.",
+      "failedField": "값 패널에 해당 필드를 표시했습니다.",
+      "stopped": {
+        "timeout": "10 분 안에 반영이 끝나지 않았습니다. 나중에 이 가져오기를 확인하세요.",
+        "cancelled": "가져오기가 취소되어 저장되지 않았습니다.",
+        "unreachable": "반영됐는지 확인하지 못했습니다. 같은 내용으로 다시 저장하면 이어서 확인합니다."
+      },
+      "reload": "다시 불러오기",
+      "reloadConfirm": "다시 불러오면 저장하지 않은 변경이 사라집니다. 계속할까요?",
+      "reloadConfirmTitle": "최신 상태를 다시 불러올까요?",
+      "reloadConfirmAction": "다시 불러오기",
+      "alsoReverted": "이 항목에 기대던 {count}개 항목이 함께 되돌려졌습니다.",
+      "imported": "{count, plural, =0 {JSON 의 값이 지금 값과 같아 추가한 변경 항목이 없습니다.} other {JSON 에서 변경 항목 #개를 추가했습니다.}}",
+      "restored": "{count, plural, =0 {브라우저에 임시 저장된 변경이 이미 모두 반영되어 있어 추가한 항목이 없습니다.} other {브라우저에 임시 저장된 변경 #개를 복원했습니다.}}",
+      "importId": "가져오기 {id}",
+      "code": "코드 {code}"
+    },
+    "draft": {
+      "found": "저장하지 않은 변경 {count}개가 있습니다 ({savedAt}).",
+      "foundHint": "편집을 시작하면 이전 임시 저장은 버려집니다.",
+      "restore": "복원",
+      "discard": "버리기",
+      "incompatible": "서버 내용이 바뀌어 복원할 수 없습니다.",
+      "restoreFailed": "{index}번째 변경을 적용할 수 없어 복원하지 못했습니다. {detail}",
+      "tooLarge": "변경 사항이 너무 커서 브라우저에 임시 저장하지 못했습니다. 곧 저장하세요.",
+      "storageFull": "브라우저 저장소가 가득 차 임시 저장하지 못했습니다. 이 탭을 떠나기 전에 저장하세요."
+    },
+    "tray": {
+      "title": "변경 사항",
+      "description": "변경을 하나씩 확인하고 원하지 않는 것은 되돌린 뒤 저장하세요.",
+      "close": "닫기",
+      "changes": "{count, plural, =0 {변경 없음} other {변경 #개}}",
+      "emptyTitle": "아직 바뀐 것이 없습니다",
+      "hint": {
+        "structure": "Classify 탭: 페이지를 끌어 순서를 바꾸고, 문서를 나누거나 합치고, 페이지를 제외하고, 라벨을 고칩니다.",
+        "values": "Extract, Validate 같은 값 탭: 필드를 고르면 원본의 위치가 보이고, 그 자리에서 값을 고칩니다. Parse, Instruct 탭은 보기 전용입니다.",
+        "save": "모든 변경이 여기에 쌓입니다. 필요 없는 것은 되돌리고 Job 전체를 한 번에 저장합니다."
+      },
+      "noDocument": "연결된 문서 없음",
+      "emptyValue": "(빈 값)",
+      "nullValue": "(없음)",
+      "revert": "되돌리기",
+      "revertItem": "되돌리기: {text}",
+      "revertAll": "모두 되돌리기",
+      "revertAllCancel": "취소",
+      "revertAllConfirmTitle": "변경 사항 {count}개를 모두 되돌릴까요?",
+      "revertAllConfirmBody": "저장하지 않은 수정이 모두 사라집니다.",
+      "revertAllDone": "변경 사항 {count}개를 모두 되돌렸습니다.",
+      "conflict": "충돌",
+      "items": {
+        "setValue": "{step} › {field}: {before} → {after}",
+        "setValueNoStep": "{field}: {before} → {after}",
+        "setLabel": "라벨: {before} → {after}",
+        "reorderPages": "{pages}쪽을 {to}번째로 옮김",
+        "reorderDocuments": "{document}: {before}번째에서 {after}번째로 옮김",
+        "split": "{document}: {page}쪽 뒤에서 분리",
+        "merge": "{other} 문서를 {document}에 합침",
+        "movePages": "{pages}쪽을 {other} 문서로 옮김",
+        "excludePages": "{pages}쪽 제외",
+        "restorePages": "페이지 {count}개를 {document} 문서로 되돌림",
+        "replaceSubtree": "{target}: 값 교체 ({before} → {after})",
+        "replaceAll": "{step}: 전체 값 교체",
+        "insertItem": "{target}: {index}번째 항목 추가",
+        "removeItem": "{target}: {index}번째 항목 삭제 ({before})",
+        "moveItem": "{target}: {from}번째 항목을 {to}번째로 옮김",
+        "setKey": "{target}: 필드 추가",
+        "removeKey": "{target}: 필드 삭제 ({before})",
+        "restoreToNewDocument": "제외 페이지 {count}개로 새 문서를 만듦",
+        "setPageRanges": "페이지 범위: {before} → {after}",
+        "setPageRangesMoved": "페이지 범위: {before} → {after} (가져옴: {moved})",
+        "addDocument": "새 문서 {document}: {ranges}",
+        "addDocumentMoved": "새 문서 {document}: {ranges} (가져옴: {moved})",
+        "excludeDocument": "{document} 문서 제외",
+        "restoreDocument": "{document} 문서 복귀",
+        "moveFile": "{file} 파일을 옮김 → 파일 그룹 {group}",
+        "moveFileNewGroup": "{file} 파일을 새 파일 그룹으로 분리",
+        "replaceStructure": "문서 구성 JSON 교체 (문서 {documents}개, 제외 문서 {excludedDocuments}개, 제외 페이지 {excludedPages}쪽)",
+        "replaceStructureChanged": "문서 구성 JSON 교체 (문서 {documents}개, 제외 문서 {excludedDocuments}개, 제외 페이지 {excludedPages}쪽). 바뀐 것: {summary}{shown, plural, =0 {} other {. {examples}}}{more, plural, =0 {} other { 외 #개}}",
+        "batchMovePages": "문서 {documents}개의 {count}장을 {other} 문서로 옮김 ({sources})",
+        "batchExcludePages": "문서 {documents}개의 {count}장 제외 ({sources})",
+        "batchNewDocument": "문서 {documents}개의 {count}장으로 새 문서를 만듦 ({sources})"
+      },
+      "fragments": {
+        "arrayIndex": "{index}번째",
+        "movedFrom": "{document} 문서에서 {count}쪽",
+        "movedFromRemoved": "{document} 문서에서 {count}쪽(문서 없어짐)",
+        "movedFromExcluded": "제외 페이지 {count}쪽",
+        "structureLabels": "라벨 {count}개",
+        "structureRanges": "페이지 범위 {count}개",
+        "structureAdded": "추가 {count}개",
+        "structureRemoved": "삭제 {count}개",
+        "structureReordered": "순서 {count}개",
+        "structureGroups": "파일 그룹 설정",
+        "structureLabelChange": "{before} → {after} (문서 {position})",
+        "structureDocument": "{document} (문서 {position})"
+      },
+      "summary": {
+        "title": "저장 전 검증",
+        "passed": "통과:",
+        "failed": "문제:",
+        "missingOk": "빠진 페이지 없음",
+        "overlapOk": "겹친 페이지 없음",
+        "valuesOk": "바꾼 값이 schema 와 맞음",
+        "limitOk": "업로드 한도 이내",
+        "size": "({size} / {limit})",
+        "coverageUnknown": "페이지 수를 모르는 파일이 있어 빠진 페이지를 확인할 수 없습니다."
+      },
+      "advanced": "고급: 업로드 본문(JSON, {size})",
+      "save": "저장",
+      "saving": "저장 중…",
+      "blockedHint": "위 문제를 고쳐야 저장할 수 있습니다.",
+      "structureGroup": "문서 구성",
+      "origin": {
+        "revision": "이력 v{version, number}에서 불러옴",
+        "original": "최초 원본에서 불러옴"
+      }
+    },
+    "json": {
+      "menu": "JSON",
+      "menuLabel": "검수 결과 JSON",
+      "menuTitle": "검수 결과 JSON",
+      "menuDescription": "이 Job 의 검수 결과(문서 구성과 값)를 JSON 파일로 내려받거나 직접 고칩니다.",
+      "downloadOriginal": "원본 다운로드",
+      "downloadOriginalHint": "이 화면을 열 때 불러온 결과입니다.",
+      "downloadEdited": "현재 편집본 다운로드",
+      "downloadEditedHint": "저장하기 전 고친 내용까지 반영한 결과입니다.",
+      "edit": "직접 편집…",
+      "editHint": "결과 전체를 JSON 으로 보며 고칩니다.",
+      "importFile": "파일에서 가져오기…",
+      "importFileHint": "JSON 파일을 편집기로 불러와 검사한 뒤 적용합니다.",
+      "title": "전체 JSON 편집",
+      "description": "검수 JSON 전체를 고치거나 파일에서 불러옵니다. 검사한 뒤 적용하면 바뀐 점이 변경 사항 항목으로 쌓이고, 저장은 따로 합니다.",
+      "editor": "검수 JSON",
+      "jumpToError": "오류 위치로",
+      "pickFile": "파일 선택",
+      "loadEdited": "현재 편집본 불러오기",
+      "loadEditedHint": "지금 화면에서 편집 중인 검수 JSON(저장 전 편집본 포함)을 불러와 편집기 내용을 바꿉니다.",
+      "loadOriginal": "원본 불러오기",
+      "check": "검사",
+      "checking": "검사 중…",
+      "apply": "적용",
+      "close": "닫기",
+      "largeNotice": "파일이 커서({size}) 편집이 느릴 수 있습니다.",
+      "fileTooLarge": "{limit}보다 큰 파일은 열 수 없습니다.",
+      "fileUnreadable": "파일을 읽을 수 없습니다.",
+      "fileLoaded": "파일을 불러왔습니다. 검사한 뒤 적용하세요.",
+      "basis": {
+        "edited": "지금 내용: 현재 편집본 — 화면에서 고친 내용(저장 전 포함)이 들어 있습니다.",
+        "original": "지금 내용: 원본 — 이 화면을 열 때 서버에서 불러온 결과입니다. 화면에서 고친 내용은 들어 있지 않습니다.",
+        "file": "지금 내용: 파일 {name}",
+        "modified": "이 창에서 직접 고침"
+      },
+      "summary": "오류 {errors}, 거부 {rejected}, 무시 {ignored}",
+      "willAdd": "적용하면 변경 사항에 항목 {count}개가 추가됩니다.",
+      "noChanges": "지금 편집본과 바뀐 점이 없습니다.",
+      "recheck": "내용이 바뀌었습니다. 다시 검사하세요.",
+      "blockedBySave": "저장 중이거나 충돌을 받은 상태에서는 적용할 수 없습니다.",
+      "applyFailed": "{index}번째 항목을 적용하지 못해 아무것도 바꾸지 않았습니다. {detail}",
+      "rejectedTitle": "적용할 수 없는 이유",
+      "warningsTitle": "알림 (적용은 됩니다)",
+      "parse": {
+        "invalidJson": "JSON 으로 읽을 수 없습니다.",
+        "invalidJsonAt": "{line}번째 줄 {column}번째 칸에서 JSON 으로 읽을 수 없습니다.",
+        "duplicateKey": "같은 키가 두 번 있습니다: {key}",
+        "tooDeep": "너무 깊게 중첩되어 있습니다.",
+        "tooLarge": "JSON 이 너무 큽니다.",
+        "unsupportedFormat": "검수 JSON 형식이 아닙니다 (format: {format}).",
+        "invalidDocument": "{pointer} 의 모양이 올바르지 않습니다 ({reason})."
+      },
+      "errors": {
+        "collection_mismatch": "다른 Collection 의 파일입니다.",
+        "job_mismatch": "이 Job 의 파일이 아닙니다(Job 은 하나, 같은 id 여야 합니다).",
+        "catalog_mismatch": "Step, Config 목록이 다릅니다.",
+        "unknown_result": "이 Job 에 없는 결과입니다.",
+        "result_step_mismatch": "결과의 Step 이 다릅니다.",
+        "base_version_mismatch": "version 이 다릅니다. 최신 문서를 받아 다시 고치세요.",
+        "layout_mismatch": "문서 배치 보기 구성이 다릅니다.",
+        "file_set_mismatch": "파일 구성이 다릅니다.",
+        "structure_mismatch": "문서 구성(file_groups, 문서 배치)이 맞지 않습니다.",
+        "apply_failed": "이 변경은 적용할 수 없습니다 ({reason})."
+      },
+      "warnings": {
+        "read_only_ignored": "읽기 전용 필드라 저장해도 반영되지 않아 버립니다.",
+        "layout_step_changed": "분류 Step 연결이 바뀌어 문서와 결과 연결이 바뀔 수 있습니다."
+      }
+    },
+    "history": {
+      "title": "변경 이력",
+      "description": "저장된 변경을 봅니다. 이전 값을 편집에 불러와 다시 저장할 수 있습니다.",
+      "close": "닫기",
+      "sort": {
+        "label": "정렬",
+        "newest": "최신순",
+        "oldest": "오래된 순"
+      },
+      "loading": "변경 이력을 불러오는 중…",
+      "loadingBlock": "다음 페이지를 불러오는 중…",
+      "empty": "아직 저장된 변경이 없습니다",
+      "retry": "다시 시도",
+      "errors": {
+        "unsupported": "이 서버에서는 변경 이력을 볼 수 없습니다",
+        "notFound": "이 Job 의 변경 이력을 볼 수 없습니다",
+        "busy": "요청이 많습니다. {seconds, number}초 뒤 다시 시도하세요",
+        "busyReady": "요청이 많습니다. 다시 시도하세요",
+        "generic": "변경 이력을 불러오지 못했습니다 ({code})",
+        "detail": "변경 내용을 불러오지 못했습니다 ({code})",
+        "revisionNotFound": "이 변경을 찾을 수 없습니다"
+      },
+      "row": {
+        "type": {
+          "result": "값",
+          "structure": "문서 구성"
+        },
+        "version": "v{from}→v{to}",
+        "documentsMore": "+{count, number}",
+        "noDocuments": "연결 문서 없음",
+        "noLabel": "(라벨 없음)",
+        "documentsHint": "문서 라벨은 지금 문서 구성 기준입니다",
+        "toggle": "{name} 변경 내용 보기",
+        "publishedAt": "반영 시각: {time}",
+        "copiedAt": "복사된 시각: {time} (원래 변경 시각과 다를 수 있습니다)",
+        "createdBy": "작성: {name}",
+        "reference": "참조: {value}",
+        "reason": "사유: {value}",
+        "badge": {
+          "current": "현재 반영본",
+          "fromMachine": "최초 원본에서 변경",
+          "copied": "복사됨",
+          "system": "시스템"
+        }
+      },
+      "machineLoading": "최초 원본을 불러오는 중…",
+      "emptyFiltered": "조건에 맞는 변경이 없습니다",
+      "savingNotice": "저장이 끝나면 목록을 다시 불러옵니다",
+      "filter": {
+        "label": "종류",
+        "all": "전체",
+        "result": "값",
+        "structure": "문서 구성",
+        "resultChip": "결과: {name}",
+        "clearResult": "{name} 결과 필터 지우기"
+      },
+      "group": {
+        "same": "함께 저장된 변경 {count, number}건",
+        "continued": "함께 저장된 변경 {count, number}건 (이전 페이지에서 이어짐)",
+        "foreign": "다른 Collection 에서 저장됨",
+        "sameHelp": "한 번의 저장으로 함께 바뀐 항목입니다. 항목별로 불러오거나 \"모두 불러오기\" 로 한 번에 불러올 수 있습니다",
+        "foreignHelp": "이 Job 은 여러 Collection 에 속해 있습니다. 이 변경은 지금 보고 있는 Collection 이 아닌 다른 Collection 의 검수 화면에서 저장됐습니다.",
+        "loadAll": "모두 불러오기 ({count, number})",
+        "loading": "묶음을 불러오는 중…",
+        "loaded": "{loaded, number}건을 편집에 불러왔습니다",
+        "loadedPartial": "{total, number}건 중 {loaded, number}건을 불러왔습니다 — 나머지는 현재 값과 같거나 불러올 수 없습니다",
+        "loadNone": "불러올 수 있는 변경이 없습니다"
+      },
+      "load": {
+        "button": "편집에 불러오기",
+        "done": "편집에 불러왔습니다",
+        "failed": "불러오지 못했습니다: {reason}",
+        "draftWarning": "불러오면 복원하지 않은 임시 저장이 사라집니다",
+        "mergeNote": "Merge 결과는 저장할 때 다시 계산되어 불러온 값과 달라질 수 있습니다",
+        "blocked": {
+          "loading": "내용을 불러오는 중…",
+          "omitted": "내용을 받을 수 없어 불러올 수 없습니다",
+          "missing_result": "지금 Job 에 이 결과가 없습니다",
+          "not_editable": "이 결과는 지금 고칠 수 없습니다",
+          "mismatch": "지금 문서 구성과 맞지 않아 불러올 수 없습니다",
+          "same": "현재 값과 같음",
+          "saving": "저장하는 중에는 불러올 수 없습니다",
+          "conflict": "저장 충돌을 먼저 해결하세요",
+          "current": "지금 반영된 값입니다",
+          "original_missing": "이력에서 최초 원본을 찾을 수 없어 불러올 수 없습니다"
+        },
+        "impact": {
+          "title": "불러오면 문서 {documents, number}개가 바뀌고 연결된 결과 {results, number}개에 영향이 있습니다",
+          "removed": "{label} 삭제",
+          "added": "{label} 추가",
+          "pages": "{label}: 페이지 범위 변경",
+          "results": "연결 결과: {names}",
+          "noResults": "연결 결과 없음",
+          "more": "+{count, number}",
+          "applied": "문서 구성을 불러왔습니다 — 문서 {documents, number}개 변경 · 결과 {results, number}개 영향",
+          "batchHint": "같은 저장의 값도 함께 불러오려면 묶음 머리줄의 \"모두 불러오기\" 를 쓰세요"
+        }
+      },
+      "detail": {
+        "field": "항목",
+        "before": "변경 전",
+        "after": "변경 후",
+        "none": "(값 없음)",
+        "noDiff": "값 차이가 없습니다",
+        "machineBefore": "변경 전은 최초 원본입니다",
+        "reordered": "항목 순서도 바뀌었습니다",
+        "showJson": "JSON 보기",
+        "hideJson": "JSON 숨기기",
+        "jsonAfter": "변경 후 JSON",
+        "jsonBefore": "변경 전 JSON",
+        "moreRows": "차이 {count, number}건 더 있음 — JSON 보기로 확인",
+        "omitted": {
+          "too_large": "내용이 너무 커서 보여 줄 수 없습니다",
+          "unavailable": "내용을 받을 수 없습니다"
+        },
+        "baseOmitted": {
+          "too_large": "변경 전 내용이 너무 커서 비교할 수 없습니다",
+          "unavailable": "변경 전 내용을 받을 수 없어 비교할 수 없습니다"
+        },
+        "structure": {
+          "fileAdded": "파일 {file} 추가",
+          "fileRemoved": "파일 {file} 제거",
+          "fileMoved": "파일 {file} 을 다른 그룹으로 이동",
+          "documentAdded": "문서 {label} 추가",
+          "documentRemoved": "문서 {label} 삭제",
+          "documentLabel": "{document}: 라벨 {from} → {to}",
+          "documentMoved": "문서 {label} 을 다른 그룹으로 이동",
+          "documentPages": "{document}: 페이지 범위 변경",
+          "documentsReordered": "문서 순서 변경",
+          "documentExcluded": "문서 {label} 제외",
+          "documentIncluded": "문서 {label} 제외 해제",
+          "pagesExcluded": "제외한 페이지 변경",
+          "pagesIncluded": "제외 해제한 페이지 변경",
+          "noLabel": "(라벨 없음)"
+        }
+      },
+      "machine": {
+        "title": "최초 원본",
+        "description": "수정 전 처음 받은 결과",
+        "none": "수정된 결과가 없어 현재 값이 최초 원본입니다",
+        "toggle": "최초 원본 대상 보기",
+        "skipped": "받는 동안 편집이 바뀌어 넣지 않았습니다. 다시 누르면 불러옵니다"
+      }
+    },
+    "stepsFallback": "설정에서 켠 단계가 이 Job 에 없어 모든 단계를 보입니다."
+  }
+}

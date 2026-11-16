@@ -1,0 +1,699 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Filmstrip — 루트 DOM > 전체 보기 1`] = `
+"<div role="region" aria-label="필름스트립" data-testid="fs" class="min-w-0">
+<div class="flex items-stretch overflow-x-auto pb-2">
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 1" data-document-id="d1" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 1</span>
+<select aria-label="라벨" data-testid="fs-label-select" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
+<option value="invoice">invoice</option>
+<option value="receipt">receipt</option>
+</select>
+<button type="button" aria-label="문서 1 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-1" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p1" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p1" title="a.pdf p1" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<img alt="" loading="lazy" decoding="async" draggable="false" class="size-full object-contain" src="/img/p1.png">
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p1</span>
+<button type="button" aria-label="a.pdf p1 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-2" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p1 뒤에서 나누기" title="p1 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="p2" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p2 · 겹침" aria-current="true" title="겹침" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border-2 border-destructive">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p2</span>
+<button type="button" aria-label="a.pdf p2 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-3" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p2 뒤에서 나누기" title="p2 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="p3" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p3" title="a.pdf p3" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p3</span>
+<button type="button" aria-label="a.pdf p3 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-4" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">3쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 2" data-document-id="d2" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 2</span>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="">
+<button type="button" aria-label="문서 2 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-5" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p4" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p4" title="a.pdf p4" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p4</span>
+<button type="button" aria-label="a.pdf p4 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-6" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p4 뒤에서 나누기" title="p4 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="p5" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p5 · 빈 자리" title="빈 자리" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border-2 border-dashed border-destructive">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p5</span>
+<button type="button" aria-label="a.pdf p5 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-7" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">2쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 3" data-document-id="d3" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border opacity-60">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 3</span>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="memo">
+<button type="button" aria-label="문서 3 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-8" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<div class="flex flex-wrap gap-1">
+<span data-slot="badge" data-variant="secondary" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80">제외됨</span>
+<span data-slot="badge" data-variant="outline" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground" title="설정에 없는 라벨">설정에 없음</span>
+</div>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p6" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p6" title="a.pdf p6" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p6</span>
+<button type="button" aria-label="a.pdf p6 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-9" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">1쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-6">
+<div role="separator" aria-orientation="vertical" aria-label="그룹 경계" title="그룹 경계" class="w-0 border-l-2 border-dashed border-border">
+</div>
+</div>
+<section aria-label="문서 4" data-document-id="d4" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border opacity-60">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="false" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-not-allowed">⠿</span>
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 4</span>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" disabled="" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="other">
+<button type="button" aria-label="문서 4 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-10" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-disabled="" disabled="" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p7" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<button type="button" aria-label="b.pdf p7" title="b.pdf p7" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">b.pdf p7</span>
+<button type="button" aria-label="b.pdf p7 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-11" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-disabled="" disabled="" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">1쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="빠진 페이지" data-testid="fs-unplaced" class="mr-3 flex min-w-32 shrink-0 flex-col gap-2 rounded-lg border border-dashed border-destructive p-2">
+<h3 class="text-xs font-medium text-destructive">빠진 페이지</h3>
+<ol role="list" class="flex min-h-24 items-start gap-2">
+<li title="빈 자리" class="flex w-16 shrink-0 flex-col items-center gap-1">
+<button type="button" aria-label="a.pdf p10 빠진 페이지 메뉴" data-testid="fs-unplaced-menu-open" class="flex h-20 w-16 items-center justify-center rounded-md border-2 border-dashed border-destructive text-xs text-destructive cursor-pointer bg-background hover:bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-12" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">?</button>
+<span class="w-full truncate text-center text-xs text-muted-foreground">a.pdf p10</span>
+</li>
+</ol>
+</section>
+<section aria-label="제외" data-testid="fs-excluded" class="flex min-w-32 shrink-0 flex-col gap-2 rounded-lg border border-dashed bg-muted/50 p-2 border-border">
+<h3 class="text-xs font-medium text-muted-foreground">제외</h3>
+<ol role="list" class="flex min-h-24 items-start gap-2 opacity-70">
+<li class="flex shrink-0">
+<div data-filmstrip-page="p8" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p8" title="a.pdf p8" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p8</span>
+<button type="button" aria-label="a.pdf p8 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-13" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0">
+<div data-filmstrip-page="p9" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="b.pdf p9" title="b.pdf p9" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">b.pdf p9</span>
+<button type="button" aria-label="b.pdf p9 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-14" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</div>
+</div>"
+`;
+
+exports[`Filmstrip — 이웃 보기 > 이웃 보기 루트 DOM 1`] = `
+"<div role="region" aria-label="필름스트립" data-testid="fs" class="min-w-0">
+<div data-testid="fs-scroller" class="relative flex items-stretch overflow-x-auto pb-2">
+<p class="flex shrink-0 items-center px-2 text-xs whitespace-nowrap text-muted-foreground tabular-nums">앞 문서 1개</p>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 2" data-document-id="n2" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<button type="button" aria-label="문서 2 펼치기" title="문서 2 펼치기" data-testid="fs-strip-focus" class="cursor-pointer rounded-md text-xs text-muted-foreground underline-offset-2 hover:text-foreground hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden shrink-0 font-medium">문서 2</button>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="">
+<button type="button" aria-label="문서 2 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-1" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start gap-1">
+<li class="flex h-20 shrink-0 items-center">
+<span data-slot="badge" data-variant="secondary" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80 tabular-nums" data-testid="fs-strip-collapsed-chip">…2쪽</span>
+</li>
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="b3" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p3" title="a.pdf p3" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p3</span>
+<button type="button" aria-label="a.pdf p3 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-2" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="b4" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p4" title="a.pdf p4" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p4</span>
+<button type="button" aria-label="a.pdf p4 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-3" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="b5" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p5" title="a.pdf p5" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p5</span>
+<button type="button" aria-label="a.pdf p5 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-4" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">5쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 3" data-document-id="n3" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5 sticky left-2 w-fit max-w-full">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 3</span>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="focus">
+<button type="button" aria-label="문서 3 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-5" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<span aria-hidden="true" class="mx-0.5 w-5 shrink-0">
+</span>
+<div data-filmstrip-page="c1" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p1" aria-current="true" title="a.pdf p1" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border-2 border-primary">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p1</span>
+<button type="button" aria-label="a.pdf p1 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-6" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p1 뒤에서 나누기" title="p1 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c2" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p2" title="a.pdf p2" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p2</span>
+<button type="button" aria-label="a.pdf p2 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-7" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p2 뒤에서 나누기" title="p2 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c3" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p3" title="a.pdf p3" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p3</span>
+<button type="button" aria-label="a.pdf p3 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-8" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p3 뒤에서 나누기" title="p3 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c4" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p4" title="a.pdf p4" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p4</span>
+<button type="button" aria-label="a.pdf p4 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-9" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p4 뒤에서 나누기" title="p4 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c5" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p5" title="a.pdf p5" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p5</span>
+<button type="button" aria-label="a.pdf p5 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-10" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p5 뒤에서 나누기" title="p5 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c6" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p6" title="a.pdf p6" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p6</span>
+<button type="button" aria-label="a.pdf p6 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-11" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p6 뒤에서 나누기" title="p6 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c7" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p7" title="a.pdf p7" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p7</span>
+<button type="button" aria-label="a.pdf p7 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-12" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p7 뒤에서 나누기" title="p7 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c8" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p8" title="a.pdf p8" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p8</span>
+<button type="button" aria-label="a.pdf p8 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-13" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p8 뒤에서 나누기" title="p8 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c9" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p9" title="a.pdf p9" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p9</span>
+<button type="button" aria-label="a.pdf p9 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-14" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p9 뒤에서 나누기" title="p9 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c10" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p10" title="a.pdf p10" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p10</span>
+<button type="button" aria-label="a.pdf p10 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-15" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p10 뒤에서 나누기" title="p10 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c11" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p11" title="a.pdf p11" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p11</span>
+<button type="button" aria-label="a.pdf p11 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-16" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<button type="button" aria-label="p11 뒤에서 나누기" title="p11 뒤에서 나누기" data-testid="fs-split-button" class="mx-0.5 mt-8 inline-flex h-6 w-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground opacity-40 hover:bg-muted hover:text-foreground hover:opacity-100 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-0 motion-reduce:transition-none">✂</button>
+<div data-filmstrip-page="c12" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p12" title="a.pdf p12" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p12</span>
+<button type="button" aria-label="a.pdf p12 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-17" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li aria-hidden="true" class="shrink-0" style="width: 704px;">
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground sticky left-2 w-fit max-w-full">
+<span class="tabular-nums">20쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 4" data-document-id="n4" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span draggable="true" title="문서 끌기" aria-hidden="true" data-testid="fs-strip-handle" class="shrink-0 px-0.5 text-sm leading-none text-muted-foreground select-none cursor-grab">⠿</span>
+<button type="button" aria-label="문서 4 펼치기" title="문서 4 펼치기" data-testid="fs-strip-focus" class="cursor-pointer rounded-md text-xs text-muted-foreground underline-offset-2 hover:text-foreground hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden shrink-0 font-medium">문서 4</button>
+<input aria-label="라벨" placeholder="라벨 없음" maxlength="40" data-testid="fs-label-input" class="h-7 w-0 min-w-24 flex-1 rounded-md border border-input bg-background px-2 text-sm text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" type="text" value="">
+<button type="button" aria-label="문서 4 메뉴" data-testid="fs-strip-menu-open" class="ml-auto inline-flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-18" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start gap-1">
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="d1" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p1" title="a.pdf p1" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p1</span>
+<button type="button" aria-label="a.pdf p1 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-19" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="d2" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p2" title="a.pdf p2" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p2</span>
+<button type="button" aria-label="a.pdf p2 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-20" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start">
+<div data-filmstrip-page="d3" draggable="true" class="relative flex w-16 shrink-0 flex-col items-center gap-1 cursor-grab">
+<button type="button" aria-label="a.pdf p3" title="a.pdf p3" data-testid="fs-thumbnail-select" class="flex h-20 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-muted focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</button>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p3</span>
+<button type="button" aria-label="a.pdf p3 메뉴" data-testid="fs-thumbnail-menu-open" class="inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50" id="id-21" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-slot="dropdown-menu-trigger">⋯</button>
+</div>
+</div>
+</li>
+<li class="flex h-20 shrink-0 items-center">
+<span data-slot="badge" data-variant="secondary" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80 tabular-nums" data-testid="fs-strip-collapsed-chip">…2쪽</span>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">5쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<p class="flex shrink-0 items-center px-2 text-xs whitespace-nowrap text-muted-foreground tabular-nums">뒤 문서 2개</p>
+<section aria-label="제외" data-testid="fs-excluded" class="flex min-w-32 shrink-0 flex-col gap-2 rounded-lg border border-dashed bg-muted/50 p-2 border-border">
+<h3 class="text-xs font-medium text-muted-foreground">제외</h3>
+<div class="flex min-h-24 flex-col items-start gap-2">
+<span data-slot="badge" data-variant="secondary" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80 tabular-nums">1쪽</span>
+<button type="button" data-testid="fs-excluded-expand" class="cursor-pointer rounded-md text-xs text-muted-foreground underline-offset-2 hover:text-foreground hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden self-start px-1">펼치기</button>
+</div>
+</section>
+</div>
+</div>"
+`;
+
+exports[`Filmstrip — 읽기 전용·선택 콜백 > 콜백 없이 그리면 끌기·✂·메뉴·라벨 편집이 없고 라벨은 글자로, 썸네일은 버튼이 아니다 1`] = `
+"<div role="region" aria-label="필름스트립" data-testid="fs" class="min-w-0">
+<div class="flex items-stretch overflow-x-auto pb-2">
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 1" data-document-id="d1" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 1</span>
+<span class="min-w-0 flex-1 truncate text-sm text-foreground">invoice</span>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p1" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p1" title="a.pdf p1" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<img alt="" loading="lazy" decoding="async" draggable="false" class="size-full object-contain" src="/img/p1.png">
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p1</span>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<span aria-hidden="true" class="mx-0.5 w-5 shrink-0">
+</span>
+<div data-filmstrip-page="p2" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p2 · 겹침" aria-current="true" title="겹침" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border-2 border-destructive">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p2</span>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<span aria-hidden="true" class="mx-0.5 w-5 shrink-0">
+</span>
+<div data-filmstrip-page="p3" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p3" title="a.pdf p3" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p3</span>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">3쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 2" data-document-id="d2" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border">
+<header class="flex min-w-0 items-center gap-1.5">
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 2</span>
+<span class="min-w-0 flex-1 truncate text-sm text-muted-foreground">라벨 없음</span>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p4" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p4" title="a.pdf p4" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p4</span>
+</div>
+</div>
+</li>
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<span aria-hidden="true" class="mx-0.5 w-5 shrink-0">
+</span>
+<div data-filmstrip-page="p5" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p5 · 빈 자리" title="빈 자리" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border-2 border-dashed border-destructive">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p5</span>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">2쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="문서 3" data-document-id="d3" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border opacity-60">
+<header class="flex min-w-0 items-center gap-1.5">
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 3</span>
+<span class="min-w-0 flex-1 truncate text-sm text-foreground">memo</span>
+</header>
+<div class="flex flex-wrap gap-1">
+<span data-slot="badge" data-variant="outline" class="group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;&gt;svg]:pointer-events-none [&amp;&gt;svg]:size-3! border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground" title="설정에 없는 라벨">설정에 없음</span>
+</div>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p6" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p6" title="a.pdf p6" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p6</span>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">1쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch">
+<div class="flex shrink-0 items-stretch justify-center w-6">
+<div role="separator" aria-orientation="vertical" aria-label="그룹 경계" title="그룹 경계" class="w-0 border-l-2 border-dashed border-border">
+</div>
+</div>
+<section aria-label="문서 4" data-document-id="d4" class="flex min-w-40 shrink-0 flex-col gap-2 rounded-lg border bg-card p-2 border-border opacity-60">
+<header class="flex min-w-0 items-center gap-1.5">
+<span class="shrink-0 text-xs font-medium text-muted-foreground">문서 4</span>
+<span class="min-w-0 flex-1 truncate text-sm text-foreground">other</span>
+</header>
+<ol role="list" data-testid="fs-strip-pages" class="flex min-h-24 items-start">
+<li class="flex shrink-0 items-start" style="width: 88px;">
+<div data-filmstrip-page="p7" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="b.pdf p7" title="b.pdf p7" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">b.pdf p7</span>
+</div>
+</div>
+</li>
+</ol>
+<p class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+<span class="tabular-nums">1쪽</span>
+</p>
+</section>
+</div>
+<div class="flex shrink-0 items-stretch justify-center w-3">
+<div aria-hidden="true" class="w-1 rounded-full bg-transparent">
+</div>
+</div>
+<section aria-label="빠진 페이지" data-testid="fs-unplaced" class="mr-3 flex min-w-32 shrink-0 flex-col gap-2 rounded-lg border border-dashed border-destructive p-2">
+<h3 class="text-xs font-medium text-destructive">빠진 페이지</h3>
+<ol role="list" class="flex min-h-24 items-start gap-2">
+<li title="빈 자리" class="flex w-16 shrink-0 flex-col items-center gap-1">
+<span class="flex h-20 w-16 items-center justify-center rounded-md border-2 border-dashed border-destructive text-xs text-destructive">?</span>
+<span class="w-full truncate text-center text-xs text-muted-foreground">a.pdf p10</span>
+</li>
+</ol>
+</section>
+<section aria-label="제외" data-testid="fs-excluded" class="flex min-w-32 shrink-0 flex-col gap-2 rounded-lg border border-dashed bg-muted/50 p-2 border-border">
+<h3 class="text-xs font-medium text-muted-foreground">제외</h3>
+<ol role="list" class="flex min-h-24 items-start gap-2 opacity-70">
+<li class="flex shrink-0">
+<div data-filmstrip-page="p8" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="a.pdf p8" title="a.pdf p8" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">a.pdf p8</span>
+</div>
+</div>
+</li>
+<li class="flex shrink-0">
+<div data-filmstrip-page="p9" draggable="false" class="relative flex w-16 shrink-0 flex-col items-center gap-1">
+<div role="img" aria-label="b.pdf p9" title="b.pdf p9" class="flex h-20 w-16 items-center justify-center overflow-hidden rounded-md bg-muted border border-border">
+<span class="px-1 text-center text-xs text-muted-foreground">이미지 없음</span>
+</div>
+<div class="flex w-full min-w-0 items-center gap-0.5">
+<span class="min-w-0 flex-1 truncate text-xs text-muted-foreground tabular-nums">b.pdf p9</span>
+</div>
+</div>
+</li>
+</ol>
+</section>
+</div>
+</div>"
+`;

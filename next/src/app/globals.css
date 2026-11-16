@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+/* 검수 화면이 창 높이에 맞춰 칼럼마다 스크롤할 때(`data-viewport-fit="true"` 틀 안). */
+@custom-variant fit (&:where([data-viewport-fit="true"], [data-viewport-fit="true"] *));
+
+/*
+ * Upstage Studio 화면과 같은 팔레트 값을 shadcn 표준 토큰 이름에 옮겨 담는다. 다른 디자인 시스템 패키지는 쓰지 않고
+ * (외부 UI Kit 소비자와 같은 shadcn 환경 유지) 값만 맞춰, 버튼, 입력, 탭, 표, 배지가 Studio 와 같은 색, 둥글기,
+ * 글꼴로 보이게 한다. 이름이 같아도 역할이 다르면 역할을 따른다(예: DS 의 secondary 는 연두 강조색이지만
+ * shadcn 의 secondary 는 옅은 보조 배경이므로 DS muted 를 쓴다). Studio UI Kit item 은 shadcn 표준
+ * 토큰만 쓰고, 아래 "Studio 확장 토큰" 은 host 화면에서만 쓴다.
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Studio 는 시스템 글꼴(macOS 라틴 SF Pro, 한글 Apple SD Gothic Neo)을 쓴다. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Hiragino Sans", "Yu Gothic UI", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Studio 확장 토큰(host 전용): 흐린 배경 단계, 진한 보조 글자, 상태 메시지 색. */
+  --color-subtle: var(--subtle);
+  --color-muted-light: var(--muted-light);
+  --color-muted-medium: var(--muted-medium);
+  --color-muted-dark: var(--muted-dark);
+  --color-border-medium: var(--border-medium);
+  --color-link: var(--link);
+  --color-state-success: var(--state-success);
+  --color-state-success-background: var(--state-success-background);
+  --color-state-success-foreground: var(--state-success-foreground);
+  --color-state-warning: var(--state-warning);
+  --color-state-warning-background: var(--state-warning-background);
+  --color-state-warning-foreground: var(--state-warning-foreground);
+  --color-state-error: var(--state-error);
+  --color-state-error-background: var(--state-error-background);
+  --color-state-error-foreground: var(--state-error-foreground);
+
+  /* Studio DS 둥글기: 작은 4px, 입력 6px, 버튼, 탭 8px, 카드, 패널 12px. */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: var(--radius);
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --radius-4xl: 1.625rem;
+
+  /* Studio DS 그림자(남색 기운의 옅은 그림자). */
+  --shadow-xs: 0 1px 2px hsl(220 30% 10% / 0.06);
+  --shadow-sm: 0 1px 2px hsl(220 30% 10% / 0.1);
+  --shadow-md:
+    0 4px 6px -1px hsl(220 30% 10% / 0.08),
+    0 2px 4px -2px hsl(220 30% 10% / 0.08);
+  --shadow-lg:
+    0 10px 15px -3px hsl(220 30% 10% / 0.1),
+    0 4px 6px -4px hsl(220 30% 10% / 0.1);
+}
+
+/* 값은 Studio 화면의 팔레트(neutral 은 slate 계열, brand 는 보라 파랑)를 따른다. */
+:root {
+  --background: hsl(0 0% 100%); /* neutral-0 */
+  --foreground: hsl(222 47% 11%); /* neutral-900 */
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222 47% 11%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 47% 11%);
+  --primary: hsl(243 100% 66%); /* brand-500, 주 동작 버튼·선택·포커스 */
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 40% 96%); /* DS muted(neutral-100) */
+  --secondary-foreground: hsl(222 47% 11%);
+  --muted: hsl(210 40% 96%); /* neutral-100 */
+  --muted-foreground: hsl(215 16% 47%); /* neutral-500 */
+  --accent: hsl(227 100% 96%); /* brand-50, 선택 메뉴·강조 배경 */
+  --accent-foreground: hsl(248 65% 41%); /* brand-800 */
+  --destructive: hsl(350 100% 61%); /* red-400 */
+  --border: hsl(214 32% 91%); /* neutral-200 */
+  --input: hsl(214 32% 91%); /* neutral-200 */
+  --ring: hsl(243 100% 66%); /* brand-500 */
+  --chart-1: hsl(243 100% 66%);
+  --chart-2: hsl(84 100% 65%);
+  --chart-3: hsl(14 100% 70%);
+  --chart-4: hsl(182 100% 40%);
+  --chart-5: hsl(323 84% 60%);
+  --radius: 0.5rem;
+  --sidebar: hsl(210 40% 98%);
+  --sidebar-foreground: hsl(215 19% 35%);
+  --sidebar-primary: hsl(243 100% 66%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(214 32% 91%);
+  --sidebar-accent-foreground: hsl(222 47% 11%);
+  --sidebar-border: hsl(210 40% 96%);
+  --sidebar-ring: hsl(243 100% 66%);
+
+  /* Studio 확장 토큰 */
+  --subtle: hsl(210 40% 98%); /* neutral-50, 섹션·표 머리 배경 */
+  --muted-light: hsl(210 40% 98%); /* neutral-50, 행 hover */
+  --muted-medium: hsl(213 27% 84%); /* neutral-300 */
+  --muted-dark: hsl(215 19% 35%); /* neutral-600, 표 머리글·보조 값 */
+  --border-medium: hsl(213 27% 84%); /* neutral-300 */
+  --link: hsl(243 100% 66%);
+  --state-success: hsl(165 100% 34%);
+  --state-success-background: hsl(158 85% 96%);
+  --state-success-foreground: hsl(163 88% 20%);
+  --state-warning: hsl(36 100% 57%);
+  --state-warning-background: hsl(46 100% 95%);
+  --state-warning-foreground: hsl(39 100% 27%);
+  --state-error: hsl(350 100% 61%);
+  --state-error-background: hsl(356 100% 97%);
+  --state-error-foreground: hsl(350 86% 29%);
+
+  /* Studio 워크플로우 노드 색(단계 탭 트랙, host 전용). Studio HEADER_TAB_STYLES 와 같은 값. */
+  --node-parse: hsl(243 100% 66%); /* primary */
+  --node-classify: hsl(16 100% 70%); /* sub-coral */
+  --node-split: hsl(8 90% 52%); /* sub-coral-deep */
+  --node-extract: hsl(324 85% 60%); /* sub-pink */
+  --node-instruct: hsl(182 100% 40%); /* sub-teal */
+  --node-validate: hsl(259 87% 66%); /* accent-violet */
+  --node-match: hsl(200 81% 54%); /* accent-blue */
+  --node-merge: hsl(165 100% 34%); /* green */
+  --node-export: hsl(200 81% 54%); /* accent-blue */
+  --node-other: hsl(215 19% 35%); /* muted-dark */
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+    /* 목록이 도착해 페이지가 길어지면서 스크롤 막대가 생겨도 내용 폭과 위치가 바뀌지 않게, 막대
+       자리를 늘 비워 둔다(겹치는 스크롤 막대를 쓰는 환경에서는 영향 없음). */
+    scrollbar-gutter: stable;
+  }
+  /* Tailwind 4 는 버튼 커서를 화살표(default)로 둔다. 누를 수 있는 버튼은 손 모양으로 보이게 하고,
+     비활성 버튼은 화살표로 남긴다. 클래스로 커서를 정한 요소(cursor-grab 등)는 그 값이 이긴다. */
+  button:not(:disabled):not([aria-disabled="true"]),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+  ::selection {
+    background-color: hsl(229 100% 93%); /* brand-100 */
+    color: hsl(248 65% 41%); /* brand-800 */
+  }
+}
+
+/* Radix 메뉴와 대화상자는 열릴 때 스크롤을 막고, 사라지는 스크롤 막대만큼 body 오른쪽 여백을 더한다
+   (react-remove-scroll-bar). 막대 자리는 위 `scrollbar-gutter` 로 이미 비워 두었으므로 그 여백까지 더하면
+   메뉴를 열 때마다 내용이 왼쪽으로 밀린다. 그래서 여백을 없앤다. */
+html body[data-scroll-locked] {
+  margin-right: 0 !important;
+}
+
+/* 한국어·일본어는 어절 단위로 줄바꿈한다 */
+html:lang(ko),
+html:lang(ja) {
+  word-break: keep-all;
+}

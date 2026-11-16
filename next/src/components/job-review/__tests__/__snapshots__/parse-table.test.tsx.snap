@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ParseTable > 머리·colspan/rowspan·그림 대체 글자가 든 표를 그린다 1`] = `
+"<div role="region" aria-label="표 영역" tabindex="0" class="max-w-full overflow-x-auto rounded-[0.25rem] text-xs leading-5 whitespace-pre-wrap break-words text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-hidden [&amp;_table]:border-collapse [&amp;_th]:border [&amp;_th]:border-border [&amp;_th]:bg-muted [&amp;_th]:px-2 [&amp;_th]:py-1 [&amp;_th]:text-left [&amp;_th]:font-medium [&amp;_td]:border [&amp;_td]:border-border [&amp;_td]:px-2 [&amp;_td]:py-1 [&amp;_td]:align-top" data-testid="job-review-parse-table">
+<table>
+<thead>
+<tr>
+<th colspan="2">품목</th>
+<th>금액</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">A</td>
+<td>볼트</td>
+<td>1,000</td>
+</tr>
+<tr>
+<td>
+<span class="text-muted-foreground">그림: 도장</span>
+</td>
+<td>2,000</td>
+</tr>
+</tbody>
+</table>
+</div>"
+`;

@@ -1,0 +1,65 @@
+{
+  "format": "collection-results/11",
+  "collection_id": "scol_test",
+  "configs": { "cfg_1": { "agent_id": "agt_1" } },
+  "steps": {
+    "st_extract": { "config_id": "cfg_1", "name": "추출", "type": "information-extract" },
+    "st_validate": { "config_id": "cfg_1", "name": "검증", "type": "validate" }
+  },
+  "jobs": [
+    {
+      "id": "job_N",
+      "file_groups": {
+        "base_version": 0,
+        "groups": [
+          {
+            "group_id": "grp_1",
+            "layout_step_id": null,
+            "files": [{ "file_ref": "job_N#0", "file_id": "file_n", "name": "n.pdf" }]
+          }
+        ]
+      },
+      "output": [
+        {
+          "step_id": null,
+          "base_version": 0,
+          "content": {
+            "documents": [
+              {
+                "document_id": "doc_n",
+                "group_id": "grp_1",
+                "label": null,
+                "source_files": [{ "file_ref": "job_N#0", "page_ranges": [[1, 4]] }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "occ_n_1",
+          "step_id": "st_extract",
+          "base_version": 0,
+          "content": { "title": "Hello", "count": 3, "ok": false, "note": null },
+          "document_ids": ["doc_n"]
+        },
+        {
+          "id": "occ_n_2",
+          "step_id": "st_validate",
+          "base_version": 0,
+          "content": "yellow",
+          "document_ids": ["doc_n"]
+        }
+      ]
+    },
+    {
+      "id": "job_V",
+      "output": [
+        {
+          "id": "occ_v_1",
+          "step_id": "st_extract",
+          "base_version": 0,
+          "content": { "title": "Values only" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x", "debian-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum JobReviewState {
+  IN_PROGRESS
+  DONE
+}
+
+/// Job 검수 상태. 행이 없으면 "검수 전". (Collection, Job) 단위이며 사용자 구분이 없다.
+model JobReviewStatus {
+  collectionId String         @map("collection_id")
+  jobId        String         @map("job_id")
+  state        JobReviewState
+  startedAt    DateTime       @default(now()) @map("started_at")
+  completedAt  DateTime?      @map("completed_at")
+  updatedAt    DateTime       @updatedAt @map("updated_at")
+
+  @@id([collectionId, jobId])
+  @@index([collectionId, state])
+  @@map("job_review_status")
+}

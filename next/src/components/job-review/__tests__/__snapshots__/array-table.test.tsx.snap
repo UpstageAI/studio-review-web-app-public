@@ -1,0 +1,652 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`배열 표 기본 모양 > 스냅샷 1`] = `
+"<div class="relative max-h-[60vh] min-w-0 overflow-auto" data-testid="job-review-tree-table">
+<table class="w-full border-collapse text-sm">
+<thead class="sticky top-0 z-10 bg-background">
+<tr class="border-b border-border text-left text-xs text-muted-foreground">
+<th scope="col" class="w-8 px-2 py-1.5 font-medium">
+<span aria-hidden="true">#</span>
+<span class="sr-only">번호</span>
+</th>
+<th scope="col" title="품목 이름" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">품명</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">수량</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">단가</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">메모</th>
+<th scope="col" class="w-8 px-1 py-1.5">
+<span class="sr-only">항목 조작</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr data-node-id="res_1#/items/0" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">1</th>
+<td data-field-id="res_1#/items/0/name" data-pointer="/items/0/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-1" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-1" data-field-input="" data-testid="job-review-field-input-value" value="사과">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/qty" data-pointer="/items/0/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-2" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-2" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="1">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-3" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/price" data-pointer="/items/0/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-4" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-4" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="100">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-5" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<button data-slot="button" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 cursor-pointer text-muted-foreground" type="button" aria-label="메모 추가" data-testid="job-review-tree-table-button-add-cell">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-6" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="1 메뉴" data-testid="job-review-tree-button-menu" id="id-7" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+<tr data-node-id="res_1#/items/1" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">2</th>
+<td data-field-id="res_1#/items/1/name" data-pointer="/items/1/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-8" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-8" data-field-input="" data-testid="job-review-field-input-value" value="배">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/1/qty" data-pointer="/items/1/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-9" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-9" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="2">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-10" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/1/price" data-pointer="/items/1/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-11" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-11" placeholder="값 없음" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-12" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/1/memo" data-pointer="/items/1/memo" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-13" class="sr-only">메모</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-13" data-field-input="" data-testid="job-review-field-input-value" value="메모">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="메모 메뉴" data-testid="job-review-tree-button-menu" id="id-14" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-15" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="2 메뉴" data-testid="job-review-tree-button-menu" id="id-16" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+<tr data-node-id="res_1#/items/2" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">3</th>
+<td data-field-id="res_1#/items/2/name" data-pointer="/items/2/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-17" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-17" data-field-input="" data-testid="job-review-field-input-value" value="감">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/2/qty" data-pointer="/items/2/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-18" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-18" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="3">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-19" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/2/price" data-pointer="/items/2/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-20" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-20" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="300">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-21" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/2/memo" data-pointer="/items/2/memo" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-22" class="sr-only">메모</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-22" placeholder="빈 값" data-field-input="" data-testid="job-review-field-input-value" value="">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="메모 메뉴" data-testid="job-review-tree-button-menu" id="id-23" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-24" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="3 메뉴" data-testid="job-review-tree-button-menu" id="id-25" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>"
+`;
+
+exports[`배열 표 바뀐 칸 > 바뀐 칸 스냅샷 1`] = `
+"<tr data-node-id="res_1#/items/0" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">1</th>
+<td data-field-id="res_1#/items/0/name" data-pointer="/items/0/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-1" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-1" data-field-input="" data-testid="job-review-field-input-value" value="사과">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/qty" data-pointer="/items/0/qty" data-changed="true" title="원본 값: 1" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none bg-primary/5">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-2" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-2" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="5">
+</div>
+<button data-slot="button" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 원래 값으로" data-testid="job-review-tree-table-button-revert">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw" aria-hidden="true">
+<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8">
+</path>
+<path d="M3 3v5h5">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-3" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/price" data-pointer="/items/0/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-4" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-4" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="100">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-5" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<button data-slot="button" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 cursor-pointer text-muted-foreground" type="button" aria-label="메모 추가" data-testid="job-review-tree-table-button-add-cell">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-6" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="1 메뉴" data-testid="job-review-tree-button-menu" id="id-7" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>"
+`;
+
+exports[`배열 표 칸 오류 > 오류·경고 스냅샷 1`] = `
+"<div class="relative max-h-[60vh] min-w-0 overflow-auto" data-testid="job-review-tree-table">
+<table class="w-full border-collapse text-sm">
+<thead class="sticky top-0 z-10 bg-background">
+<tr class="border-b border-border text-left text-xs text-muted-foreground">
+<th scope="col" class="w-8 px-2 py-1.5 font-medium">
+<span aria-hidden="true">#</span>
+<span class="sr-only">번호</span>
+</th>
+<th scope="col" title="품목 이름" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">품명</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">수량</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">단가</th>
+<th scope="col" class="min-w-24 px-2 py-1.5 font-medium whitespace-nowrap">메모</th>
+<th scope="col" class="w-8 px-1 py-1.5">
+<span class="sr-only">항목 조작</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr data-node-id="res_1#/items/0" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">1</th>
+<td data-field-id="res_1#/items/0/name" data-pointer="/items/0/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-1" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-1" data-field-input="" data-testid="job-review-field-input-value" value="사과">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/qty" data-pointer="/items/0/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-2" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-2" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="1">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-3" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/0/price" data-pointer="/items/0/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-4" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-4" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="100">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-5" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<button data-slot="button" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 cursor-pointer text-muted-foreground" type="button" aria-label="메모 추가" data-testid="job-review-tree-table-button-add-cell">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-6" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="1 메뉴" data-testid="job-review-tree-button-menu" id="id-7" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+<tr data-node-id="res_1#/items/1" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">2</th>
+<td data-field-id="res_1#/items/1/name" data-pointer="/items/1/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-8" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-8" data-field-input="" data-testid="job-review-field-input-value" value="배">
+</div>
+</div>
+</td>
+<td data-field-id="res_1#/items/1/qty" data-pointer="/items/1/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-9" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-9" aria-invalid="true" aria-describedby="id-9-error" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="2">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-10" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+<p id="id-9-error" role="alert" class="px-1.5 pt-1 text-xs break-words text-destructive" data-testid="job-review-tree-table-cell-error">수량 오류</p>
+</td>
+<td data-field-id="res_1#/items/1/price" data-pointer="/items/1/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-11" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-11" placeholder="값 없음" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-12" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/1/memo" data-pointer="/items/1/memo" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-13" class="sr-only">메모</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-13" data-field-input="" data-testid="job-review-field-input-value" value="메모">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="메모 메뉴" data-testid="job-review-tree-button-menu" id="id-14" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-15" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="2 메뉴" data-testid="job-review-tree-button-menu" id="id-16" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<p role="alert" data-testid="job-review-field-group-error" class="px-2 pb-1 text-xs break-words text-destructive">항목 오류</p>
+</td>
+</tr>
+<tr data-node-id="res_1#/items/2" class="border-b border-border align-top last:border-b-0">
+<th scope="row" class="px-2 py-2 text-left text-xs font-medium text-muted-foreground">3</th>
+<td data-field-id="res_1#/items/2/name" data-pointer="/items/2/name" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-17" class="sr-only">품명</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-17" aria-describedby="id-17-warning" data-field-input="" data-testid="job-review-field-input-value" value="감">
+</div>
+</div>
+<p id="id-17-warning" class="px-1.5 pt-1 text-xs break-words text-muted-foreground" data-testid="job-review-tree-table-cell-warning">품명 경고</p>
+</td>
+<td data-field-id="res_1#/items/2/qty" data-pointer="/items/2/qty" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-18" class="sr-only">수량</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-18" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="3">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="수량 메뉴" data-testid="job-review-tree-button-menu" id="id-19" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/2/price" data-pointer="/items/2/price" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-20" class="sr-only">단가</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 font-mono h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-20" data-field-input="" inputmode="decimal" data-testid="job-review-field-input-value" value="300">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="단가 메뉴" data-testid="job-review-tree-button-menu" id="id-21" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td data-field-id="res_1#/items/2/memo" data-pointer="/items/2/memo" class="min-w-24 px-1 py-1 align-top transition-colors motion-reduce:transition-none">
+<div class="flex min-w-0 items-center gap-0.5">
+<label for="id-22" class="sr-only">메모</label>
+<div class="min-w-0 flex-1">
+<input data-slot="input" class="w-full min-w-0 rounded-lg border py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 h-7 border-transparent bg-transparent px-1.5 shadow-none hover:border-input" id="id-22" placeholder="빈 값" data-field-input="" data-testid="job-review-field-input-value" value="">
+</div>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="메모 메뉴" data-testid="job-review-tree-button-menu" id="id-23" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+<td class="px-1 py-1">
+<div class="flex items-center justify-end">
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="필드 추가 (1)" data-testid="job-review-tree-button-add-field" id="id-24" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="M12 5v14">
+</path>
+</svg>
+</button>
+<button data-slot="dropdown-menu-trigger" data-variant="ghost" data-size="icon-xs" class="group/button inline-flex items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&amp;_svg:not([class*='size-'])]:size-3 shrink-0 cursor-pointer text-muted-foreground" type="button" aria-label="3 메뉴" data-testid="job-review-tree-button-menu" id="id-25" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical lucide-more-vertical" aria-hidden="true">
+<circle cx="12" cy="12" r="1">
+</circle>
+<circle cx="12" cy="5" r="1">
+</circle>
+<circle cx="12" cy="19" r="1">
+</circle>
+</svg>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>"
+`;

@@ -1,0 +1,78 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InstructStructured > 객체·배열·중첩·빈 값·숫자·불리언을 그린다 1`] = `
+"<div class="min-w-0 text-sm" data-testid="job-review-instruct-structured">
+<dl class="flex min-w-0 flex-col gap-2">
+<div class="flex min-w-0 flex-col gap-0.5">
+<dt class="text-xs font-medium text-muted-foreground">summary</dt>
+<dd class="min-w-0">
+<span data-text="">요약 본문【†1】</span>
+</dd>
+</div>
+<div class="flex min-w-0 flex-col gap-0.5">
+<dt class="text-xs font-medium text-muted-foreground">items</dt>
+<dd class="min-w-0">
+<ol class="my-0 flex list-decimal flex-col gap-1.5 pl-5 marker:text-muted-foreground">
+<li class="min-w-0 pl-1">
+<div class="rounded-md border border-border p-2">
+<dl class="flex min-w-0 flex-col gap-2">
+<div class="flex min-w-0 flex-col gap-0.5 border-l-2 border-border pl-2">
+<dt class="text-xs font-medium text-muted-foreground">name</dt>
+<dd class="min-w-0">
+<span data-text="">볼트</span>
+</dd>
+</div>
+<div class="flex min-w-0 flex-col gap-0.5 border-l-2 border-border pl-2">
+<dt class="text-xs font-medium text-muted-foreground">qty</dt>
+<dd class="min-w-0">
+<span class="tabular-nums">12345678901234567890</span>
+</dd>
+</div>
+</dl>
+</div>
+</li>
+<li class="min-w-0 pl-1">
+<span data-text="">둘째 항목</span>
+</li>
+<li class="min-w-0 pl-1">
+<ol class="my-0 flex list-decimal flex-col gap-1.5 pl-5 marker:text-muted-foreground">
+<li class="min-w-0 pl-1">
+<span data-text="">안쪽</span>
+</li>
+<li class="min-w-0 pl-1">
+<span class="tabular-nums">3</span>
+</li>
+</ol>
+</li>
+</ol>
+</dd>
+</div>
+<div class="flex min-w-0 flex-col gap-0.5">
+<dt class="text-xs font-medium text-muted-foreground">nested</dt>
+<dd class="min-w-0">
+<dl class="flex min-w-0 flex-col gap-2">
+<div class="flex min-w-0 flex-col gap-0.5 border-l-2 border-border pl-2">
+<dt class="text-xs font-medium text-muted-foreground">inner</dt>
+<dd class="min-w-0">
+<dl class="flex min-w-0 flex-col gap-2">
+<div class="flex min-w-0 flex-col gap-0.5 border-l-2 border-border pl-2">
+<dt class="text-xs font-medium text-muted-foreground">deep</dt>
+<dd class="min-w-0">
+<span data-text="">깊은 글자</span>
+</dd>
+</div>
+</dl>
+</dd>
+</div>
+<div class="flex min-w-0 flex-col gap-0.5 border-l-2 border-border pl-2">
+<dt class="text-xs font-medium text-muted-foreground">flag</dt>
+<dd class="min-w-0">
+<span class="tabular-nums">false</span>
+</dd>
+</div>
+</dl>
+</dd>
+</div>
+</dl>
+</div>"
+`;

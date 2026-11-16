@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "title": "Studio Review",
+    "description": "パートナー企業向けの Studio レビュー機能ガイドです。"
+  },
+  "common": {
+    "leaveConfirm": {
+      "title": "この画面から移動しますか?",
+      "stay": "とどまる",
+      "leave": "移動する"
+    }
+  },
+  "home": {
+    "title": "Studio Review",
+    "description": "コレクションを選ぶ → Job を選ぶ → Job をレビューする、の 3 ステップで Studio のレビューの流れを体験できる Demo App です。",
+    "cta": "はじめる",
+    "stepLabel": "ステップ {step}",
+    "stepsLabel": "レビューの流れ",
+    "dashboard": {
+      "label": "レビューの状況",
+      "stats": {
+        "inProgress": "レビュー中の Job",
+        "done": "レビュー済みの Job",
+        "collections": "レビュー中のコレクション",
+        "failed": "読み込めませんでした"
+      },
+      "continue": {
+        "title": "レビューを続ける",
+        "open": "Job を開く",
+        "empty": "このブラウザで開いた Job に、レビュー中のものはありません。",
+        "emptyAction": "コレクションを選ぶ"
+      },
+      "recent": {
+        "title": "最近のレビュー",
+        "hint": "このサーバーを使うすべての人のレビュー記録です。このブラウザで開いていない Job は ID で表示されます。",
+        "failed": "レビュー状態を読み込めなかったため、このブラウザで開いた Job だけを表示しています。"
+      }
+    },
+    "steps": {
+      "collections": {
+        "title": "コレクションを選ぶ",
+        "description": "レビューするドキュメントのコレクションを選びます。",
+        "items": {
+          "0": "作成元で絞り込み、表示する列を選ぶ",
+          "1": "並び順を選ぶ",
+          "2": "番号でページを移動",
+          "3": "名前の横のボタンでコレクション ID をコピー"
+        }
+      },
+      "detail": {
+        "title": "Job を選ぶ",
+        "description": "完了した Job からレビューするものを選びます。",
+        "items": {
+          "0": "ファイル名、分量、レビュー状態、設定を確認",
+          "1": "ファイル名で検索、Job ID で直接開く",
+          "2": "レビュー状態で絞り込み、順番にレビュー",
+          "3": "レビューに対応していないコレクションの案内"
+        }
+      },
+      "job": {
+        "title": "Job をレビューする",
+        "description": "元のページと照らし合わせ、ドキュメント構成と値を修正して保存します。",
+        "items": {
+          "0": "ページ画像上で Parse と抽出値をハイライト",
+          "1": "ドキュメントの分割、結合、移動、並べ替え、除外、ラベル付け",
+          "2": "検証で引っかかったドキュメントと空の値をすぐ探す",
+          "3": "保存と完了を一度に行い、次の Job へ"
+        }
+      }
+    }
+  },
+  "appHeader": {
+    "home": "Studio Review",
+    "homeLabel": "Studio Review のトップ画面"
+  },
+  "settings": {
+    "label": "設定",
+    "language": "言語",
+    "stepsPick": "レビューするステップ",
+    "stepsHint": "すべての Job で、ここでオンにしたステップだけがタブに表示されます。Parse と Instruct は表示のみです。",
+    "readOnly": "表示のみ",
+    "queue": "レビューキュー",
+    "advance": "完了したら次の Job を開く",
+    "advanceHint": "「順番にレビュー」で開いた Job を完了すると、次の Job をすぐに開きます。",
+    "groups": {
+      "pageEditing": "ページ編集",
+      "advanced": "詳細"
+    },
+    "groupHints": {
+      "pageEditing": "文書を分けたりまとめたり、ページを移動したりする機能です。ラベルだけ確認するときはオフにすると画面がすっきりします。",
+      "advanced": "レビュー結果をファイルで扱ったり、保存した変更をさかのぼったりする機能です。"
+    },
+    "feature": {
+      "pageTools": "ページ編集ツール",
+      "filmstrip": "ページのサムネイル",
+      "organizer": "ページの整理",
+      "jsonMenu": "レビュー結果 JSON",
+      "history": "変更履歴"
+    },
+    "featureHint": {
+      "pageTools": "構成タブのツールバーに文書の境界移動、ここで分ける、前の文書へ、次の文書へ、ページを除外、ページを移動を、作業パネルにこの文書を除外と新しい文書に分割を表示します。",
+      "filmstrip": "構成タブで前後の文書のページを帯で見ながら、分ける位置を選びます。",
+      "organizer": "すべての文書のページを格子で表示し、複数枚をまとめて移動、除外、新しい文書への分割を行い、サムネイル間の ✂ で文書を分けます。",
+      "jsonMenu": "ヘッダーに JSON メニューを置き、レビュー結果をダウンロードしたり直接編集したりします。",
+      "history": "ヘッダーに変更履歴ボタンを表示します。ここから以前に保存した値や元の出力を読み込み直せます。"
+    }
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "backHome": "ホームに戻る"
+  },
+  "collections": {
+    "title": "コレクション",
+    "description": "レビューするコレクションを選びます。",
+    "backToList": "コレクション一覧",
+    "view": {
+      "label": "表示",
+      "list": "一覧",
+      "lineage": "関係"
+    },
+    "lineage": {
+      "graphLabel": "コレクションの関係",
+      "loading": "つながっているコレクションを探しています…",
+      "loadingHint": "コレクションが多いと、初回は少し時間がかかることがあります。",
+      "emptyTitle": "つながっているコレクションはまだありません",
+      "emptyDescription": "Workflow がコレクションの結果を Import するか、修正した結果を新しいコレクションに取り込むと、ここに表示されます。",
+      "hint": "矢印は元のコレクションから、その結果で作られたコレクションへ向かいます。",
+      "unrelated": "つながりのないコレクション {count, number} 件は表示していません。",
+      "partial": "読み取れなかったコレクションがあるため、関係が欠けている可能性があります。",
+      "partialRetry": "再読み込み",
+      "importEdge": "Import",
+      "importEdgeTitle": "{workflows} で Import",
+      "missing": "表示できないコレクション",
+      "jobs": "Job {count, number} 件",
+      "srSources": "元: {names}",
+      "srResults": "つながり先: {names}",
+      "resultImportEdge": "結果インポート",
+      "unverified": "Workflow を表示できないなどの理由で、つながりを確認できなかったコレクションが {count, number} 件あります。"
+    },
+    "columns": {
+      "name": "名前",
+      "source": "作成元",
+      "workflow": "Workflow",
+      "jobs": "Job 数",
+      "review": "レビュー",
+      "updated": "更新日時",
+      "lastResult": "最終結果",
+      "menu": "列の表示設定",
+      "menuLabel": "表示する列"
+    },
+    "kind": {
+      "documents": "ドキュメント",
+      "table": "表"
+    },
+    "defaultBadge": "デフォルト",
+    "defaultCollectionHint": "この Workflow の実行結果が自動でたまる既定のコレクションです。",
+    "untitled": "名前のないコレクション",
+    "loadMore": "さらに表示",
+    "loadingMore": "読み込み中…",
+    "pagination": {
+      "label": "Collection のページ移動",
+      "previous": "前へ",
+      "next": "次へ",
+      "page": "{page} ページ",
+      "goTo": "{page} ページへ"
+    },
+    "source": {
+      "agent_export": "Agent Export",
+      "agent_link": "Workflow 連携",
+      "result_import": "結果のインポート",
+      "file_upload": "ファイルアップロード",
+      "standalone": "Store API"
+    },
+    "sourceHint": {
+      "agent_export": "Export Node で作成した Collection",
+      "agent_link": "Workflow に連携して作成した Collection",
+      "result_import": "結果ファイルをインポートして作成した Collection",
+      "file_upload": "ファイルをアップロードして作成した Collection",
+      "standalone": "Workflow を使わず Store API で直接作成した Collection"
+    },
+    "sort": {
+      "order": "並び順",
+      "newestResults": "新しい結果順",
+      "oldestResults": "古い結果順",
+      "scopeHint": "列の並べ替えと作成元フィルターはこのページ内だけに適用されます。",
+      "ariaSortBy": "{column} で並べ替え"
+    },
+    "filter": {
+      "ariaFilterBy": "{column} で絞り込み",
+      "ariaFilterByCount": "{column} で絞り込み、{count} 件選択",
+      "all": "すべて",
+      "clear": "フィルターを解除"
+    },
+    "copyId": {
+      "label": "コレクション ID をコピー",
+      "hint": "クリックでコピー",
+      "copied": "コピーしました",
+      "failed": "コピーできませんでした。上の ID を選択して手動でコピーしてください。"
+    },
+    "empty": {
+      "title": "コレクションがありません",
+      "description": "Agent や Workflow が結果を書き込むとここに表示されます。",
+      "filteredTitle": "条件に合うコレクションがありません",
+      "filteredDescription": "作成元フィルターを変更するか解除してください。",
+      "pageTitle": "このページに Collection はありません",
+      "pageDescription": "前のページに戻ってください。"
+    },
+    "summary": {
+      "totalJobs": "全 Job",
+      "latestConfigJobs": "最新の設定で実行した Job",
+      "latestConfigs": "最新の設定の数",
+      "totalJobsHelp": "全 Job 数の説明",
+      "totalJobsHint": "この Collection に結果を出したすべての Job の数です。以前の設定で実行した Job、同じファイルを再実行した Job、実行中・失敗した Job も含みます。表ですべて見るには、表示オプションで「以前の実行も表示」をオンにし、「最新の設定の結果のみ」をオフにしてください(表には完了した Job のみ表示されます)。",
+      "latestConfigJobsHelp": "最新の設定で実行した Job 数の説明",
+      "latestConfigJobsHint": "最新の設定で実行した Job の数です。同じファイルを複数回実行した場合はすべて数えます。",
+      "visibleRows": "表に表示中の行 {count}",
+      "visibleRowsMore": "表に表示中の行 {count}+"
+    },
+    "unsupported": {
+      "title": "このコレクションはレビューに対応していません",
+      "description": "ファイルアップロードや結果インポートで作成したコレクションには、レビューできる元の Job がありません。"
+    },
+    "jobs": {
+      "title": "Job",
+      "allHistory": "以前の実行も表示",
+      "allHistoryHintOff": "同じファイルは最後に実行した Job だけを表示します。",
+      "allHistoryHintOn": "同じファイルを複数回実行した場合も、その Job をすべて表示します。",
+      "latestOnly": "最新の設定の結果のみ",
+      "latestOnlyHintOff": "設定を変更する前に実行した Job も表示します。",
+      "latestOnlyHintOn": "最新の設定で実行した Job だけを表示します。",
+      "latestOnlyGroupedTooltip": "「以前の実行も表示」がオフのため、同じファイルは最後に実行した Job だけを表示します。同じファイルを変更後の設定で再実行した場合、このオプションをオフにしても以前の設定の Job は表示されません。表示するには「以前の実行も表示」をオンにしてください。",
+      "viewOptions": "表示オプション",
+      "empty": {
+        "title": "完了した Job がありません",
+        "description": "フィルターをオフにするか、検索語を変えてください。"
+      },
+      "emptySearch": {
+        "title": "「{query}」に一致する Job がありません",
+        "description": "検索は入力ファイル名（2 文字以上）と照合します。"
+      },
+      "emptyFiltered": {
+        "title": "条件に一致する Job がありません",
+        "description": "レビュー状態のフィルターや検索語を変えてみてください。"
+      }
+    },
+    "search": {
+      "label": "ファイル名または Job ID で検索",
+      "placeholder": "ファイル名または job_…",
+      "hintShort": "2 文字以上入力するとファイル名で絞り込みます。",
+      "hintJobId": "Job ID のようです。一覧を絞り込まずに直接開きます。",
+      "openJob": "直接開く",
+      "checking": "確認中…",
+      "jobNotFound": "このコレクションの完了 Job ではありません。",
+      "jobError": "Job を開けませんでした（{code}）。"
+    },
+    "errors": {
+      "title": "データを読み込めませんでした",
+      "retry": "再試行",
+      "code": "エラーコード: {code}",
+      "server_misconfigured": "サーバーに Upstage API キーが設定されていません。",
+      "api_unreachable": "Upstage API に接続できませんでした。",
+      "upstream_timeout": "Upstage API が時間内に応答しませんでした。",
+      "network_error": "このアプリのサーバーに接続できませんでした。",
+      "unauthorized": "API キーが拒否されました。",
+      "not_found": "見つかりません。",
+      "generic": "問題が発生しました。"
+    },
+    "reviewFilter": {
+      "label": "レビュー状態",
+      "all": "すべて",
+      "pending": "未レビュー",
+      "in_progress": "レビュー中",
+      "done": "レビュー完了"
+    },
+    "progress": {
+      "label": "進捗",
+      "done": "レビュー完了 {done} / {total}",
+      "doneOnly": "レビュー完了 {done}",
+      "inProgress": "レビュー中 {count}",
+      "loading": "集計中…",
+      "error": "進捗を読み込めませんでした",
+      "basis": "全 Job から実行中・失敗した Job を除いた数が基準です。以前の設定で実行した Job や同じファイルを再実行した Job も数えるため、「順番にレビュー」の対象(下の表の既定の表示)より多くなることがあります。"
+    },
+    "startReview": {
+      "button": "順番にレビュー",
+      "checking": "確認中…",
+      "none": "レビューする Job がありません",
+      "error": "Job を確認できませんでした"
+    },
+    "overview": {
+      "label": "レビューの状況",
+      "inProgress": "レビュー中の Job",
+      "done": "レビュー済みの Job",
+      "collections": "レビュー中のコレクション",
+      "hint": "このアプリに記録されたレビュー状態をすべてのコレクションで数えます。下の表の「レビュー」列はコレクションごとの状況です。"
+    },
+    "reviewCell": {
+      "none": "未レビュー",
+      "done": "完了 {done} / {total}",
+      "doneOnly": "完了 {done}",
+      "inProgress": "レビュー中 {count}",
+      "bar": "レビュー済みの割合"
+    }
+  },
+  "jobRow": {
+    "columns": {
+      "file": "ファイル",
+      "size": "分量",
+      "status": "状態",
+      "review": "レビュー",
+      "config": "設定",
+      "created": "作成",
+      "updated": "更新"
+    },
+    "status": {
+      "in_progress": "処理中",
+      "completed": "完了",
+      "failed": "失敗",
+      "cancelled": "キャンセル"
+    },
+    "moreFiles": "+{count}",
+    "filesAndPages": "ファイル {files} 件、{pages} ページ",
+    "filesOnly": "ファイル {files} 件",
+    "noFile": "（ファイル名なし）",
+    "latestBadge": "最新の設定",
+    "noConfig": "—",
+    "reviewStatus": {
+      "pending": "未レビュー",
+      "in_progress": "レビュー中",
+      "done": "レビュー完了",
+      "unknown": "—",
+      "completedAt": "{at} 完了"
+    }
+  },
+  "review": {
+    "loading": "Job を読み込んでいます…",
+    "header": {
+      "back": "Job 一覧に戻る",
+      "moreFiles": "ほか {count} 件",
+      "tray": "変更内容",
+      "save": "保存",
+      "saving": "保存中…",
+      "leaveConfirm": "保存していない変更があります。この画面を離れると変更は失われます。移動しますか?",
+      "leaveConfirmSaving": "保存中です。今この画面を離れると、保存結果をここで確認できません。移動しますか?",
+      "complete": "レビュー完了",
+      "completeAndNext": "完了して次の Job",
+      "completing": "処理中…",
+      "reopen": "レビュー中に戻す",
+      "saveAndComplete": "保存して完了",
+      "saveAndNext": "保存して次の Job",
+      "saveShortcut": "⌘S または Ctrl+S",
+      "completeShortcut": "⌘Enter または Ctrl+Enter",
+      "completedNotice": "レビュー完了: {name}",
+      "history": "変更履歴",
+      "historyUnavailable": {
+        "unsupported": "この Collection では変更履歴を利用できません",
+        "unknown": "変更履歴に対応しているか確認できませんでした"
+      }
+    },
+    "reviewStatus": {
+      "notice": {
+        "completed": "レビュー完了にしました",
+        "reopened": "レビュー中に戻しました",
+        "reverted_by_save": "保存したためレビュー中に戻りました。確認してからもう一度レビュー完了を押してください",
+        "failed": "レビュー状態を変更できませんでした"
+      }
+    },
+    "queue": {
+      "label": "レビューキュー",
+      "previous": "前の Job",
+      "next": "次の Job",
+      "nextJob": "次: {name}",
+      "nextMore": "+{count}",
+      "remaining": "残り {count} 件",
+      "remainingMore": "残り {count} 件+",
+      "loading": "読み込み中…",
+      "end": "最後の Job です",
+      "refresh": "新しい Job を確認",
+      "refreshHint": "一覧に新しく追加された Job がないか確認し、あればすぐに開きます。",
+      "refreshing": "確認中…",
+      "noNew": "新しく追加された Job はありません",
+      "noMore": "レビューする Job がありません",
+      "loadFailed": "次の Job を読み込めませんでした",
+      "revisitable": "新しい Job はありません。終わっていない {count} 件は「前の Job」に戻ってレビューしてください。"
+    },
+    "stepTabs": {
+      "label": "ステップ",
+      "readOnly": "閲覧のみ",
+      "noLayout": "文書構成",
+      "structureMultiLayout": "ドキュメント配置が複数あるジョブです。このジョブのドキュメント構成は Studio で修正してください。",
+      "structureNoLayout": "このジョブには修正できるドキュメント構成がありません。値は修正できます。"
+    },
+    "stepTypes": {
+      "parse": "Parse",
+      "classify": "Classify",
+      "split": "Split",
+      "extract": "Extract",
+      "instruct": "Instruct",
+      "validate": "Validate",
+      "match": "Match",
+      "merge": "Merge",
+      "export": "Export"
+    },
+    "documents": {
+      "title": "文書",
+      "titleSplit": "分割された文書",
+      "about": "この一覧について",
+      "aboutSplit": "Classify が元のファイルから識別して分割した文書です。各文書の名前は分類された文書の種類(ラベル)で、文書を選ぶとそのページがビューアに表示されます。",
+      "aboutPlain": "この Job の元のファイルにある文書です。文書を選ぶとそのページがビューアに表示されます。",
+      "untitled": "(ラベルなし)",
+      "excluded": "除外したページ",
+      "pages": "{count} ページ",
+      "empty": "この Job には表示できる文書構成がありません。",
+      "summary": "文書 {count} 件、合計 {pages} ページ",
+      "summaryVisited": "開いた文書 {count} 件",
+      "summarySeparator": "、",
+      "filtered": "絞り込み {count} 件",
+      "selectedHidden": "選択中の文書はフィルターで隠れています。",
+      "excludedHint": "除外したページは Classify タブのページサムネイルから元に戻せます。",
+      "excludedHintAction": "ページサムネイルをオンにする",
+      "group": "グループ {index}",
+      "unvisited": "まだ開いていない",
+      "flag": {
+        "danger": "不合格",
+        "warning": "警告"
+      },
+      "hint": {
+        "danger": "Validate の判定が不合格(red)の文書です。",
+        "warning": "Validate の判定が警告(yellow)の文書です。",
+        "changed": "ラベル、ページ構成、または値を変更した文書です。",
+        "recheck": "ページ構成が変わったため、値の再確認が必要な文書です。",
+        "locked": "編集できない文書です。",
+        "excluded": "除外した文書です。保存すると、この文書のページは除外ページとして扱われます。",
+        "unvisited": "この Job でまだ開いていない文書です。"
+      },
+      "filter": {
+        "search": "ラベルで検索",
+        "placeholder": "ラベルを検索",
+        "status": "状態フィルター",
+        "all": "すべて",
+        "flagged": "不合格または警告",
+        "changed": "変更あり",
+        "recheck": "再確認が必要",
+        "excluded": "除外",
+        "untouched": "変更なし",
+        "unvisited": "まだ開いていない文書",
+        "noMatch": "条件に合う文書がありません。",
+        "clear": "フィルターを解除"
+      },
+      "status": {
+        "changed": "変更あり",
+        "recheck": "再確認が必要",
+        "locked": "編集不可",
+        "excluded": "除外"
+      }
+    },
+    "pages": {
+      "position": {
+        "label": "ページ位置",
+        "previous": "前のページ",
+        "next": "次のページ",
+        "input": "ページ番号",
+        "total": "/ {total}",
+        "track": "ページ移動",
+        "valueText": "{total} ページ中 {page} ページ",
+        "marks": {
+          "changed": "変更した値があるページ",
+          "issue": "検証の問題があるページ",
+          "noImage": "画像がまだないページ"
+        }
+      }
+    },
+    "viewer": {
+      "label": "文書ビューア",
+      "failedToLoadImage": "ページ画像を読み込めませんでした。",
+      "pleaseTryAgain": "もう一度お試しください。",
+      "preparingPageImage": "ページ画像を準備しています…",
+      "retry": "再試行",
+      "notReady": "一部のページ画像をまだ準備しています。",
+      "fileFailed": "{file} のページ画像を読み込めませんでした。",
+      "noPages": "この文書には表示できるページがありません。",
+      "progress": "ページ画像 {pages}/{totalPages}、ファイル {files}/{totalFiles}",
+      "highlightsLoading": "周辺ページのハイライトを読み込んでいます…",
+      "highlightsFailed": "一部のページのハイライトを読み込めませんでした。",
+      "viewMode": "ページの表示方法",
+      "paged": "1 ページずつ表示",
+      "continuous": "連続スクロール",
+      "filmstrip": "ページのサムネイル",
+      "filmstripShow": "ページのサムネイルを表示",
+      "filmstripHide": "ページのサムネイルを隠す",
+      "organizerShow": "ページ整理を開く",
+      "organizerHide": "ページ整理を閉じる",
+      "shortcuts": "PageUp・PageDown で前後のページ、Home・End で最初・最後のページ、Alt+↑・↓ で前後の文書に移動します。"
+    },
+    "panel": {
+      "title": "選択した文書",
+      "noSelection": "文書を選択してください。",
+      "pages": "ページ",
+      "pageRange": "{file} {from}–{to} ページ",
+      "pageSingle": "{file} {page} ページ"
+    },
+    "status": {
+      "changed": "変更あり",
+      "recheck": "再確認が必要",
+      "locked": "編集不可"
+    },
+    "errors": {
+      "title": "この Job を開けませんでした",
+      "retry": "再試行",
+      "backToJobs": "Job 一覧に戻る",
+      "code": "エラーコード: {code}",
+      "generic": "問題が発生しました。",
+      "review_target_not_found": "このコレクションの完了した Job ではありません。",
+      "collection_source_type_unsupported": "このコレクションはレビューに対応していません。",
+      "collection_review_disabled": "このコレクションではレビューが無効になっています。",
+      "operation_capacity_exceeded": "サーバーが混み合っています。しばらくしてから再試行してください。",
+      "artifact_unavailable": "現在この Job の結果を読み込めません。しばらくしてから再試行してください。",
+      "idempotency_key_reused": "同じアップロードが別の内容ですでに送信されています。",
+      "invalid_value": "リクエストに不正な値があります。",
+      "forbidden": "このリクエストはブロックされました。",
+      "package_limit_exceeded": "レビューファイルがアップロード上限を超えています。",
+      "server_misconfigured": "サーバーに Upstage API キーが設定されていません。",
+      "api_unreachable": "Upstage API に接続できませんでした。",
+      "upstream_timeout": "Upstage API が時間内に応答しませんでした。",
+      "upstream_redirect": "Upstage API が予期しないリダイレクトを返しました。",
+      "network_error": "このアプリのサーバーに接続できませんでした。",
+      "invalid_document": "レビュー文書を読み取れませんでした。",
+      "unsupported_review_format": "対応していないレビュー文書の形式です。",
+      "invalid_json": "レビュー文書が正しい JSON ではありません。",
+      "json_too_large": "レビュー文書が大きすぎて開けません。",
+      "nesting_too_deep": "レビュー文書の入れ子が深すぎて開けません。",
+      "duplicate_key": "レビュー文書に重複したキーがあります。",
+      "unknownCode": "保存できませんでした({code})。",
+      "http_error": "サーバーが予期しない応答を返しました。",
+      "invalid_response": "サーバーの応答を読み取れませんでした。",
+      "unsupported_media_type": "レビューファイルを誤った形式で送信しました。",
+      "review_import_not_found": "このインポートはもう存在しません。",
+      "base_version_conflict": "別のレビューが先に反映されました。再読み込みしてから修正してください。",
+      "schema_violation": "Step の schema に合わない値があります。",
+      "mixed_file_result": "他のファイルと結果を共有しているファイルは移動できません。",
+      "review_target_mismatch": "別の Collection のレビューファイルです。",
+      "review_step_mismatch": "結果の Step が変わりました。再読み込みしてから修正してください。",
+      "review_step_unavailable": "レビューファイルが不明な Step を指しています。",
+      "review_group_unavailable": "レビューファイルが存在しないファイルグループを指しています。",
+      "review_document_unavailable": "レビューファイルが存在しないドキュメントを指しています。",
+      "review_file_unavailable": "レビューファイルが存在しないファイルを指しています。",
+      "review_source_unavailable": "このジョブはレビューできません。",
+      "review_limit_exceeded": "このジョブはレビューの上限を超えています。",
+      "duplicate_review_file": "同じファイルが複数のグループに入っています。",
+      "page_out_of_range": "ファイルの範囲外のページ範囲があります。",
+      "duplicate_review_page": "同じページが1つの文書に2回、または2つの文書に入っています。",
+      "page_overlap": "除外したページがドキュメントにも入っているか、二重に除外されています。",
+      "page_missing": "どのドキュメントにもなく除外もされていないページがあります。",
+      "label_not_in_config": "設定にないラベルがあります。",
+      "permission_revoked": "このジョブを修正する権限がありません。",
+      "upload_checksum_mismatch": "アップロードが破損しました。もう一度保存してください。",
+      "operation_expired": "インポートの有効期限が切れました。もう一度保存してください。",
+      "artifact_too_large": "結果が大きすぎて保存できません。",
+      "unit_too_large": "一度に変更した内容が多すぎます。分けて保存してください。",
+      "invalid_import_resource": "インポートの状態を読み取れませんでした。",
+      "unknown_import_status": "インポートが不明な状態です。",
+      "result_not_editable": "変更した結果の中に、もう修正できないものがあります。"
+    },
+    "values": {
+      "noResults": "この文書に紐づく結果はありません。",
+      "noStepResults": "この文書にはこのステップの結果がありません。",
+      "noFields": "修正できる値がありません。",
+      "stepOrdinal": "{name} ({n})",
+      "result": "結果",
+      "resultOrdinal": "結果 {n}",
+      "resultId": "結果 ID: {id}",
+      "mergeNotice": "入力結果が変わると、保存時に再合成されます。",
+      "machine": "元の値",
+      "keyTitle": "スキーマのキー: {key}",
+      "descriptionTitle": "スキーマの説明: {text}",
+      "empty": "(空)",
+      "revert": "元の値に戻す",
+      "none": "(なし)",
+      "notInConfig": "{value}(設定にない値)",
+      "true": "はい",
+      "false": "いいえ",
+      "nullPlaceholder": "値なし",
+      "emptyPlaceholder": "空",
+      "invalid_number": "数値として読めません。1234.5 のようにカンマなしで入力してください。",
+      "not_integer": "整数のみ入力できます。",
+      "invalid_json": "JSON の値として読めません。",
+      "not_scalar": "オブジェクトや配列は入力できません。値を 1 つ入力してください。",
+      "responseLoading": "原本の位置を読み込んでいます…",
+      "responseFailed": "原本の位置を読み込めませんでした。ハイライトなしで値を修正できます。",
+      "filter": {
+        "label": "値のフィルター",
+        "changedOnly": "変更した値のみ",
+        "emptyOnly": "空の値のみ",
+        "currentPageOnly": "現在のページの値のみ",
+        "hidden": "{count} 件を非表示",
+        "noLocationHint": "位置情報のない値は表示されません。"
+      },
+      "display": {
+        "description": "説明を表示",
+        "rules": "ルールを表示"
+      },
+      "fields": {
+        "label": "フィールド",
+        "menuLabel": "表示するフィールド",
+        "count": "{shown} / {total}",
+        "countLabel": "フィールド: {total} 件中 {shown} 件を表示",
+        "showAll": "すべて表示",
+        "hidden": "フィールド {count} 件を非表示にしています。"
+      },
+      "editErrors": {
+        "generic": "この変更を適用できませんでした({code})。",
+        "result_missing": "結果が見つからないため変更を適用できませんでした。",
+        "path_missing": "フィールドが見つからないため変更を適用できませんでした。",
+        "result_not_editable": "編集できない結果です。",
+        "path_exists": "そのフィールドはすでにあります。",
+        "index_out_of_range": "その位置には移動できません。",
+        "depends_on_reverted": "元に戻した変更に依存していたため、一緒に元に戻しました。"
+      },
+      "tree": {
+        "rootArray": "値の一覧",
+        "addItem": "項目を追加",
+        "addField": "フィールドを追加 ({count})",
+        "maxItems": "最大 {max} 件まで追加できます",
+        "emptyArray": "項目がありません。",
+        "clearValue": "空にする（値なし）",
+        "removeField": "フィールドを削除",
+        "moveUp": "上へ",
+        "moveDown": "下へ",
+        "removeItem": "項目を削除",
+        "removeItemMin": "項目を削除（最低 {min} 件）",
+        "menu": "{field} のメニュー",
+        "resultMenu": "{name} のメニュー",
+        "editJson": "JSON で編集",
+        "history": "この結果の変更履歴",
+        "showMore": "さらに表示（残り {count} 件）",
+        "itemNumber": "番号",
+        "itemActions": "項目の操作",
+        "original": "元の値: {value}",
+        "revertCell": "{field} を元の値に戻す",
+        "addCellField": "{field} を追加"
+      },
+      "longText": {
+        "summary": "長いテキスト ({size}、{count, number} 文字)",
+        "hint": "長すぎるためここでは編集できません。「JSON で編集」を使ってください。"
+      },
+      "schema": {
+        "type": "スキーマの型と一致しません(必要: {expected})。",
+        "enum": "許可された値ではありません。",
+        "required": "必須フィールドがありません: {missing}",
+        "known_key": "スキーマにないフィールドです。",
+        "min_items": "{limit} 件以上必要です(現在 {count} 件)。",
+        "max_items": "{limit} 件までです(現在 {count} 件)。",
+        "min_length": "{limit}文字以上にしてください(現在 {count}文字)。",
+        "max_length": "{limit}文字までです(現在 {count}文字)。"
+      },
+      "jsonDialog": {
+        "title": "{name} の値を JSON で編集",
+        "description": "結果の値全体を JSON で編集します。適用すると変更内容に「すべての値を置き換え」が 1 件追加されます。",
+        "editor": "結果の値の JSON",
+        "jumpToError": "エラー位置へ",
+        "apply": "適用",
+        "cancel": "キャンセル",
+        "unchanged": "変更はありません。",
+        "invalidJson": "JSON として読み取れません。",
+        "invalidJsonAt": "{line} 行 {column} 列目で JSON として読み取れません。",
+        "duplicateKey": "同じキーが 2 回あります: {key}",
+        "tooDeep": "入れ子が深すぎます。",
+        "tooLarge": "JSON が大きすぎます。",
+        "schemaProblem": "値の形が schema と一致しません（期待: {expected}）。"
+      },
+      "unlinked": "文書に未接続 ({count})",
+      "unlinkedHint": "この Job のどの文書にも接続されていない結果です。"
+    },
+    "parse": {
+      "summary": "{name}、要素 {count}、{pages}ページ",
+      "page": "{page}ページ",
+      "item": "要素 {n}",
+      "loadMore": "さらに表示",
+      "empty": "この文書のページには Parse 要素がありません。",
+      "noSpace": "位置情報を準備しています。",
+      "image": "図",
+      "imageLocate": "この図の位置を表示",
+      "currentPageOnly": "現在のページのみ",
+      "summaryPage": "{name}、{page}ページ、要素 {count}",
+      "emptyPage": "このページには Parse 要素がありません。",
+      "tableShowSource": "原文を表示",
+      "tableShowTable": "表として表示",
+      "tableRegion": "表",
+      "tableImage": "(画像: {alt})"
+    },
+    "instruct": {
+      "decision": "判定",
+      "unclassified": "未分類",
+      "citation": "引用 {n}",
+      "noLocation": "位置情報なし",
+      "rawJson": "元の JSON を表示",
+      "noRangeMatch": "この文書の範囲の出力がないため、すべて表示しています。",
+      "noSpace": "ページ位置がまだ分からないため、出力をすべて表示し、引用位置には移動できません。",
+      "outputHeading": "出力 {n}",
+      "pages": "{ranges}ページ",
+      "empty": "この出力には本文がありません。",
+      "image": "(画像: {alt})",
+      "readOnly": "Instruct の出力は表示のみです。",
+      "structured": {
+        "nullValue": "なし",
+        "emptyText": "(空)",
+        "emptyList": "項目なし",
+        "emptyObject": "フィールドなし"
+      }
+    },
+    "chips": {
+      "changed": "変更あり",
+      "changedCount": "変更 {count}",
+      "recheck": "要再確認",
+      "staleReason": "判定が参照した値が変わりました",
+      "locked": "編集不可",
+      "lock": {
+        "input_changed": "ページ構成が変わったため値を修正できません",
+        "unlinked": "紐づく文書がありません",
+        "missing": "値のない結果です",
+        "unsupported_state": "この状態の結果は修正できません",
+        "structure_changed": "構成が変わった文書です。保存してから値を確認してください"
+      }
+    },
+    "verdict": {
+      "group": "判定",
+      "green": "green",
+      "yellow": "yellow",
+      "red": "red",
+      "checks": "元の判定根拠",
+      "passed": "合格",
+      "failed": "不合格",
+      "checksNotice": "判定を変えると、下の元の判定根拠は保存時に削除されます。",
+      "changedNotice": "判定を変更しました。元の判定根拠は保存時に削除されます。"
+    },
+    "validateRules": {
+      "empty": "この Job のレスポンスにこの Step のルールがありません。",
+      "severity": {
+        "error": "エラー → red",
+        "warning": "警告 → yellow"
+      },
+      "logic": {
+        "and": "すべて満たす",
+        "or": "いずれかを満たす"
+      },
+      "operator": {
+        "filled": "<left></left> が入力済み",
+        "empty": "<left></left> が空",
+        "contains": "<left></left> に <right></right> を含む",
+        "matches": "<left></left> がパターン <right></right> に一致"
+      },
+      "agg": {
+        "sum": "<target></target> の合計",
+        "count": "<target></target> の件数",
+        "min": "<target></target> の最小値",
+        "max": "<target></target> の最大値"
+      },
+      "attr": {
+        "confidence": "<target></target> の信頼度",
+        "length": "<target></target> の長さ"
+      },
+      "scope": {
+        "all": "すべての <target></target>",
+        "any": "いずれかの <target></target>"
+      }
+    },
+    "validationSummary": {
+      "label": "検証結果",
+      "open": "判定を見る",
+      "verdict": {
+        "red": "不合格",
+        "yellow": "警告"
+      }
+    },
+    "filmstrip": {
+      "region": "ドキュメント構成",
+      "document": "ドキュメント {index}",
+      "untitled": "(ラベルなし)",
+      "label": "ドキュメントのラベル",
+      "noLabel": "(ラベルなし)",
+      "notInConfigOption": "{label}(設定にない)",
+      "notInConfigBadge": "設定にない",
+      "notInConfigHint": "設定にないラベルです。そのまま保存できます。",
+      "pageCount": "{count} ページ",
+      "page": "{page}p",
+      "pageInFile": "{page}p ({file})",
+      "noImage": "画像なし",
+      "pageMenu": "{page} のメニュー",
+      "moveLeft": "左へ",
+      "moveRight": "右へ",
+      "moveToDocument": "別のドキュメントへ移動",
+      "documentOption": "ドキュメント {index} ({label})",
+      "noOtherDocument": "同じファイルグループに別のドキュメントがありません",
+      "excludePage": "このページを除外",
+      "restorePage": "ドキュメントに戻す",
+      "split": "{page} の後ろで分割",
+      "documentMenu": "ドキュメント {index} のメニュー",
+      "dragDocument": "ドラッグして並べ替えるか、別のドキュメントにドロップして結合します",
+      "mergeWithPrevious": "前のドキュメントと結合",
+      "moveDocumentEarlier": "前へ",
+      "moveDocumentLater": "後ろへ",
+      "excluded": "除外",
+      "excludedEmpty": "ここにページをドロップすると除外されます。",
+      "unplaced": "抜けているページ",
+      "missing": "どのドキュメントにもなく、除外もされていないページです。",
+      "overlap": "複数の場所に入っているページです。",
+      "dropRejected": "ページは同じファイルグループ内でのみ移動できます。",
+      "dropRejectedLocked": "ロックされた文書には置けません。",
+      "groupBoundary": "ファイルグループの境界",
+      "excludeDocument": "このドキュメントを除外",
+      "restoreDocument": "このドキュメントを戻す",
+      "excludedDocument": "除外済み",
+      "restoreToNewDocument": "新しいドキュメントにする",
+      "unplacedMenu": "抜けている {page} のメニュー",
+      "collapsedPages": "…{count} ページ",
+      "focusDocument": "文書 {index} を表示",
+      "hiddenBefore": "前の文書 {count} 件",
+      "hiddenAfter": "後の文書 {count} 件",
+      "expand": "展開",
+      "collapse": "折りたたむ",
+      "moveDocumentTo": "位置を指定…"
+    },
+    "organizer": {
+      "title": "ページ整理",
+      "region": "ページサムネイルのグリッド",
+      "size": "サムネイルのサイズ",
+      "sizeSmall": "小さいサムネイル",
+      "sizeMedium": "大きいサムネイル",
+      "done": "完了",
+      "dragCount": "{count} 枚",
+      "dragging": "{count} 枚をまとめて移動中",
+      "moveEarlier": "前へ",
+      "moveLater": "後ろへ",
+      "splitBefore": "{page} の前で分割",
+      "selection": {
+        "label": "選択したページの操作",
+        "hint": "サムネイルをドラッグして移動します。⌘/Ctrl+クリックや Shift+クリックで複数のページを選び、まとめて移動、除外、新しい文書への分割ができます。",
+        "count": "{count} 枚選択",
+        "move": "別の文書へ移動…",
+        "exclude": "除外",
+        "newDocument": "新しい文書に分割…",
+        "split": "ここで分割",
+        "clear": "選択を解除",
+        "mixedGroups": "同じファイルグループのページだけをまとめて移動できます。",
+        "summary": "{count} 枚 ({documents})",
+        "summaryDocument": "文書 {index}: {pages} ページ",
+        "dialogDescription": "選んだページの移動先を選びます。「新しい文書」を選ぶとラベルを決めて分割します。"
+      }
+    },
+    "structure": {
+      "label": "ラベル",
+      "noLabel": "(ラベルなし)",
+      "notInConfigOption": "{label}(設定にない)",
+      "notInConfig": "設定にないラベルです。そのまま保存できます。",
+      "recheck": "構成が変わったドキュメントです。保存してから値をもう一度確認してください。",
+      "coverageUnknown": "ページ数が分からないファイルがあるため、抜けているページを確認できません。",
+      "errors": {
+        "generic": "この変更を適用できませんでした({code})。",
+        "document_missing": "そのドキュメントはもうありません。",
+        "page_not_in_document": "そのページはもうドキュメントにありません。",
+        "result_missing": "結果が見つからないため変更を適用できませんでした。",
+        "path_missing": "フィールドが見つからないため変更を適用できませんでした。",
+        "result_not_editable": "この結果は修正できません。",
+        "group_mismatch": "ページは同じファイルグループ内でのみ移動できます。",
+        "target_missing": "移動先が見つかりませんでした。",
+        "already_excluded": "すでに除外されたページです。",
+        "multi_layout_unsupported": "このジョブのドキュメント構成は Studio で修正してください。",
+        "index_out_of_range": "これ以上移動できません。",
+        "invalid_document_id": "新しいドキュメントを作成できませんでした。もう一度お試しください。",
+        "path_exists": "そのフィールドはすでにあります。",
+        "depends_on_reverted": "元に戻した変更に依存していたため、一緒に元に戻しました。",
+        "invalid_page_ranges": "ページ範囲を確認してください。ページは 1 から始まり、開始は終了より後にできず、ファイルはこのファイルグループのものである必要があります。",
+        "mixed_file_document": "このファイルと別のファイルを一緒に使うドキュメントがあるため、ファイルをまとめて移動できません。先にそのドキュメントのページ範囲を直してください。"
+      },
+      "pageRanges": {
+        "title": "ページ範囲",
+        "file": "範囲 {row} のファイル",
+        "range": "範囲 {row} のページ",
+        "placeholder": "1-3, 5",
+        "removeRow": "範囲 {row} を削除",
+        "addRow": "+ ファイル範囲を追加",
+        "invalid": "範囲を読み取れません。「1-3, 5」のように入力してください。"
+      },
+      "excludeDocument": "このドキュメントを除外",
+      "restoreDocument": "このドキュメントを戻す",
+      "excludedNotice": "除外したドキュメントです。保存すると、このドキュメントのページは除外ページとして扱われます。",
+      "newDocument": {
+        "open": "新しい文書に分割…",
+        "title": "新しい文書に分割",
+        "description": "指定したページは今の文書（または除外リスト）から分割されて新しい文書になります。ラベルを選んでください。新しい文書は選択中の文書の直後に入ります。",
+        "hint": "ファイルとページ範囲を指定して、そのページを今の文書から分割し、ラベルを決めた新しい文書にします。",
+        "invalidRanges": "「1-3, 5」のように読み取れるページ範囲を入力してください。",
+        "cancel": "キャンセル",
+        "create": "作成"
+      },
+      "documentPosition": {
+        "title": "文書の位置を指定",
+        "description": "文書 {index} の移動先を同じファイルグループ内の {first}–{last} で入力してください。",
+        "position": "位置",
+        "invalid": "{first} から {last} までの数字を入力してください。",
+        "cancel": "キャンセル",
+        "move": "移動"
+      },
+      "toolbar": {
+        "label": "文書の境界とページ操作",
+        "previousEnd": "◀ 文書 {index} の末尾 ({page}p)",
+        "nextStart": "文書 {index} の先頭 ({page}p) ▶",
+        "noPrevious": "◀ 最初の文書",
+        "noNext": "最後の文書 ▶",
+        "current": "文書 {index} ({label})、{page}/{total} ページ",
+        "splitHere": "ここで分割 ✂",
+        "toPrevious": "前の文書へ",
+        "toNext": "次の文書へ",
+        "excludePage": "ページを除外",
+        "movePages": "ページを移動…",
+        "noPreviousDocument": "前に文書がありません",
+        "noNextDocument": "後ろに文書がありません",
+        "previousOtherGroup": "前の文書は別のファイルグループのため移動できません",
+        "nextOtherGroup": "次の文書は別のファイルグループのため移動できません",
+        "splitHereHint": "表示中のページから文書の末尾までを同じラベルの新しい文書に分けます。一部のページだけ分割する・ラベルを変えるには「ページを移動…」を使います。",
+        "movePagesHint": "ページ範囲を選び、同じファイルグループの別の文書へ移動するか、ラベルを決めた新しい文書に分割します。"
+      },
+      "movePages": {
+        "title": "ページを移動",
+        "description": "この文書のページ範囲と移動先を選びます。「新しい文書」を選ぶとラベルを決めて分割します。",
+        "from": "開始ページ",
+        "to": "終了ページ",
+        "target": "移動先の文書",
+        "position": "位置",
+        "end": "末尾",
+        "start": "先頭",
+        "before": "指定ページの前",
+        "beforePage": "移動先の文書内の順番 (1–{max})",
+        "invalidRange": "1 から {total} までの範囲を入力してください。",
+        "invalidBefore": "1 から {total} までのページを入力してください。",
+        "newDocument": "新しい文書（元の文書の直後）",
+        "newDocumentLabel": "新しい文書のラベル",
+        "onlyNewDocument": "同じファイルグループに他の文書がないため、新しい文書に分割します。",
+        "cancel": "キャンセル",
+        "move": "移動"
+      },
+      "fileGroups": {
+        "title": "ファイルグループ",
+        "group": "グループ {index}",
+        "currentGroup": "（選択中のドキュメント）",
+        "move": "移動",
+        "moveMenu": "{file} を移動",
+        "moveToGroup": "グループ {index} に移動",
+        "moveToNewGroup": "新しいグループに分離",
+        "reasons": {
+          "layoutMismatch": "ドキュメント分類 Step が異なるグループです。",
+          "singleFile": "グループ内のファイルはこれだけです。"
+        }
+      }
+    },
+    "issues": {
+      "title": "保存前の検証",
+      "ok": "保存を妨げる問題はありません。",
+      "hint": "編集するたびに文書の構成と値を自動で検査します。赤い項目があると保存できません。",
+      "blockingSummary": "保存を妨げる問題が {count} 種類あります。",
+      "blocking": "保存を妨げる問題:",
+      "notBlocking": "お知らせ、保存はできます:",
+      "other": "{code}: {count} 件",
+      "page_missing": "どのドキュメントにもなく除外もされていないページ {count} 件",
+      "duplicate_review_page": "文書に重複して入っているページ {count} 件",
+      "page_overlap": "除外したのにドキュメントにも入っている、または二重に除外されたページ {count} 件",
+      "page_out_of_range": "ファイルの範囲外のページ範囲 {count} 件",
+      "label_not_in_config": "設定にないラベル {count} 件(そのまま保存できます)",
+      "review_file_unavailable": "このジョブにないファイル参照 {count} 件",
+      "review_group_unavailable": "存在しないファイルグループを指すドキュメント {count} 件",
+      "review_document_unavailable": "ドキュメント一覧にない除外ドキュメント {count} 件",
+      "review_step_unavailable": "存在しない、または Classify ではない Step を指すファイルグループ {count} 件",
+      "duplicate_review_file": "複数のグループに入っているファイル {count} 件",
+      "review_limit_exceeded": "このジョブはレビューの上限を超えています",
+      "schema_violation": "schema に合わない値 {count} 件",
+      "result_not_editable": "修正できなくなった変更済みの結果 {count} 件",
+      "package_limit_exceeded": "レビューファイルがアップロードの上限を超えています"
+    },
+    "save": {
+      "short": {
+        "saving": "保存中…",
+        "reloading": "再読み込み中…",
+        "savedRevision": "保存バージョン {revision}",
+        "savedNoRevision": "保存済み",
+        "reloadFailed": "保存済み、再読み込みできませんでした",
+        "noChange": "変更なし",
+        "conflict": "競合、再読み込みが必要",
+        "failed": "保存できませんでした"
+      },
+      "uploading": "レビューファイルをアップロードしています…",
+      "polling": "変更の反映を待っています…",
+      "reloadingAfterSave": "保存しました。最新の状態を再読み込みしています…",
+      "reloading": "最新の状態を再読み込みしています…",
+      "saved": "保存済み (revision {revision})",
+      "savedNoRevision": "保存済み",
+      "savedPartial": "{saved}。一部の変更のみ反映されました。再読み込みした値を確認して修正し直してください。",
+      "savedReloadFailed": "{saved}。最新の状態を再読み込みできませんでした。続けて修正する前に再読み込みしてください。",
+      "reloaded": "最新の状態を読み込みました。",
+      "noChange": "変更された内容はありません。",
+      "blocked": "「保存前の検証」の問題を直してから保存してください。",
+      "tooLarge": "レビューファイルが {size} で、アップロードの上限 {limit} を超えています。変更を分けて保存してください。",
+      "conflict": "別のレビューが先に反映されました(競合 {count} 件)。再読み込みしてから修正してください。",
+      "conflictHint": "もう一度保存しても同じ競合になります。先に再読み込みしてから保存してください。",
+      "conflictResult": "別のレビューがこの結果を先に変更しました。再読み込みしてから修正してください。",
+      "conflictStructure": "別のレビューがドキュメント構成を先に変更しました。再読み込みしてから修正してください。",
+      "failedField": "該当するフィールドを値パネルに表示しました。",
+      "stopped": {
+        "timeout": "10 分以内に反映が終わりませんでした。後でこのインポートを確認してください。",
+        "cancelled": "インポートがキャンセルされ、保存されませんでした。",
+        "unreachable": "反映されたか確認できませんでした。同じ内容で再度保存すると確認を続けます。"
+      },
+      "reload": "再読み込み",
+      "reloadConfirm": "再読み込みすると保存していない変更は失われます。続けますか?",
+      "reloadConfirmTitle": "最新の状態を再読み込みしますか?",
+      "reloadConfirmAction": "再読み込み",
+      "alsoReverted": "この項目に依存していた {count} 件の項目も元に戻しました。",
+      "imported": "{count, plural, =0 {JSON の値が現在の値と同じため、追加した変更はありません。} other {JSON から変更を # 件追加しました。}}",
+      "restored": "{count, plural, =0 {このブラウザに一時保存されていた変更はすでに反映されているため、追加した項目はありません。} other {このブラウザに一時保存されていた変更を # 件復元しました。}}",
+      "importId": "インポート {id}",
+      "code": "コード {code}"
+    },
+    "draft": {
+      "found": "保存していない変更が {count} 件あります ({savedAt})。",
+      "foundHint": "編集を始めると以前の一時保存は破棄されます。",
+      "restore": "復元",
+      "discard": "破棄",
+      "incompatible": "サーバーの内容が変わったため、保存していない変更は復元できません。",
+      "restoreFailed": "{index} 件目の変更を適用できなかったため、復元しませんでした。{detail}",
+      "tooLarge": "変更が大きすぎてこのブラウザに一時保存できませんでした。早めに保存してください。",
+      "storageFull": "ブラウザのストレージがいっぱいで一時保存できませんでした。このタブを離れる前に保存してください。"
+    },
+    "tray": {
+      "title": "変更内容",
+      "description": "変更を一つずつ確認し、不要なものを元に戻してから保存してください。",
+      "close": "閉じる",
+      "changes": "{count, plural, =0 {変更なし} other {変更 # 件}}",
+      "emptyTitle": "まだ変更はありません",
+      "hint": {
+        "structure": "Classify タブ: ページをドラッグして並べ替え、ドキュメントの分割・結合、ページの除外、ラベルの修正を行います。",
+        "values": "Extract・Validate などの値タブ: フィールドを選ぶと原本の位置が表示され、その場で値を修正できます。Parse・Instruct タブは表示のみです。",
+        "save": "すべての変更がここにたまります。不要なものは元に戻し、ジョブ全体を一度に保存します。"
+      },
+      "noDocument": "リンクされたドキュメントなし",
+      "emptyValue": "(空)",
+      "nullValue": "(なし)",
+      "revert": "元に戻す",
+      "revertItem": "元に戻す: {text}",
+      "revertAll": "すべて元に戻す",
+      "revertAllCancel": "キャンセル",
+      "revertAllConfirmTitle": "{count} 件の変更をすべて元に戻しますか?",
+      "revertAllConfirmBody": "保存していない修正はすべて失われます。",
+      "revertAllDone": "{count} 件の変更をすべて元に戻しました。",
+      "conflict": "競合",
+      "items": {
+        "setValue": "{step} › {field}: {before} → {after}",
+        "setValueNoStep": "{field}: {before} → {after}",
+        "setLabel": "ラベル: {before} → {after}",
+        "reorderPages": "{pages} ページを {to} 番目に移動",
+        "reorderDocuments": "{document} を {before} 番目から {after} 番目に移動",
+        "split": "{document} を {page} ページの後で分割",
+        "merge": "{document} と {other} を結合",
+        "movePages": "{pages} ページを {other} に移動",
+        "excludePages": "{pages} ページを除外",
+        "restorePages": "{count} ページを {document} に戻す",
+        "replaceSubtree": "{target}: 値を置き換え ({before} → {after})",
+        "replaceAll": "{step}: すべての値を置き換え",
+        "insertItem": "{target}: {index} 番目の項目を追加",
+        "removeItem": "{target}: {index} 番目の項目を削除 ({before})",
+        "moveItem": "{target}: {from} 番目の項目を {to} 番目へ移動",
+        "setKey": "{target}: フィールドを追加",
+        "removeKey": "{target}: フィールドを削除 ({before})",
+        "restoreToNewDocument": "除外ページ {count} 件から新しいドキュメントを作成",
+        "setPageRanges": "ページ範囲: {before} → {after}",
+        "setPageRangesMoved": "ページ範囲: {before} → {after}（取り込み: {moved}）",
+        "addDocument": "新しいドキュメント {document}: {ranges}",
+        "addDocumentMoved": "新しいドキュメント {document}: {ranges}（取り込み: {moved}）",
+        "excludeDocument": "ドキュメント {document} を除外",
+        "restoreDocument": "ドキュメント {document} を復帰",
+        "moveFile": "{file} をファイルグループ {group} に移動",
+        "moveFileNewGroup": "{file} を新しいファイルグループに分離",
+        "replaceStructure": "文書構成を JSON で置き換え（ドキュメント {documents} 件、除外ドキュメント {excludedDocuments} 件、除外ページ {excludedPages} ページ）",
+        "replaceStructureChanged": "文書構成を JSON で置き換え（ドキュメント {documents} 件、除外ドキュメント {excludedDocuments} 件、除外ページ {excludedPages} ページ）・変更: {summary}{shown, plural, =0 {} other {・{examples}}}{more, plural, =0 {} other { ほか # 件}}",
+        "batchMovePages": "{documents} 件のドキュメントの {count} ページを {other} に移動 ({sources})",
+        "batchExcludePages": "{documents} 件のドキュメントの {count} ページを除外 ({sources})",
+        "batchNewDocument": "{documents} 件のドキュメントの {count} ページから新しいドキュメントを作成 ({sources})"
+      },
+      "fragments": {
+        "arrayIndex": "{index}番目",
+        "movedFrom": "{document} から {count} ページ",
+        "movedFromRemoved": "{document} から {count} ページ（ドキュメント削除）",
+        "movedFromExcluded": "除外ページ {count} ページ",
+        "structureLabels": "ラベル {count} 件",
+        "structureRanges": "ページ範囲 {count} 件",
+        "structureAdded": "追加 {count} 件",
+        "structureRemoved": "削除 {count} 件",
+        "structureReordered": "順序 {count} 件",
+        "structureGroups": "ファイルグループ設定",
+        "structureLabelChange": "{before} → {after}（ドキュメント {position}）",
+        "structureDocument": "{document}（ドキュメント {position}）"
+      },
+      "summary": {
+        "title": "保存前の検証",
+        "passed": "合格:",
+        "failed": "問題:",
+        "missingOk": "抜けているページなし",
+        "overlapOk": "重複しているページなし",
+        "valuesOk": "変更した値は schema に合っています",
+        "limitOk": "アップロードの上限内",
+        "size": "({size} / {limit})",
+        "coverageUnknown": "ページ数が不明なファイルがあるため、抜けているページを確認できません。"
+      },
+      "advanced": "詳細: アップロード本文(JSON, {size})",
+      "save": "保存",
+      "saving": "保存中…",
+      "blockedHint": "上の問題を直すと保存できます。",
+      "structureGroup": "文書構成",
+      "origin": {
+        "revision": "履歴 v{version, number} から読み込み",
+        "original": "元の出力から読み込み"
+      }
+    },
+    "json": {
+      "menu": "JSON",
+      "menuLabel": "レビュー結果 JSON",
+      "menuTitle": "レビュー結果 JSON",
+      "menuDescription": "この Job のレビュー結果(文書の構成と値)を JSON ファイルでダウンロードしたり、直接編集したりします。",
+      "downloadOriginal": "元のデータをダウンロード",
+      "downloadOriginalHint": "この画面を開いたときに読み込んだ結果です。",
+      "downloadEdited": "現在の編集内容をダウンロード",
+      "downloadEditedHint": "保存前の編集内容も反映した結果です。",
+      "edit": "JSON で編集…",
+      "editHint": "結果全体を JSON で表示して編集します。",
+      "importFile": "ファイルから読み込む…",
+      "importFileHint": "JSON ファイルをエディターに読み込み、検査してから適用します。",
+      "title": "JSON 全体を編集",
+      "description": "レビュー JSON 全体を編集するか、ファイルから読み込みます。検査して適用すると差分が変更内容として追加されます。保存は別に行います。",
+      "editor": "レビュー JSON",
+      "jumpToError": "エラー位置へ",
+      "pickFile": "ファイルを選択",
+      "loadEdited": "現在の編集内容を読み込む",
+      "loadEditedHint": "画面で編集中のレビュー JSON（未保存の編集を含む）を読み込み、エディターの内容を置き換えます。",
+      "loadOriginal": "元のデータを読み込む",
+      "check": "検査",
+      "checking": "検査中…",
+      "apply": "適用",
+      "close": "閉じる",
+      "largeNotice": "ファイルが大きいため ({size})、編集が遅くなることがあります。",
+      "fileTooLarge": "{limit} を超えるファイルは開けません。",
+      "fileUnreadable": "ファイルを読み取れません。",
+      "fileLoaded": "ファイルを読み込みました。検査してから適用してください。",
+      "basis": {
+        "edited": "現在の内容: 現在の編集内容 — 画面で変更した内容（未保存を含む）が入っています。",
+        "original": "現在の内容: 元のデータ — この画面を開いたときにサーバーから読み込んだ結果です。画面で変更した内容は含まれません。",
+        "file": "現在の内容: ファイル {name}",
+        "modified": "このウィンドウで直接編集"
+      },
+      "summary": "エラー {errors}、拒否 {rejected}、無視 {ignored}",
+      "willAdd": "適用すると変更内容に {count} 件追加されます。",
+      "noChanges": "現在の編集内容との違いはありません。",
+      "recheck": "内容が変わりました。もう一度検査してください。",
+      "blockedBySave": "保存中、または競合が発生した状態では適用できません。",
+      "applyFailed": "{index} 件目を適用できなかったため、何も変更していません。{detail}",
+      "rejectedTitle": "適用できない理由",
+      "warningsTitle": "お知らせ（適用はできます）",
+      "parse": {
+        "invalidJson": "JSON として読み取れません。",
+        "invalidJsonAt": "{line} 行 {column} 列目で JSON として読み取れません。",
+        "duplicateKey": "同じキーが 2 回あります: {key}",
+        "tooDeep": "入れ子が深すぎます。",
+        "tooLarge": "JSON が大きすぎます。",
+        "unsupportedFormat": "レビュー JSON の形式ではありません（format: {format}）。",
+        "invalidDocument": "{pointer} の形が正しくありません（{reason}）。"
+      },
+      "errors": {
+        "collection_mismatch": "別の Collection のファイルです。",
+        "job_mismatch": "この Job のファイルではありません（同じ id の Job が 1 件だけ必要です）。",
+        "catalog_mismatch": "Step・Config の一覧が異なります。",
+        "unknown_result": "この Job にない結果です。",
+        "result_step_mismatch": "結果の Step が異なります。",
+        "base_version_mismatch": "version が異なります。最新のレビュー文書を読み込んで編集し直してください。",
+        "layout_mismatch": "ドキュメント配置ビューの構成が異なります。",
+        "file_set_mismatch": "ファイル構成が異なります。",
+        "structure_mismatch": "ドキュメント構成（file_groups・ドキュメント配置）が一致しません。",
+        "apply_failed": "この変更は適用できません（{reason}）。"
+      },
+      "warnings": {
+        "read_only_ignored": "読み取り専用のフィールドのため、保存しても反映されず破棄されます。",
+        "layout_step_changed": "分類 Step の紐付けが変わったため、ドキュメントと結果の紐付けが変わることがあります。"
+      }
+    },
+    "history": {
+      "title": "変更履歴",
+      "description": "保存された変更を確認します。以前の値を編集に読み込んで、もう一度保存できます。",
+      "close": "閉じる",
+      "sort": {
+        "label": "並び順",
+        "newest": "新しい順",
+        "oldest": "古い順"
+      },
+      "loading": "変更履歴を読み込んでいます…",
+      "loadingBlock": "次のページを読み込んでいます…",
+      "empty": "保存された変更はまだありません",
+      "retry": "再試行",
+      "errors": {
+        "unsupported": "このサーバーでは変更履歴を表示できません",
+        "notFound": "この Job の変更履歴を表示できません",
+        "busy": "リクエストが多すぎます。{seconds, number} 秒後にもう一度お試しください",
+        "busyReady": "リクエストが多すぎます。もう一度お試しください",
+        "generic": "変更履歴を読み込めませんでした ({code})",
+        "detail": "変更内容を読み込めませんでした ({code})",
+        "revisionNotFound": "この変更が見つかりません"
+      },
+      "row": {
+        "type": {
+          "result": "値",
+          "structure": "文書構成"
+        },
+        "version": "v{from}→v{to}",
+        "documentsMore": "+{count, number}",
+        "noDocuments": "関連文書なし",
+        "noLabel": "（ラベルなし）",
+        "documentsHint": "文書ラベルは現在の文書構成に基づいています",
+        "toggle": "{name} の変更内容を表示",
+        "publishedAt": "反映日時: {time}",
+        "copiedAt": "コピー日時: {time}（元の変更日時と異なる場合があります）",
+        "createdBy": "作成者: {name}",
+        "reference": "参照: {value}",
+        "reason": "理由: {value}",
+        "badge": {
+          "current": "現在反映中",
+          "fromMachine": "元の出力から変更",
+          "copied": "コピー済み",
+          "system": "システム"
+        }
+      },
+      "machineLoading": "元の出力を読み込んでいます…",
+      "emptyFiltered": "条件に一致する変更はありません",
+      "savingNotice": "保存が終わると一覧を再読み込みします",
+      "filter": {
+        "label": "種類",
+        "all": "すべて",
+        "result": "値",
+        "structure": "文書構成",
+        "resultChip": "結果: {name}",
+        "clearResult": "{name} の結果フィルターを解除"
+      },
+      "group": {
+        "same": "まとめて保存された変更 {count, number} 件",
+        "continued": "まとめて保存された変更 {count, number} 件（前のページの続き）",
+        "foreign": "別の Collection で保存済み",
+        "sameHelp": "1 回の保存でまとめて変更された項目です。項目ごとに、または「すべて読み込む」で一度に読み込めます",
+        "foreignHelp": "この Job は複数の Collection に属しています。この変更は、表示中とは別の Collection のレビュー画面で保存されました。",
+        "loadAll": "すべて読み込む（{count, number}）",
+        "loading": "グループを読み込んでいます…",
+        "loaded": "{loaded, number} 件を編集に読み込みました",
+        "loadedPartial": "{total, number} 件中 {loaded, number} 件を読み込みました — 残りは現在の値と同じか、読み込めない変更です",
+        "loadNone": "読み込める変更がありません"
+      },
+      "load": {
+        "button": "編集に読み込む",
+        "done": "編集に読み込みました",
+        "failed": "読み込めませんでした: {reason}",
+        "draftWarning": "読み込むと、復元していない一時保存が破棄されます",
+        "mergeNote": "Merge の結果は保存時に再計算されるため、読み込んだ値と異なる場合があります",
+        "blocked": {
+          "loading": "内容を読み込んでいます…",
+          "omitted": "内容を取得できないため読み込めません",
+          "missing_result": "この結果は現在の Job にありません",
+          "not_editable": "この結果は現在編集できません",
+          "mismatch": "現在の文書構成と一致しないため読み込めません",
+          "same": "現在の値と同じです",
+          "saving": "保存中は読み込めません",
+          "conflict": "先に保存の競合を解決してください",
+          "current": "現在反映されている値です",
+          "original_missing": "履歴に元の出力が見つからないため読み込めません"
+        },
+        "impact": {
+          "title": "読み込むと文書 {documents, number} 件が変わり、紐づく結果 {results, number} 件に影響します",
+          "removed": "{label} を削除",
+          "added": "{label} を追加",
+          "pages": "{label}: ページ範囲を変更",
+          "results": "紐づく結果: {names}",
+          "noResults": "紐づく結果なし",
+          "more": "+{count, number}",
+          "applied": "文書構成を読み込みました — 文書 {documents, number} 件を変更、結果 {results, number} 件に影響",
+          "batchHint": "同じ保存で変わった値も読み込むには、グループ見出しの「すべて読み込む」を使ってください"
+        }
+      },
+      "detail": {
+        "field": "項目",
+        "before": "変更前",
+        "after": "変更後",
+        "none": "（値なし）",
+        "noDiff": "値の違いはありません",
+        "machineBefore": "「変更前」は元の出力です",
+        "reordered": "項目の順序も変わりました",
+        "showJson": "JSON を表示",
+        "hideJson": "JSON を非表示",
+        "jsonAfter": "変更後の JSON",
+        "jsonBefore": "変更前の JSON",
+        "moreRows": "ほかに {count, number} 件の違いがあります —「JSON を表示」で確認してください",
+        "omitted": {
+          "too_large": "内容が大きすぎて表示できません",
+          "unavailable": "内容を取得できません"
+        },
+        "baseOmitted": {
+          "too_large": "変更前の内容が大きすぎて比較できません",
+          "unavailable": "変更前の内容を取得できないため比較できません"
+        },
+        "structure": {
+          "fileAdded": "ファイル {file} を追加",
+          "fileRemoved": "ファイル {file} を削除",
+          "fileMoved": "ファイル {file} を別のグループへ移動",
+          "documentAdded": "文書 {label} を追加",
+          "documentRemoved": "文書 {label} を削除",
+          "documentLabel": "{document}: ラベル {from} → {to}",
+          "documentMoved": "文書 {label} を別のグループへ移動",
+          "documentPages": "{document}: ページ範囲を変更",
+          "documentsReordered": "文書の順序を変更",
+          "documentExcluded": "文書 {label} を除外",
+          "documentIncluded": "文書 {label} の除外を解除",
+          "pagesExcluded": "除外したページを変更",
+          "pagesIncluded": "除外を解除したページを変更",
+          "noLabel": "（ラベルなし）"
+        }
+      },
+      "machine": {
+        "title": "元の出力",
+        "description": "修正前に最初に受け取った結果",
+        "none": "修正された結果がないため、現在の値が元の出力です",
+        "toggle": "元の出力の対象を表示",
+        "skipped": "読み込み中に編集内容が変わったため、適用しませんでした。もう一度押すと読み込みます"
+      }
+    },
+    "stepsFallback": "設定でオンにしたステップがこの Job にないため、すべてのステップを表示しています。"
+  }
+}

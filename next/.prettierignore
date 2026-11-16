@@ -1,0 +1,6 @@
+.next/
+node_modules/
+
+# shadcn CLI 가 관리하는 파일 — 바이트 그대로 보존해 재설치·업데이트 시 변경 없음으로 인식되게 한다
+src/components/ui/
+src/components/studio-ui-kit/

@@ -1,0 +1,17 @@
+import { hasLocale } from "next-intl";
+import { getRequestConfig } from "next-intl/server";
+import { routing } from "./routing";
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  // `[locale]` 세그먼트 값. 지원하지 않는 값이면 기본 locale 로 대체.
+  const requested = await requestLocale;
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  return {
+    locale,
+    messages: (await import(`../messages/${locale}.json`)).default,
+    timeZone: "UTC",
+  };
+});
