@@ -24,6 +24,10 @@ Docker, Node.js(`>=22.23.4`), pnpm(`>=10.7.1`)이 필요합니다. 저장소 루
 
 이 앱에는 로그인이 없고 서버가 API 키로 검수 API 를 대신 호출하므로, 로컬이나 신뢰된 네트워크에서만 띄웁니다(`next/README.md` 의 [환경 변수](next/README.md#환경-변수)).
 
+## 데모
+
+API 키·서버 없이 mock 데이터로 도는 데모를 GitHub Pages 에 둡니다: https://upstageai.github.io/studio-review-web-app-public/ (UI Kit 데모 화면은 `/ko/ui-kit-demo`). 저장한 내용은 방문자의 브라우저에만 남습니다. 빌드 방식은 `next/README.md` 의 [GitHub Pages 데모](next/README.md#github-pages-데모-서버-없이-mock-모드)를 봅니다.
+
 ## 데이터 전송 고지
 
 이 앱에서 입력한 내용은 Upstage API(`api.upstage.ai`) 등 외부 API 로 전송됩니다. 개인정보 등 민감정보는 입력하지 마세요.

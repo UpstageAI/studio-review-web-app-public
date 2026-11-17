@@ -6,6 +6,10 @@ import { CollectionsBackLink } from "@/components/collections/collections-back-l
 import { PAGE_CONTAINER } from "@/components/page-container";
 import { FIT_PAGE_CLASS } from "@/components/studio-table";
 import type { Locale } from "@/i18n/config";
+import { demoCollectionParams } from "@/lib/pages-demo";
+
+// Pages 데모(정적 export)에서만 값이 있다. 평소에는 `undefined` 라 요청 때 그린다.
+export const generateStaticParams = demoCollectionParams;
 
 export default function CollectionDetailPage({
   params,

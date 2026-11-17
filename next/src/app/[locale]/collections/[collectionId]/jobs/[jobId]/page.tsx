@@ -3,6 +3,10 @@ import { setRequestLocale } from "next-intl/server";
 import { PAGE_CONTAINER } from "@/components/page-container";
 import { JobReviewWithQueue } from "@/components/showcase/review-queue/job-review-with-queue";
 import type { Locale } from "@/i18n/config";
+import { demoJobParams } from "@/lib/pages-demo";
+
+// Pages 데모(정적 export)에서만 값이 있다. 평소에는 `undefined` 라 요청 때 그린다.
+export const generateStaticParams = demoJobParams;
 
 export default function JobReviewPage({
   params,
