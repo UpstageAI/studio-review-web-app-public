@@ -49,6 +49,8 @@ Postgres 컨테이너 시작(`docker compose up -d --wait postgres`) → `.env` 
 | `pnpm mock:measure` | 검수 화면 성능 측정 ([성능 측정](#성능-측정-pnpm-mockmeasure) 절) |
 | `pnpm mock:smoke` | 검수 화면 스모크 ([스모크](#스모크-pnpm-mocksmoke) 절) |
 | `pnpm mock:dom`   | 검수 화면 DOM 캡처 ([DOM 캡처](#dom-캡처-pnpm-mockdom) 절) |
+| `pnpm pages:build` | GitHub Pages 데모 빌드 ([GitHub Pages 데모](#github-pages-데모-서버-없이-mock-모드) 절) |
+| `pnpm pages:preview` | 위 빌드 결과(`out/`) 로컬 미리보기 |
 
 ## Collection 검수 API 연동
 
@@ -266,7 +268,7 @@ curl -s http://127.0.0.1:4010/v2/search-collections            # 401
 curl -s http://localhost:3000/api/files/file_mock_0001 | head -c 300   # image_url 이 http://127.0.0.1:4010/...
 ```
 
-`mock/*.mjs` 는 ESLint 대상이지만 Prettier 검사(`src/**`)에는 들어가지 않으므로 고친 뒤 `npx prettier --write mock` 을 직접 실행합니다. 코드 위치: 생성기 `mock/lib/dataset.mjs`(순수 함수 `generateDataset`·`pageSvg`), CLI `mock/generate.mjs`, 서버 `mock/server.mjs`, 변경 이력 원장 `mock/lib/revisions.mjs`, 모델 검사 `src/test/__tests__/mock-dataset.test.ts`, 원장 테스트 `src/test/__tests__/mock-revisions.test.ts`.
+`mock/*.mjs` 는 ESLint 대상이지만 Prettier 검사(`src/**`)에는 들어가지 않으므로 고친 뒤 `npx prettier --write mock` 을 직접 실행합니다. 코드 위치: 생성기 `mock/lib/dataset.mjs`(순수 함수 `generateDataset`·`pageSvg`), CLI `mock/generate.mjs`, 서버 `mock/server.mjs`(Node HTTP 로 감싸기)·본체 `mock/lib/upstream.mjs`(라우팅·저장, 전송 계층과 무관), 변경 이력 원장 `mock/lib/revisions.mjs`, 모델 검사 `src/test/__tests__/mock-dataset.test.ts`, 원장 테스트 `src/test/__tests__/mock-revisions.test.ts`.
 
 #### 스모크 (`pnpm mock:smoke`)
 
@@ -360,6 +362,21 @@ node mock/measure.mjs compare mock/results/before-….json mock/results/after-�
 - 뒤에 추가되는 UI 의 testid(`job-review-viewer-progress` 등)는 있으면 `present`, 없으면 `skipped` 로만 기록합니다(`job-review-viewer-progress` 는 파일 요청이 끝난 뒤 재므로 늘 `skipped`, `job-review-draft-banner` 는 새 브라우저 컨텍스트라 `skipped` 가 정상).
 
 코드 위치: 하네스 `mock/measure.mjs`, 표·비교·중앙값(순수 함수) `mock/lib/measure-report.mjs`, 그 테스트 `src/test/__tests__/measure-report.test.ts`.
+
+### GitHub Pages 데모 (서버 없이 mock 모드)
+
+mock 모드와 UI Kit 데모 화면을 서버·DB 없이 정적 호스팅(GitHub Pages)에 올리는 빌드입니다. `main` 에 push 하면 `.github/workflows/pages.yml` 이 빌드해 배포합니다(저장소 Settings → Pages 의 Source 가 "GitHub Actions" 여야 합니다).
+
+```bash
+PAGES_BASE_PATH=/studio-review-web-app-public pnpm pages:build     # out/ 에 정적 사이트
+PAGES_BASE_PATH=/studio-review-web-app-public pnpm pages:preview   # http://localhost:4173/studio-review-web-app-public/
+```
+
+- **구조**: `next build` 를 정적 export(`output: "export"`)로 돌리고, 서버가 하던 일은 서비스 워커 하나(`out/mock-sw.js`)가 브라우저 안에서 합니다. 워커는 BFF Route Handler(`src/app/api/**/route.ts`)를 고치지 않고 그대로 번들하고, 그 upstream 호출을 `pnpm mock:serve` 와 같은 mock upstream 본체(`mock/lib/upstream.mjs`)로 보냅니다. 화면이 부르는 `/api/...` 와 그 응답은 서버가 있을 때와 같고, 네트워크로 나가는 API 요청은 없습니다.
+- **데이터**: 데이터셋은 워커가 뜰 때마다 같은 seed 로 만듭니다(`pages-demo/config.mjs` 의 `DEMO_DATASET_OPTIONS`, 기본 200 쪽 Job 3 개). 저장한 검수 내용과 검수 상태(앱 DB 의 `job_review_status` 자리)는 **그 브라우저의 IndexedDB** 에만 남고 방문자끼리 공유되지 않습니다. 처음으로 되돌리려면 브라우저에서 이 사이트의 데이터를 지웁니다.
+- **평소 빌드와 다른 점**: `NEXT_PUBLIC_PAGES_DEMO=1` 일 때만 켜집니다(`next.config.ts`, `src/lib/pages-demo.ts`). `pageExtensions` 를 `tsx` 로 좁혀 `route.ts`·`proxy.ts` 를 빌드에서 빼고, Collection·Job 화면은 mock 데이터셋의 id 로 미리 만들며(`generateStaticParams`), locale 없는 주소는 `out/index.html` 이 브라우저 언어를 보고 보냅니다. UI Kit 데모 화면의 `REVIEW_UI_KIT_DEMO` 는 빌드 때 값으로 굳습니다(기본 `1`, 빼려면 `REVIEW_UI_KIT_DEMO=0 pnpm pages:build`). 응답 보안 헤더(`headers()`)는 정적 호스팅에서 붙지 않습니다.
+- **첫 화면**: 워커가 페이지를 맡을 때까지 `MockGate`(`src/components/pages-demo/mock-gate.tsx`)가 화면을 그리지 않습니다. 서비스 워커를 쓸 수 없는 창(일부 사생활 보호 모드)에서는 안내 문구만 보입니다.
+- 코드 위치: 빌드 `pages-demo/build.mjs`, 미리보기 서버 `pages-demo/preview.mjs`, 워커 `pages-demo/sw/`(`entry.mjs` 라우팅, `prisma-shim.mjs` 검수 상태 표, `store.mjs` IndexedDB, `png-browser.mjs` 그림 생성, `prelude.mjs` 환경 변수), 미리 만들 경로 `pages-demo/static-params.mjs`.
 
 ## 코드 읽는 순서
 

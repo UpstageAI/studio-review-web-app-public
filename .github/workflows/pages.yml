@@ -1,0 +1,53 @@
+# mock 모드 데모(정적 export + 서비스 워커)를 GitHub Pages 에 배포한다. next/README.md "GitHub Pages 데모" 참고.
+# 저장소 Settings → Pages → Source 가 "GitHub Actions" 여야 한다.
+name: Deploy demo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: next/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: next/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - name: Build static demo
+        run: pnpm pages:build
+        env:
+          PAGES_BASE_PATH: /${{ github.event.repository.name }}
+          REVIEW_UI_KIT_DEMO: "1"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: next/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
