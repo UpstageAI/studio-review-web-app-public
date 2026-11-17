@@ -34,7 +34,7 @@ API 키·서버 없이 mock 데이터로 도는 데모를 GitHub Pages 에 둡�
 
 ## UI 스택
 
-shadcn/ui 기반이며, 검수 화면 부품은 Studio UI Kit item 을 공개 Registry 로 설치해 씁니다(shadcn CLI 4.21.0 · `radix-nova` · Tailwind 4). Studio UI Kit 은 Upstage 가 공개하는 UI 부품 모음이고, 설치 방법은 안내 페이지(https://console.upstage.ai/ui-kit)에 있습니다. 이 앱에서 쓰는 방식은 `next/README.md` 의 [UI 스택](next/README.md#ui-스택-shadcnui--studio-ui-kit-호환)을 봅니다.
+shadcn/ui 기반이며, 검수 화면 부품은 Studio UI Kit item 을 공개 Registry 로 설치해 씁니다(shadcn CLI 4.21.0 · `radix-nova` · Tailwind 4). Studio UI Kit 은 Upstage 가 공개하는 UI 부품 모음이고, 설치 방법과 item 별 사용 가이드(미리보기·예제 코드·props), 문서 검수 화면 조합 예제는 안내 페이지(https://console.upstage.ai/ui-kit)에 있습니다. 이 앱에서 쓰는 방식은 `next/README.md` 의 [UI 스택](next/README.md#ui-스택-shadcnui--studio-ui-kit-호환)을 봅니다.
 
 ## 지원·문의
 

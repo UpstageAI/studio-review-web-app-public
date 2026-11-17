@@ -571,6 +571,7 @@ REVIEW_UI_KIT_DEMO=1 PORT=3100 pnpm mock:start   # 또는 REVIEW_UI_KIT_DEMO=1 p
 - **문구**: 데모 전용이라 item `labels` 에 영어 고정 문자열을 넘기고 번역하지 않습니다(host 문구 하드코딩 금지 규칙의 예외, 메시지 파일에 키를 두지 않음).
 - **플래그**: 서버 전용 env 를 `connection()` 뒤에 읽으므로 빌드 때 값으로 굳지 않습니다. `NEXT_PUBLIC_*` 를 쓰지 않고, 기본이 꺼짐이라 배포본에 노출되지 않습니다. 화면은 별도 청크로, 다른 페이지가 import 하지 않습니다.
 - 스모크 `ui-kit-demo` 시나리오가 이 화면을 확인합니다(플래그가 꺼져 있으면 SKIP).
+- item 하나씩의 미리보기와 복사할 수 있는 예제 코드는 Studio UI Kit 안내 페이지의 item 별 사용 가이드에도 있습니다([Studio UI Kit item 설치](#studio-ui-kit-item-설치) 절의 "item 사용법").
 
 ### 알려진 제약
 
@@ -717,14 +718,19 @@ CLI 버전은 항상 `@4.21.0` 으로 고정합니다. Studio UI Kit 이 설치�
 
 설치 절차는 Studio UI Kit 공개 안내 페이지(https://console.upstage.ai/ui-kit)의 "시작하기" 를 따릅니다. 여기에는 이 앱에 해당하는 사항만 적습니다.
 
-1. **Registry 주소**: `components.json` 의 `registries` 에 공개 Registry 의 릴리스 URL 을 직접 적어 두었습니다(안내 "시작하기 > 3. Registry 등록" 과 같은 방식). 리뷰 화면 item 은 안내 페이지의 기본 releaseId 가 아니라 아래 표의 releaseId(이 앱 `components.json` 의 값)에 있습니다. 자기 프로젝트에 설치할 때는 안내의 URL 에서 releaseId 만 이 값으로 바꿉니다 — 안내의 기본 releaseId 로는 리뷰 화면 item 을 찾지 못합니다(`The item at … was not found`). 새 릴리스로 옮길 때도 releaseId 만 바꿉니다(안내 "업데이트").
+1. **Registry 주소**: `components.json` 의 `registries` 에 공개 Registry 의 고정 릴리스 URL(`…/r/releases/<releaseId>/{style}/{name}.json`)을 적어 두었습니다. 안내 "업데이트 > 공개 릴리스 이력" 의 2026-11-12 릴리스(item 16 개)이고, releaseId 는 아래 표의 값입니다. 자기 프로젝트에 설치할 때는 둘 중 하나를 씁니다.
+   - 안내 "시작하기 > 3. Registry 등록" 의 기본 주소(`…/r/latest/{style}/{name}.json`): 설치 명령을 실행하는 시점의 최신 공개 릴리스를 받습니다. 리뷰 화면 item 도 이 주소로 설치됩니다(2026-11-17 에는 아래 표의 releaseId 로 연결).
+   - 고정 주소: 이 앱과 같은 소스를 받거나 팀이 같은 릴리스를 쓰려면 "공개 릴리스 이력" 에서 고정 주소를 복사합니다. 2026-11-12 보다 앞선 릴리스에는 리뷰 화면 item 이 없습니다(`The item at … was not found`).
+
+   이 앱을 새 릴리스로 옮길 때는 releaseId 만 바꿉니다(안내 "업데이트 > 새 릴리스 적용").
 2. **확인**: `npx -y shadcn@4.21.0 search @studio-ui-kit` 가 item 목록(16 개)을 보여야 합니다.
 3. **설치**: `npx -y shadcn@4.21.0 add @studio-ui-kit/<item>` — 파일은 `src/components/studio-ui-kit/<item>/` 에 들어갑니다.
    - **터미널에서 직접 실행**하고, 기존 파일 덮어쓰기 질문에는 **"n"** 으로 답합니다.
    - CI·AI 코딩 에이전트처럼 터미널 없이 실행하면 질문에서 exit 0 으로 끝나 파일이 생기지 않습니다. 안내 "시작하기 > 터미널 없이 설치해야 할 때" 의 `--dry-run` → `--overwrite` → `~ overwrite` 로 표시된 파일 `git restore` 절차를 씁니다.
 4. **설치 후**: `git status` 로 `src/components/ui/` 의 primitive 가 바뀌지 않았는지, item 폴더에 `LICENSE.txt` 가 함께 설치됐는지 확인하고 `pnpm build` 를 돌립니다.
 
-- **item 사용법**: 안내 페이지의 사용 가이드는 아직 `image-viewer`·`collection-preview`·`document-element-list` 에만 있습니다. 리뷰 화면 item 13 개의 props·labels·DOM 계약은 이 앱의 host 코드(아래 표의 "쓰는 곳"), item 렌더 테스트(`src/test/studio-ui-kit/<item>/`), [UI Kit 데모 화면](#ui-kit-데모-화면)에서 봅니다.
+- **item 사용법**: 안내 페이지에 item 16 개 모두의 사용 가이드가 있습니다(리뷰 화면 item 13 개 포함). item 마다 조작해 볼 수 있는 미리보기, 복사할 수 있는 예제 코드(코드 탭), 공개 API(props·콜백)·`labels`·DOM 계약·접근성·알려진 한계가 있고, 주소는 `https://console.upstage.ai/ui-kit/<item>` 입니다(예: `…/ui-kit/structure-editor`). 여러 item 을 잇는 조합 예제도 있습니다 — "문서 검수 화면 조합"(`…/ui-kit/examples/document-review`: `document-list`·`page-position-bar`·`image-viewer`·`value-widget`·`review-actions`)과 "원문·요소 목록 연동"(`…/ui-kit/examples/document-element-viewer`). 안내 페이지는 Upstage Console 에 로그인해서 봅니다.
+- **이 앱에서 쓰는 모습**: 검수 모델·BFF 와 이어 쓰는 방법은 이 앱의 host 코드(아래 표의 "쓰는 곳"), item 렌더 테스트(`src/test/studio-ui-kit/<item>/`), [UI Kit 데모 화면](#ui-kit-데모-화면)에서 봅니다.
 - **문의**: 설치·화면 문제는 안내 페이지 "지원" 의 확인 항목과 문의 경로를 따릅니다.
 
 설치한 item(15 개). 리뷰 화면 item 13 개 중 `structure-editor` 한 item 이 `Filmstrip`·`PageGrid`·`DocumentPositionDialog` 를 내보냅니다. 경로는 모두 `src/components/studio-ui-kit/<item>/`, 쓰는 곳은 `src/components/job-review/` 기준이고, 리뷰 화면 item 13 개는 UI Kit 데모 화면(`src/app/[locale]/ui-kit-demo/`)도 씁니다. 공개 API 는 각 item `index.ts` 가 내보내는 것만 씁니다.
